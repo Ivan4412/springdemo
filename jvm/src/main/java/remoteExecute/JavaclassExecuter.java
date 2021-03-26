@@ -25,7 +25,7 @@ public class JavaclassExecuter {
         Class clazz = loader.loadBytes(modiBytes);
         try {
             Method method = clazz.getMethod("main", new Class[]{String[].class});
-            method.invoke(null, new String[]{null});
+            method.invoke(null, new String[]{});
         } catch (Throwable e) {
             e.printStackTrace(HackSystem.out);
         }
