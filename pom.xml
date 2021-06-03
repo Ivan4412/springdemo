@@ -15,6 +15,8 @@
         <module>service</module>
         <module>jvm</module>
         <module>java8</module>
+        <module>spring</module>
+        <module>cache</module>
     </modules>
     <packaging>pom</packaging>
 

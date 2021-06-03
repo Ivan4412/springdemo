@@ -11,6 +11,6 @@ public class JvmTest {
     public static void main(String[] args) {
         Integer a = 3;
         System.out.println(a.hashCode());
-        System.out.println(HashMap.hash(a));
+        //System.out.println(HashMap.hash(a));
     }
 }
