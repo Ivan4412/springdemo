@@ -1,0 +1,34 @@
+package cn.utrust.fintech.cdcp2.dto.yujingtong.resp;
+
+import cn.utrust.fintech.cdcp2.conf.DateJsonDeserializer;
+import cn.utrust.fintech.cdcp2.conf.DateJsonSerializer;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.*;
+
+/**
+ * ${classNickName}
+ *
+ * ${author}
+ * ${date}
+ */
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class ${className} {
+    #for
+    /**
+    * ${data.columnComment}
+    */
+    #ifDate
+    @ApiModelProperty("${data.columnComment}")
+    @JsonProperty(value = "${data.columnJsonName}")
+    protected ${data.dataType} ${data.columnName};
+    #end
+}
