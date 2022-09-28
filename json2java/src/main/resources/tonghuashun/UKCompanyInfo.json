@@ -1,0 +1,52 @@
+{
+  "codes": "同花顺-英股-基础数据-公司资料",
+  "indipara": [
+    {
+      "name": "公司简称",
+      "indicator": "ths_corp_short_name_gbs"
+    },
+    {
+      "name": "公司名称",
+      "indicator": "ths_corp_name_gbs"
+    },
+    {
+      "name": "CIK编码",
+      "indicator": "ths_cik_gbs"
+    },
+    {
+      "name": "会计年结日",
+      "indicator": "ths_accounting_date_gbs"
+    },
+    {
+      "name": "成立日期",
+      "indicator": "ths_listed_date_gbs"
+    },
+    {
+      "name": "所属ICB行业",
+      "indicator": "ths_icb_industry_gbs",
+      "indiparams": [
+        "20220913"
+      ]
+    },
+    {
+      "name": "员工总数",
+      "indicator": "ths_staff_num_gbs"
+    },
+    {
+      "name": "办公地址",
+      "indicator": "ths_office_address_gbs"
+    },
+    {
+      "name": "公司电话",
+      "indicator": "ths_corp_tel_gbs"
+    },
+    {
+      "name": "公司传真",
+      "indicator": "ths_corp_fax_gbs"
+    },
+    {
+      "name": "公司网站",
+      "indicator": "ths_corp_website_gbs"
+    }
+  ]
+}

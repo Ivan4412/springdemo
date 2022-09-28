@@ -1,0 +1,135 @@
+{
+  "codes": "同花顺-债券-基础数据-发债主体资料",
+  "indipara": [
+    {
+      "name": "发行人中文名称",
+      "indicator": "ths_issuer_name_cn_bond"
+    },
+    {
+      "name": "发行人中文简称",
+      "indicator": "ths_issuer_short_name_cn_bond"
+    },
+    {
+      "name": "是否上市公司",
+      "indicator": "ths_is_lc_bond"
+    },
+    {
+      "name": "上市公司（银行）类型",
+      "indicator": "ths_info_banktype_bond"
+    },
+    {
+      "name": "发行人所属地区",
+      "indicator": "ths_issuer_respond_district_bond",
+      "indiparams": [
+        "1"
+      ]
+    },
+    {
+      "name": "发行人企业性质",
+      "indicator": "ths_issuer_corp_nature_bond"
+    },
+    {
+      "name": "公司发行证券一览",
+      "indicator": "ths_corp_issue_sec_list_bond",
+      "indiparams": [
+        "100",
+        "100"
+      ]
+    },
+    {
+      "name": "所属国民经济行业",
+      "indicator": "ths_the_national_eco_industry_bond",
+      "indiparams": [
+        "20220913"
+      ]
+    },
+    {
+      "name": "所属国民经济行业代码",
+      "indicator": "ths_the_national_eco_industry_code_bond",
+      "indiparams": [
+        "100",
+        "20220913"
+      ]
+    },
+    {
+      "name": "大股东名称",
+      "indicator": "ths_major_shareholder_name_bond",
+      "indiparams": [
+        "20220913",
+        "0"
+      ]
+    },
+    {
+      "name": "股东公司属性",
+      "indicator": "ths_holder_corp_attribute_bond",
+      "indiparams": [
+        "20220913",
+        "1"
+      ]
+    },
+    {
+      "name": "大股东持股比例",
+      "indicator": "ths_big_holder_held_ratio_bond",
+      "indiparams": [
+        "20220913",
+        "1"
+      ]
+    },
+    {
+      "name": "大股东类型",
+      "indicator": "ths_big_holder_type_bond",
+      "indiparams": [
+        "20220913",
+        "0"
+      ]
+    },
+    {
+      "name": "法人代表人",
+      "indicator": "ths_legal_representative_bond"
+    },
+    {
+      "name": "董事长",
+      "indicator": "ths_chairman_bond"
+    },
+    {
+      "name": "实际控制人名称",
+      "indicator": "ths_actual_controller_name_bond"
+    },
+    {
+      "name": "实际控制人类型",
+      "indicator": "ths_actual_controller_type_bond"
+    },
+    {
+      "name": "总经理",
+      "indicator": "ths_general_manager_bond"
+    },
+    {
+      "name": "注册地址",
+      "indicator": "ths_reg_address_bond"
+    },
+    {
+      "name": "办公地址",
+      "indicator": "ths_office_address_bond"
+    },
+    {
+      "name": "统一社会信用代码",
+      "indicator": "ths_unified_social_credit_code_bond"
+    },
+    {
+      "name": "联系电话",
+      "indicator": "ths_telephone_bond"
+    },
+    {
+      "name": "电子邮件",
+      "indicator": "ths_email_bond"
+    },
+    {
+      "name": "企业规模",
+      "indicator": "ths_company_sacle_bond"
+    },
+    {
+      "name": "成立日期",
+      "indicator": "ths_established_date_bond"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "codes": "同花顺-美股-基础数据-公司资料",
+  "indipara": [
+    {
+      "name": "公司中文名称",
+      "indicator": "ths_corp_cn_name_uss"
+    },
+    {
+      "name": "公司英文名称",
+      "indicator": "ths_corp_name_en_uss"
+    },
+    {
+      "name": "CIK编码",
+      "indicator": "ths_cik_uss"
+    },
+    {
+      "name": "成立日期",
+      "indicator": "ths_established_date_uss"
+    },
+    {
+      "name": "注册资本",
+      "indicator": "ths_reg_capital_uss"
+    },
+    {
+      "name": "会计年结日",
+      "indicator": "ths_accounting_date_uss"
+    },
+    {
+      "name": "总经理",
+      "indicator": "ths_general_manager_uss"
+    },
+    {
+      "name": "董事会秘书",
+      "indicator": "ths_secretary_uss"
+    },
+    {
+      "name": "法人代表",
+      "indicator": "ths_legal_representative_uss"
+    },
+    {
+      "name": "经营范围",
+      "indicator": "ths_operating_scope_uss"
+    },
+    {
+      "name": "所属SIC行业",
+      "indicator": "ths_the_sic_industry_uss",
+      "indiparams": [
+        "1"
+      ]
+    },
+    {
+      "name": "所属GICS行业",
+      "indicator": "ths_the_gics_industry_uss",
+      "indiparams": [
+        "100",
+        "20220913"
+      ]
+    },
+    {
+      "name": "员工总数",
+      "indicator": "ths_staff_num_uss"
+    },
+    {
+      "name": "注册地址",
+      "indicator": "ths_reg_address_uss"
+    },
+    {
+      "name": "办公地址",
+      "indicator": "ths_office_address_uss"
+    },
+    {
+      "name": "邮政编码",
+      "indicator": "ths_postcode_uss"
+    },
+    {
+      "name": "公司电话",
+      "indicator": "ths_corp_tel_uss"
+    },
+    {
+      "name": "公司传真",
+      "indicator": "ths_corp_fax_uss"
+    },
+    {
+      "name": "公司电子邮箱地址",
+      "indicator": "ths_corp_email_uss"
+    },
+    {
+      "name": "注册所在国家或地区",
+      "indicator": "ths_registrate_nation_or_district_uss"
+    },
+    {
+      "name": "公司网站",
+      "indicator": "ths_corp_website_uss"
+    },
+    {
+      "name": "审计机构",
+      "indicator": "ths_audit_office_usk",
+      "indiparams": [
+        "2022"
+      ]
+    },
+    {
+      "name": "高管成员（现任）",
+      "indicator": "ths_sm_current_uss"
+    },
+    {
+      "name": "董事会成员（现任）",
+      "indicator": "ths_mem_of_bod_resolution_plan_ad_uss"
+    }
+  ]
+}

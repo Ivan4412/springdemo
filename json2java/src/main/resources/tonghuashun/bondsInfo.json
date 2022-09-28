@@ -1,0 +1,84 @@
+{
+  "codes": "同花顺-债券-基础数据-债券资料",
+  "indipara": [
+    {
+      "name":"债券简称",
+      "indicator": "ths_bond_short_name_bond"
+    },
+    {
+      "name":"凭证类别",
+      "indicator": "ths_receipt_type_bond"
+    },
+    {
+      "name":"发行总额",
+      "indicator": "ths_issue_total_amt_bond"
+    },
+    {
+      "name":"发行币种",
+      "indicator": "ths_issue_currency_bond"
+    },
+    {
+      "name":"债券期限（天）",
+      "indicator": "ths_bond_term_d_bond"
+    },
+    {
+      "name":"债券期限（理论）",
+      "indicator": "ths_bond_maturity_theory_bond"
+    },
+    {
+      "name":"簿记建档日",
+      "indicator": "ths_book_building_date_bond"
+    },
+    {
+      "name":"起息日期",
+      "indicator": "ths_interest_begin_date_bond"
+    },
+    {
+      "name":"到期日期",
+      "indicator": "ths_maturity_date_bond"
+    },
+    {
+      "name":"息票品种",
+      "indicator": "ths_coupon_variety_bond"
+    },
+    {
+      "name":"票面利率（当期）",
+      "indicator": "ths_nominal_interest_current_bond"
+    },
+    {
+      "name":"票面利率（发行时）",
+      "indicator": "ths_nominal_interest_at_issuing_bond"
+    },
+    {
+      "name":"利率类型",
+      "indicator": "ths_interest_type_bond"
+    },
+    {
+      "name":"是否跨市场",
+      "indicator": "ths_is_cross_mkt_bond"
+    },
+    {
+      "name":"跨市场代码",
+      "indicator": "ths_cross_mkt_code_bond",
+      "indiparams": [
+        "999999"
+      ]
+    },
+    {
+      "name":"交易状态",
+      "indicator": "ths_trading_status_bond"
+    },
+    {
+      "name":"募集资金用途",
+      "indicator": "ths_rc_usage_bond"
+    },
+    {
+      "name":"是否发行失败",
+      "indicator": "ths_is_issuing_failure_bond"
+    },
+    {
+      "name":"上市地点",
+      "indicator": "ths_listed_exchange_bond"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "codes": "同花顺-英股-基础数据-证券资料",
+  "indipara": [
+    {
+      "name": "股票简称",
+      "indicator": "ths_stock_short_name_gbs"
+    },
+    {
+      "name": "股票代码",
+      "indicator": "ths_stock_code_gbs"
+    },
+    {
+      "name": "同花顺代码",
+      "indicator": "ths_thscode_gbs"
+    },
+    {
+      "name": "ISIN编码",
+      "indicator": "ths_isin_encode_gbs"
+    },
+    {
+      "name": "股票种类",
+      "indicator": "ths_stock_varieties_gbs"
+    },
+    {
+      "name": "首发上市日期",
+      "indicator": "ths_ipo_date_gbs"
+    },
+    {
+      "name": "交易市场",
+      "indicator": "ths_td_mkt_gbs"
+    },
+    {
+      "name": "上市板块",
+      "indicator": "ths_listing_plate_gbs"
+    },
+    {
+      "name": "上市地点",
+      "indicator": "ths_listed_exchange_gbs"
+    },
+    {
+      "name": "终止上市日期",
+      "indicator": "ths_stop_listing_date_gbs"
+    },
+    {
+      "name": "所属概念",
+      "indicator": "ths_the_concept_gbs"
+    },
+    {
+      "name": "是否属于重要指数成分（富时指数100）",
+      "indicator": "ths_is_important_index_constituent_gbs"
+    }
+  ]
+}

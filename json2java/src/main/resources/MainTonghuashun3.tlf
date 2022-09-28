@@ -1,0 +1,58 @@
+package cn.utrust.fintech.cdcp2.core.provider.tonghuashun.impl;
+
+import cn.utrust.fintech.cdcp2.core.dto.tonghuashun.req.${className}Dto;
+import cn.utrust.fintech.cdcp2.core.provider.tonghuashun.TongHuaShunEconomicDataProvider;
+import cn.utrust.fintech.cdcp2.dto.tonghuashun.req.TongHuaShunBasicEconomicReq;
+import cn.utrust.fintech.cdcp2.dto.tonghuashun.resp.${className}Resp;
+import cn.utrust.fintech.cdcp2.dto.tonghuashun.resp.TongHuaShunBasicEconomicResp;
+import cn.utrust.fintech.cdcp2.framework.json.JSON;
+import cn.utrust.fintech.cdcp2.framework.json.JSONObject;
+import cn.utrust.fintech.cdcp2.framework.util.StringUtils;
+import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import java.util.List;
+
+/**
+ * ${classNickName}
+ *
+ * ${author}
+ * ${date}
+ */
+@ApiOperation("${classNickName}")
+@Component("/openapi/tonghuashun/${classPath}")
+@Slf4j
+public class ${className}DataProvider extends TongHuaShunEconomicDataProvider<TongHuaShunBasicEconomicReq, ${className}Resp, JSONObject> {
+
+    @Override
+    public String providerCode() {
+        return "${className}";
+    }
+
+   @Override
+   protected ${className}Resp doProvide(JSONObject externalData, Exception e) {
+       Object data = effectiveExternalData(externalData);
+       if (data != null) {
+           String result = JSON.toJSONString(data);
+           if (StringUtils.isNotBlank(result)) {
+               List<TongHuaShunBasicEconomicResp> list = JSON.parseArray(result, TongHuaShunBasicEconomicResp.class);
+               ${className}Resp resp = new ${className}Resp();
+               resp.setList(list);
+               return resp;
+           }
+       }
+       return null;
+   }
+
+    @SuppressWarnings("serial")
+    @Override
+    protected JSONObject doExternalData(TongHuaShunBasicEconomicReq param) {
+        TongHuaShunAccount account = getExternalAccountSetting(param, TongHuaShunAccount.class);
+        //初始化请求参数
+        ${className}Dto dataReq = ${className}Dto.getInstance(param);
+        //发送请求
+        return this.send(account, dataReq);
+    }
+}

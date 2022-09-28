@@ -1,0 +1,37 @@
+{
+  "codes": "同花顺-债券-基础数据-担保人",
+  "indipara": [
+    {
+      "name":"担保人",
+      "indicator": "ths_grnt_bond"
+    },
+    {
+      "name":"担保人公司性质",
+      "indicator": "ths_guarantorcorp_nature_bond"
+    },
+    {
+      "name":"担保人公司简介",
+      "indicator": "ths_guarantorcorp_introduction_bond"
+    },
+    {
+      "name":"担保范围",
+      "indicator": "ths_grnt_scope_bond"
+    },
+    {
+      "name":"担保方式",
+      "indicator": "ths_grnt_method_bond"
+    },
+    {
+      "name":"担保条款文字",
+      "indicator": "ths_guarentee_clause_text_bond"
+    },
+    {
+      "name":"再担保人",
+      "indicator": "ths_reguarantor_bond"
+    },
+    {
+      "name":"反担保人",
+      "indicator": "ths_counter_guarantor_bond"
+    }
+  ]
+}

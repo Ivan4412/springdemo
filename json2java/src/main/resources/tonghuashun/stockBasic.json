@@ -1,0 +1,5 @@
+{
+  "codes": "同花顺-股票-实时行情-基本行情",
+  "names":"交易日期,交易时间,前收盘价,开盘价,最高价,最低价,最新价,现额,现量,均价,涨跌,涨跌幅,涨停价,跌停价,成交额,成交量,换手率,内盘,外盘,委买十档总量,委卖十档总量,总股本,总市值,市值率,连涨天数,停牌标志,交易状态,1分钟涨跌幅,3分钟涨跌幅,5分钟涨跌幅,5日涨跌幅,10日涨跌幅,20日涨跌幅,60日涨跌幅,120日涨跌幅,250日涨跌幅,年初至今涨跌幅,流通市值,量比,委比,委差,市盈率TTM,市净率LF,振幅,最新成交价,后复权因子（分红方案计算）",
+  "indicators": "tradeDate,tradeTime,preClose,open,high,low,latest,latestAmount,latestVolume,avgPrice,change,changeRatio,upperLimit,downLimit,amount,volume,turnoverRatio,sellVolume,buyVolume,totalBidVol,totalAskVol,totalShares,totalCapital,pb,riseDayCount,suspensionFlag,tradeStatus,chg_1min,chg_3min,chg_5min,chg_5d,chg_10d,chg_20d,chg_60d,chg_120d,chg_250d,chg_year,mv,vol_ratio,committee,commission_diff,pe_ttm,pbr_lf,swing,lastest_price,af_backward"
+}

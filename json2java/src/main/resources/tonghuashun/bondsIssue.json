@@ -1,0 +1,29 @@
+{
+  "codes": "同花顺-债券-基础数据-发行资料",
+  "indipara": [
+    {
+      "name":"发行公告日",
+      "indicator": "ths_ipo_issue_ad_bond"
+    },
+    {
+      "name":"发行起始日期",
+      "indicator": "ths_issue_sd_bond"
+    },
+    {
+      "name":"发行截止日期",
+      "indicator": "ths_issue_ed_bond"
+    },
+    {
+      "name":"发行方式",
+      "indicator": "ths_issue_method_bond"
+    },
+    {
+      "name":"发行对象",
+      "indicator": "ths_issue_object_bond"
+    },
+    {
+      "name":"发行价格",
+      "indicator": "ths_ipo_issue_price_bond"
+    }
+  ]
+}

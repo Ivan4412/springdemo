@@ -1,0 +1,26 @@
+{
+  "hits": [
+
+  ],
+  "实缴明细": [
+
+  ],
+  "实缴出资币种": "string",
+  "实缴出资方式": "string",
+  "实缴出资日期": "string",
+  "实缴出资额": "string",
+  "实缴额": "float",
+  "持股比": "string",
+  "股东": "string",
+  "股东类型": "string",
+  "认缴明细": [
+
+  ],
+  "认缴出资币种": "string",
+  "认缴出资方式": "string",
+  "认缴出资日期": "string",
+  "认缴出资额": "string",
+  "认缴额": "float",
+  "责任形式": "string",
+  "total": "integer"
+}

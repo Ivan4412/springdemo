@@ -1,0 +1,24 @@
+{
+  "codes": "同花顺-债券-基础数据-信用评级",
+  "indipara": [
+    {
+      "name":"发行信用评级",
+      "indicator": "ths_issue_credit_rating_bond"
+    },
+    {
+      "name":"发行主体评级",
+      "indicator": "ths_issuer_rating_bond"
+    },
+    {
+      "name":"发行主体评级展望",
+      "indicator": "ths_issue_subject_rating_expect_bond"
+    },
+    {
+      "name":"发行时担保人评级",
+      "indicator": "ths_begin_guarantor_rate_bond",
+      "indiparams": [
+        "100"
+      ]
+    }
+  ]
+}

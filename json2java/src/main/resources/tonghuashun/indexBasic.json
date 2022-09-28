@@ -1,0 +1,5 @@
+{
+  "codes": "同花顺-指数-实时行情-基本行情",
+  "names":"交易日期,交易时间,前收盘价,开盘价,最高价,最低价,最新价,领先指数,现额,现量,均价,涨跌,涨跌幅,成交额,成交量,市盈率（动）,总市值,上涨家数,下跌家数,涨停家数,跌停家数,停牌家数,振幅,最新成交价",
+  "indicators": "tradeDate,tradeTime,preClose,open,high,low,latest,indexLead,latestAmount,latestVolume,avgPrice,change,changeRatio,amount,volume,pe_auto,totalCapital_index,riseCount,fallCount,upLimitCount,downLimitCount,suspensionCount,swing,lastest_price"
+}

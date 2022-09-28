@@ -1,0 +1,89 @@
+package cn.utrust.fintech.cdcp2.core.provider.fengbao.impl;
+
+import cn.hutool.core.bean.BeanUtil;
+import cn.utrust.fintech.cdcp2.core.dto.fengbao.resp.${className}RespDto;
+import cn.utrust.fintech.cdcp2.core.provider.fengbao.FengBaoKeywordDataProvider;
+import cn.utrust.fintech.cdcp2.dto.fengbao.req.FengBaoKeywordPageReq;
+import cn.utrust.fintech.cdcp2.dto.fengbao.resp.${className}Resp;
+import cn.utrust.fintech.cdcp2.framework.json.JSON;
+import cn.utrust.fintech.cdcp2.framework.json.JSONObject;
+import cn.utrust.fintech.cdcp2.framework.util.StringUtils;
+import cn.utrust.fintech.cdcp2.framework.util.http.RestTemplateUtils;
+import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
+
+import java.util.HashMap;
+import java.util.Map;
+
+/**
+ * ${classNickName}
+ *
+ * ${author}
+ * ${date}
+ */
+ @ApiOperation("${classNickName}")
+ @Component("/openapi/fengbao/${classPath}")
+ @Slf4j
+ public class ${className}DataProvider extends FengBaoKeywordDataProvider<FengBaoKeywordPageReq, ${className}Resp, JSONObject> {
+
+    @Override
+    public String providerCode() {
+        return "${className}";
+    }
+
+    public String apiPath() {
+        return "${apiPath}";
+    }
+
+    public String apiPath2() {
+        return "${apiPath2}";
+    }
+
+    @Override
+    protected ${className}Resp doProvide(JSONObject externalData, Exception e) {
+        Object data = effectiveExternalData(externalData);
+        if (data != null) {
+            String result = JSON.toJSONString(data);
+            if (StringUtils.isNotBlank(result)) {
+                ${className}RespDto respDto = JSON.parseObject(result, ${className}RespDto.class);
+                //深拷贝返回值
+               ${className}Resp resp = new ${className}Resp();
+                BeanUtil.copyProperties(respDto, resp);
+                return resp;
+            }
+        }
+        return null;
+    }
+
+    protected JSONObject doExternalData(FengBaoKeywordPageReq param) {
+        FengBaoAccount account = getExternalAccountSetting(param, FengBaoAccount.class);
+
+        int pageSize = 10;
+        int pageNo = 1;
+        if (param.getPageNo() != null) {
+          pageNo = param.getPageNo();
+        }
+        if (param.getPageSize() != null) {
+          pageSize = param.getPageSize();
+        }
+        int skip = (pageNo - 1) * 10;
+
+        Map<String, String> requestParam = new HashMap<String, String>();
+        requestParam.put("apikey", account.getApiKey());
+        requestParam.put("size", String.valueOf(pageSize));
+        requestParam.put("from", String.valueOf(skip));
+
+        String url = RestTemplateUtils.getUrlByGet(account.getUrl() + apiPath() + param.getKeyword() +  apiPath2(), requestParam);
+
+        log.info("{}，send:{} to {} ", providerGroup().getGroupCode(), requestParam, url);
+        JSONObject response = restTemplate.getForObject(url, JSONObject.class, requestParam);
+        log.info("{}，get:{} ", providerGroup().getGroupCode(), response);
+        if (responseOk(response)) {
+            return response;
+        } else {
+            return null;
+        }
+    }
+
+}

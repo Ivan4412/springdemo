@@ -1,0 +1,70 @@
+{
+  "codes": "同花顺-港股-基础数据-证券资料",
+  "indipara": [
+    {
+      "name": "股票简称",
+      "indicator": "ths_stock_short_name_hks"
+    },
+    {
+      "name": "股票曾用名",
+      "indicator": "ths_sec_name_used_before_hks"
+    },
+    {
+      "name": "股票代码",
+      "indicator": "ths_stock_code_hks"
+    },
+    {
+      "name": "同花顺代码",
+      "indicator": "ths_thscode_hks"
+    },
+    {
+      "name": "ISIN代码",
+      "indicator": "ths_isin_code_hks"
+    },
+    {
+      "name": "同公司A股简称",
+      "indicator": "ths_corp_ashare_short_name_hks"
+    },
+    {
+      "name": "同公司A股代码",
+      "indicator": "ths_corp_ashare_code_hks"
+    },
+    {
+      "name": "股票种类",
+      "indicator": "ths_stock_varieties_hks"
+    },
+    {
+      "name": "每手股数",
+      "indicator": "ths_shares_per_hand_hks",
+      "indiparams": [
+        "20220913"
+      ]
+    },
+    {
+      "name": "首发上市日期",
+      "indicator": "ths_ipo_date_hks"
+    },
+    {
+      "name": "上市地点",
+      "indicator": "ths_listed_exchange_hks"
+    },
+    {
+      "name": "终止上市日期",
+      "indicator": "ths_stop_listing_date_hks"
+    },
+    {
+      "name": "是否港股通标的（沪港双向）",
+      "indicator": "ths_is_shhk_underlying_hks",
+      "indiparams": [
+        "20220913"
+      ]
+    },
+    {
+      "name": "是否港股通标的（深港双向）",
+      "indicator": "ths_is_szhk_underlying_hks",
+      "indiparams": [
+        "20220913"
+      ]
+    }
+  ]
+}

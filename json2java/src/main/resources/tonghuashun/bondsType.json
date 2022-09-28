@@ -1,0 +1,17 @@
+{
+  "codes": "同花顺-债券-基础数据-债券类型",
+  "indipara": [
+    {
+      "name":"THS债券一级类型",
+      "indicator": "ths_ths_bond_first_type_bond"
+    },
+    {
+      "name":"THS债券二级类型",
+      "indicator": "ths_ths_bond_second_type_bond"
+    },
+    {
+      "name":"THS债券三级类型",
+      "indicator": "ths_ths_bond_third_type_bond"
+    }
+  ]
+}

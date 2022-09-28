@@ -1,0 +1,82 @@
+{
+  "codes": "同花顺-基本资料-公司资料",
+  "indipara": [
+    {"name": "公司中文名称",
+      "indicator": "ths_corp_cn_name_stock"
+    },
+    {"name": "公司英文名称",
+      "indicator": "ths_corp_name_en_stock"
+    },
+    {"name": "成立日期",
+      "indicator": "ths_established_date_stock"
+    },
+    {"name": "工商登记号",
+      "indicator": "ths_business_reg_num_stock"
+    },
+    {"name": "统一社会信用代码",
+      "indicator": "ths_unified_social_credit_code_stock"
+    },
+    {"name": "注册资本",
+      "indicator": "ths_reg_capital_stock"
+    },
+    {"name": "控股股东",
+      "indicator": "ths_controlling_holder_stock",
+      "indiparams": [
+        "20220913"
+      ]
+    },
+    {"name": "实际控制人",
+      "indicator": "ths_actual_controller_stock",
+      "indiparams": [
+        "20220913"
+      ]
+    },
+    {"name": "实际控制人类型",
+      "indicator": "ths_actual_controller_type_stock",
+      "indiparams": [
+        "20220913"
+      ]
+    },
+    {"name": "企业类型",
+      "indicator": "ths_company_saclle_type_stock"
+    },
+    {"name": "法人代表",
+      "indicator": "ths_legal_representative_stock"
+    },
+    {"name": "省份",
+      "indicator": "ths_province_stock"
+    },
+    {"name": "地级市",
+      "indicator": "ths_prefecture_level_city_stock"
+    },
+    {"name": "员工总数",
+      "indicator": "ths_ygzs_new_stock",
+      "indiparams": [
+        "104"
+      ]
+    },
+    {"name": "注册总数",
+      "indicator": "ths_reg_address_stock"
+    },
+    {"name": "办公地址",
+      "indicator": "ths_office_address_stock"
+    },
+    {"name": "最新主体评级",
+      "indicator": "ths_latest_subject_rating_stock"
+    },
+    {"name": "所属国民经济行业",
+      "indicator": "ths_the_national_eco_industry_stock",
+      "indiparams": [
+        "2",
+        "20220913"
+      ]
+    },
+    {"name": "所属国民经济行业代码",
+      "indicator": "ths_the_national_eco_industry_code_stock",
+      "indiparams": [
+        "2",
+        "20220913"
+      ]
+    }
+  ]
+}

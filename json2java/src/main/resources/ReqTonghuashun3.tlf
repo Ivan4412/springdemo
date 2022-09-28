@@ -1,0 +1,52 @@
+package cn.utrust.fintech.cdcp2.core.dto.tonghuashun.req;
+
+import cn.utrust.fintech.cdcp2.dto.tonghuashun.req.TongHuaShunBasicEconomicReq;
+import cn.utrust.fintech.cdcp2.framework.util.DateUtils;
+import cn.utrust.fintech.cdcp2.framework.util.StringUtils;
+import lombok.Data;
+
+/**
+ * ${classNickName}
+ *
+ * ${author}
+ * ${date}
+ */
+@Data
+public class ${className} extends TongHuaShunEconomicDataDto{
+
+    /**
+     * 私有化构造函数，应通过getInstance()方法获取实例
+     */
+    private  ${className}() {
+    }
+
+    public static  ${className} getInstance(TongHuaShunBasicEconomicReq param) {
+        ${className} dataReq = ${className}.getInstance();
+        String today = DateUtils.getCurrentDate();
+        String startDate = DateUtils.getOneMonthBefore(today);
+        String endDate = today;
+        if(StringUtils.isNotEmpty(param.getStartdate())) {
+            startDate = param.getStartdate();
+        }
+        if(StringUtils.isNotEmpty(param.getEnddate())) {
+             endDate = param.getEnddate();
+        }
+        dataReq.setStartdate(startDate);
+        dataReq.setEnddate(endDate);
+        return dataReq;
+    }
+
+    /**
+    * ${classNickName}实例化方法
+    */
+    public static ${className} getInstance() {
+        ${className} data = new ${className}();
+        String indicators = "";
+        #for
+        /** ${data.columnComment} */
+        indicators = addIndicators(indicators, "${data.columnJsonName}");
+        #end
+        data.setIndicators(indicators);
+        return data;
+    }
+}

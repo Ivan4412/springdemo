@@ -1,0 +1,48 @@
+package cn.utrust.fintech.cdcp2.core.dto.tonghuashun.req;
+
+import cn.utrust.fintech.cdcp2.dto.tonghuashun.TongHuaShunIndipara;
+import cn.utrust.fintech.cdcp2.dto.tonghuashun.req.BaseTongHuaShunReq;
+import cn.utrust.fintech.cdcp2.framework.json.JSON;
+import cn.utrust.fintech.cdcp2.framework.util.DateUtils;
+import lombok.Data;
+
+import java.util.*;
+
+/**
+ * ${classNickName}
+ *
+ * ${author}
+ * ${date}
+ */
+@Data
+public class ${className} extends TongHuaShunBasicDataDto{
+
+    /**
+    * 私有化构造函数，应通过getInstance()方法获取实例
+    */
+    private ${className}() {
+    }
+
+    public static  ${className} getInstance(BaseTongHuaShunReq param) {
+       ${className} dataReq = ${className}.getInstance();
+       dataReq.setCodes(param.getCodes());
+       return dataReq;
+    }
+
+    /**
+    * ${classNickName}实例化方法
+    */
+    public static ${className} getInstance() {
+        String currentDate = DateUtils.getCurrentDate2();
+        String currentYear = DateUtils.getCurrentYear();
+        String number = "100";
+        ${className} data = new ${className}();
+        List<TongHuaShunIndipara> indiparaList = new ArrayList<>();
+        data.setIndipara(indiparaList);
+        #for
+        /** ${data.columnComment} */
+        addIndipara(indiparaList, "${data.columnJsonName}", ${data.columnParam});
+        #end
+        return data;
+    }
+}

@@ -1,0 +1,19 @@
+{
+  "codes": "同花顺-A股-基础数据-估值指标",
+  "indipara": [
+    {"name":"市盈率（PE,TTM）",
+      "indicator": "ths_pe_ttm_stock",
+      "indiparams": [
+        "20220913",
+        "100"
+      ]
+    },
+    {"name":"股息率（股票获利率）",
+      "indicator": "ths_dividend_rate_stock_stock",
+      "indiparams": [
+        "20220913",
+        "2022"
+      ]
+    }
+  ]
+}

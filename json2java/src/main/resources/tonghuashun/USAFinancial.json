@@ -1,0 +1,52 @@
+{
+  "codes": "同花顺-美股-基础数据-证券资料",
+  "indipara": [
+    {
+      "name": "股票简称",
+      "indicator": "ths_stock_short_name_uss"
+    },
+    {
+      "name": "股票代码",
+      "indicator": "ths_stock_code_uss"
+    },
+    {
+      "name": "同花顺代码",
+      "indicator": "ths_thscode_uss"
+    },
+    {
+      "name": "股票种类",
+      "indicator": "ths_stock_varieties_uss"
+    },
+    {
+      "name": "上市日期",
+      "indicator": "ths_listed_date_uss"
+    },
+    {
+      "name": "交易市场",
+      "indicator": "ths_td_mkt_uss"
+    },
+    {
+      "name": "上市板块",
+      "indicator": "ths_listing_plate_uss"
+    },
+    {
+      "name": "上市地点",
+      "indicator": "ths_listed_exchange_uss"
+    },
+    {
+      "name": "终止上市日期",
+      "indicator": "ths_stop_listing_date_uss"
+    },
+    {
+      "name": "所属概念",
+      "indicator": "ths_the_concept_uss"
+    },
+    {
+      "name": "是否属于重要指数成分",
+      "indicator": "ths_is_important_index_constituent_uss",
+      "indiparams": [
+        "1"
+      ]
+    }
+  ]
+}

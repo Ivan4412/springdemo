@@ -23,6 +23,7 @@
         <module>saTokenClient2</module>
         <module>thread</module>
         <module>json2java</module>
+        <module>translate</module>
     </modules>
     <packaging>pom</packaging>
 

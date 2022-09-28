@@ -1,0 +1,29 @@
+package cn.utrust.fintech.cdcp2.core.dto.fengbao.resp;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.List;
+
+/**
+ * ${classNickName}
+ *
+ * ${author}
+ * ${date}
+ */
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class ${className} {
+    #for
+    /**
+    * ${data.columnComment}
+    */
+    @ApiModelProperty("${data.columnComment}")
+    @JsonProperty(value = "${data.columnJsonName}")
+    protected ${data.dataType} ${data.columnName};
+    #end
+}

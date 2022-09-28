@@ -1,0 +1,93 @@
+{
+  "codes": "同花顺-港股-基础数据-公司资料",
+  "indipara": [
+    {"name":"公司中文名称",
+      "indicator": "ths_corp_cn_name_hks"
+    },
+    {"name":"公司英文名称",
+      "indicator": "ths_corp_name_en_hks"
+    },
+    {"name":"成立日期",
+      "indicator": "ths_established_date_hks"
+    },
+    {"name":"会计年结日",
+      "indicator": "ths_accounting_date_hks"
+    },
+    {"name":"总经理",
+      "indicator": "ths_general_manager_hks"
+    },
+    {"name":"董事会秘书",
+      "indicator": "ths_secretary_hks"
+    },
+    {"name":"经营范围",
+      "indicator": "ths_operating_scope_hks"
+    },
+    {"name":"公司简介",
+      "indicator": "ths_corp_profile_hks"
+    },
+    {"name":"主营产品名称",
+      "indicator": "ths_mo_product_name_hks"
+    },
+    {"name":"省份",
+      "indicator": "ths_province_hk"
+    },
+    {"name":"地区",
+      "indicator": "ths_district_hks"
+    },
+    {"name":"注册地址",
+      "indicator": "ths_reg_address_hks"
+    },
+    {"name":"办公地址",
+      "indicator": "ths_office_address_hks"
+    },
+    {"name":"公司电话",
+      "indicator": "ths_corp_tel_hks"
+    },
+    {"name":"公司传真",
+      "indicator": "ths_corp_fax_hks"
+    },
+    {"name":"公司电子邮箱地址",
+      "indicator": "ths_corp_email_hks"
+    },
+    {"name":"公司网站",
+      "indicator": "ths_corp_website_hks"
+    },
+    {"name":"实际控制人数",
+      "indicator": "ths_actual_controller_hks",
+      "indiparams": [
+        "20220913"
+      ]
+    },
+    {"name":"实际控制人类型",
+      "indicator": "ths_actual_controller_type_hks",
+      "indiparams": [
+        "20220913"
+      ]
+    },
+    {"name":"公司独立董事（历任）",
+      "indicator": "ths_independent_director_his_hks"
+    },
+    {"name":"公司独立董事（现任）",
+      "indicator": "ths_independent_director_current_hks"
+    },
+    {"name":"核数师",
+      "indicator": "ths_auditor_hks"
+    },
+    {"name":"法律顾问",
+      "indicator": "ths_legal_counsel_hks"
+    },
+    {"name":"所属恒生行业",
+      "indicator": "ths_hs_industry_hks",
+      "indiparams": [
+        "100"
+      ]
+    },
+    {"name":"所属GICS",
+      "indicator": "ths_the_gics_industry_hk",
+      "indiparams": [
+        "100",
+        "20220913"
+      ]
+    }
+  ]
+}

@@ -42,6 +42,12 @@
             <artifactId>spring-context</artifactId>
             <version>5.1.19.RELEASE</version>
         </dependency>
+        <dependency>
+            <groupId>com.yjs</groupId>
+            <artifactId>translate</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
     <properties>

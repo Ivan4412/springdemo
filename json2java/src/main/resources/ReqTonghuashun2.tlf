@@ -1,0 +1,42 @@
+package cn.utrust.fintech.cdcp2.core.dto.tonghuashun.req;
+
+import cn.utrust.fintech.cdcp2.dto.tonghuashun.req.BaseTongHuaShunReq;
+import lombok.Data;
+
+import java.util.*;
+
+/**
+ * ${classNickName}
+ *
+ * ${author}
+ * ${date}
+ */
+@Data
+public class ${className} extends TongHuaShunRealTimeQuotationDataDto{
+
+    /**
+    * 私有化构造函数，应通过getInstance()方法获取实例
+    */
+    private ${className}() {
+    }
+
+    public static  ${className} getInstance(BaseTongHuaShunReq param) {
+       ${className} dataReq = ${className}.getInstance();
+       dataReq.setCodes(param.getCodes());
+       return dataReq;
+    }
+
+    /**
+    * ${classNickName}实例化方法
+    */
+    public static ${className} getInstance() {
+        ${className} data = new ${className}();
+        String indicators = "";
+        #for
+        /** ${data.columnComment} */
+        indicators = addIndicators(indicators, "${data.columnJsonName}");
+        #end
+         data.setIndicators(indicators);
+        return data;
+    }
+}

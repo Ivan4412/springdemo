@@ -1,0 +1,74 @@
+{
+  "A级纳税人评价年度": [
+    "string"
+  ],
+  "logo_text": "string",
+  "业务主管单位": "string",
+  "原注册号": "string",
+  "发照日期": "string",
+  "发证机关": "string",
+  "吊销原因": "string",
+  "吊销日期": "string",
+  "名称": "string",
+  "地址": "string",
+  "多证合一": "string",
+  "实收资本": "string",
+  "成立日期": "string",
+  "执行事务合伙人": "string",
+  "执行事务合伙人（委派代表）": "string",
+  "投资人": "string",
+  "曾用名": [
+    "string"
+  ],
+  "标准化名称": "string",
+  "核准日期": "string",
+  "法代/执行": "string",
+  "法定代表人": "string",
+  "注册号": "string",
+  "注册地": {
+    "code": "string",
+    "区县": "string",
+    "市": "string",
+    "省": "string"
+  },
+  "注册日期": "string",
+  "注册资本币种": "string",
+  "注册资本（万元）": "float",
+  "注吊销日期": "string",
+  "注销原因": "string",
+  "注销日期": "string",
+  "派出企业名称": "string",
+  "电子邮箱": "string",
+  "登记时间": "string",
+  "登记机关": "string",
+  "登记状态": "string",
+  "省市": "string",
+  "类型": "string",
+  "类型代码": "string",
+  "组成形式": "string",
+  "经济性质": "string",
+  "经营地": {
+    "code": "string",
+    "区县": "string",
+    "市": "string",
+    "省": "string"
+  },
+  "经营场所": "string",
+  "经营期限自": "string",
+  "经营期限至": "string",
+  "经营者": "string",
+  "经营范围": "string",
+  "统一社会信用代码": "string",
+  "联系电话": "string",
+  "股票": [
+    {
+      "代码": "string",
+      "简称": "string"
+    }
+  ],
+  "设备价款": "string",
+  "评估等级": "string",
+  "负责人": "string",
+  "迁入地工商局": "string",
+  "首席代表": "string"
+}

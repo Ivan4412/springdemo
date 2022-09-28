@@ -1,0 +1,153 @@
+{
+  "codes": "同花顺-信托理财类-基础数据-基本资料",
+  "indipara": [
+    {
+      "name":"产品简称",
+      "indicator": "ths_product_short_name_trust"
+    },
+    {
+      "name":"产品全称",
+      "indicator": "ths_product_full_name_trust"
+    },
+    {
+      "name":"产品同花顺代码",
+      "indicator": "ths_product_thscode_trust"
+    },
+    {
+      "name":"信托类别",
+      "indicator": "ths_trust_category_trust"
+    },
+    {
+      "name":"信托投资领域",
+      "indicator": "ths_trust_invest_field_trust"
+    },
+    {
+      "name":"是否结构化产品",
+      "indicator": "ths_is_structured_product_trust"
+    },
+    {
+      "name":"发行地",
+      "indicator": "ths_issue_place_trust"
+    },
+    {
+      "name":"委托人",
+      "indicator": "ths_trustee_trust"
+    },
+    {
+      "name":"证券经纪人",
+      "indicator": "ths_secbroker_trust"
+    },
+    {
+      "name":"投资顾问",
+      "indicator": "ths_invest_consult_trust"
+    },
+    {
+      "name":"托管人",
+      "indicator": "ths_mendator_trust"
+    },
+    {
+      "name":"信用增级情况",
+      "indicator": "ths_credit_increase_info_trust"
+    },
+    {
+      "name":"预期收益说明",
+      "indicator": "ths_fore_yeild_explain_trust"
+    },
+    {
+      "name":"预计年收益率上限",
+      "indicator": "ths_fore_yeild_up_limit_y_trust"
+    },
+    {
+      "name":"起点金额",
+      "indicator": "ths_threshold_amt_trust"
+    },
+    {
+      "name":"最低追加金额",
+      "indicator": "ths_low_add_amt_trust"
+    },
+    {
+      "name":"预计最大发行规模",
+      "indicator": "ths_fore_max_issue_scale_trust"
+    },
+    {
+      "name":"实际发行规模",
+      "indicator": "ths_actual_issue_scale_trust"
+    },
+    {
+      "name":"推介起始日期",
+      "indicator": "ths_recommend_sd_trust"
+    },
+    {
+      "name":"推介截止日期",
+      "indicator": "ths_introduction_ed_trust"
+    },
+    {
+      "name":"成立日",
+      "indicator": "ths_establishment_date_trust"
+    },
+    {
+      "name":"到期日",
+      "indicator": "ths_maturity_date_trust"
+    },
+    {
+      "name":"存续期（年）",
+      "indicator": "ths_duration_y_trust"
+    },
+    {
+      "name":"剩余存续期（填）",
+      "indicator": "ths_surplus_duration_d_trust"
+    },
+    {
+      "name":"收益分配方式",
+      "indicator": "ths_income_distribute_method_trust"
+    },
+    {
+      "name":"还款来源",
+      "indicator": "ths_repayment_source_trust"
+    },
+    {
+      "name":"投资范围",
+      "indicator": "ths_invest_socpe_trust"
+    },
+    {
+      "name":"资金来源",
+      "indicator": "ths_capital_source_trust"
+    },
+    {
+      "name":"托管费率",
+      "indicator": "ths_mandate_fee_rate_trust"
+    },
+    {
+      "name":"受托人固定管理费率",
+      "indicator": "ths_trustee_fix_manage_fee_rate_trust"
+    },
+    {
+      "name":"投资顾问固定管理费率",
+      "indicator": "ths_ic_fixed_manage_fee_rate_trust"
+    },
+    {
+      "name":"浮动管理费率",
+      "indicator": "ths_float_manage_rate_trust"
+    },
+    {
+      "name":"认购费率说明",
+      "indicator": "ths_subscription_rate_explain_trust"
+    },
+    {
+      "name":"赎回费率说明",
+      "indicator": "ths_redemp_rate_explain_trust"
+    },
+    {
+      "name":"封闭期说明",
+      "indicator": "ths_close_period_explain_trust"
+    },
+    {
+      "name":"开放日说明",
+      "indicator": "ths_open_day_explain_trust"
+    },
+    {
+      "name":"是否为阳光私募",
+      "indicator": "ths_is_sun_private_placement_trust"
+    }
+  ]
+}

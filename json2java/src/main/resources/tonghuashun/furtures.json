@@ -1,0 +1,5 @@
+{
+  "codes": "同花顺-期货-实时行情-基本行情",
+  "names":"交易日期,交易时间,前收盘价,开盘价,最高价,最低价,最新价,现手,均价,成交量,涨跌,涨跌（结算价）,涨跌幅,涨跌幅（结算价）,增仓价,昨结算价,内盘,外盘,日增仓,振幅,最新成交价,结算价",
+  "indicators": "tradeDate,tradeTime,preClose,open,high,low,latest,latestVolume,avgPrice,volume,change,changeSettle,changeRatio,changeRatioSettle,increasePositionVol,preSettlement,sellVolume,buyVolume,dailyIncreasePosition,swing,lastest_price,settlement"
+}

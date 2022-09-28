@@ -1,0 +1,45 @@
+package cn.utrust.fintech.cdcp2.dto.tonghuashun.resp;
+
+import cn.utrust.fintech.cdcp2.conf.DateJsonDeserializer;
+import cn.utrust.fintech.cdcp2.conf.DateJsonSerializer;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.*;
+
+/**
+ * ${classNickName}
+ *
+ * ${author}
+ * ${date}
+ */
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class ${className} {
+
+    /** 请求代码 */
+    @ApiModelProperty("请求代码")
+    protected String thscode;
+
+    /** 查询结果 */
+    @ApiModelProperty("查询结果")
+    protected Table table;
+
+    @Data
+    public static class Table {
+    #for
+    /**
+    * ${data.columnComment}
+    */
+    @ApiModelProperty("${data.columnComment}")
+    @JsonProperty(value = "${data.columnJsonName}")
+    protected ${data.dataType} ${data.columnName};
+    #end
+    }
+}

@@ -1,0 +1,32 @@
+package cn.utrust.fintech.cdcp2.dto.tonghuashun.resp;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.*;
+
+/**
+ * ${classNickName}
+ *
+ * ${author}
+ * ${date}
+ */
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class ${className} {
+
+    @ApiModelProperty("数据结果列表")
+    protected List<TongHuaShunBasicEconomicResp> list;
+    /**
+    * 接口返回字段说明
+    */
+    @ApiModelProperty("该字段不返回数据，只作为本接口返回字段说明。本接口返回字段如下:" +
+    #for
+       "${data.columnJsonName}(${data.columnComment}), " ${linkf}
+    #end
+    protected String dataSpecification ;
+}

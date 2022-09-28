@@ -1,0 +1,54 @@
+{
+  "url": "string",
+  "不公开理由": "string",
+  "判决总金额": "string",
+  "判决时间": "string",
+  "判决金额": [
+    {
+      "给付方": [
+        "string"
+      ],
+      "给付金额": "string"
+    }
+  ],
+  "发布时间": "string",
+  "当事人": [
+    {
+      "公司名": "string",
+      "其他角色": [
+        "string"
+      ],
+      "判决结果": "string",
+      "名字": "string",
+      "曾用名": [
+        "string"
+      ],
+      "法定代表人": [
+        "string"
+      ],
+      "类型": "string",
+      "组织名": "string",
+      "角色": [
+        "string"
+      ]
+    }
+  ],
+  "所属地区": {
+    "市": "string",
+    "省": "string"
+  },
+  "文书类型": "string",
+  "标题": "string",
+  "案件类型": "string",
+  "案号": "string",
+  "案由": "string",
+  "段落": [
+    {
+      "内容": "string",
+      "标签": "string"
+    }
+  ],
+  "法官": "string",
+  "法院": "string",
+  "诉讼费": "string"
+}
