@@ -1,0 +1,13 @@
+{
+  "apiid": "70e0747a-e6a1-4de5-83ff-c47904182ca2",
+  "apicode": "741",
+  "seoTitle": "企业被执行人核查",
+  "description": "核查企业是否存在被执行情况，助力风险管控。返回包括但不限于案号、立案信息、关联对象、执行法院、执行标的等信息。",
+  "standardPrice": "0.20",
+  "upNotice": "0",
+  "upTips": "",
+  "isUse": "1",
+  "apiName": "被执行人核查",
+  "isSupportBalanceBill": 1,
+  "isSupportUserApply": 1
+}

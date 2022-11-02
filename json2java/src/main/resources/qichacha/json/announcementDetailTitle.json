@@ -1,0 +1,13 @@
+{
+  "apiid": "f3d02da6-98d0-4042-a715-988f5367b61a",
+  "apicode": "888",
+  "seoTitle": "开庭公告详情",
+  "description": "通过搜索关键字获取所查询企业的开庭公告信息，返回包括但不限于案由、原告被告信息、执行法院、承办部门等信息。",
+  "standardPrice": "0.30",
+  "upNotice": "0",
+  "upTips": "",
+  "isUse": "1",
+  "apiName": "开庭公告详情",
+  "isSupportBalanceBill": 1,
+  "isSupportUserApply": 1
+}

@@ -1,0 +1,129 @@
+{
+  "Titles": {
+    "title": "接口介绍",
+    "paramList": {
+      "apiUrl": "http://api.qichacha.com/EnvPunishmentCheck/GetList",
+      "supportFormat": "JSON",
+      "requestMethod": "GET",
+      "requestSample": "http://api.qichacha.com/EnvPunishmentCheck/GetList?key=AppKey&searchKey=XXXXXX"
+    }
+  },
+  "Headers": {
+    "title": "请求参数(http请求头Headers)",
+    "paramList": [
+      {
+        "name": "Token",
+        "type": "String",
+        "ismandatory": true,
+        "description": "验证加密值 Md5(key+Timespan+SecretKey) 加密的32位大写字符串)"
+      },
+      {
+        "name": "Timespan",
+        "type": "String",
+        "ismandatory": true,
+        "description": "精确到秒的Unix时间戳"
+      }
+    ]
+  },
+  "Query": {
+    "title": "请求参数(Query)",
+    "paramList": [
+      {
+        "name": "key",
+        "type": "String",
+        "ismandatory": true,
+        "description": "应用APPKEY(应用详细页查询)"
+      },
+      {
+        "name": "searchKey",
+        "type": "String",
+        "ismandatory": true,
+        "description": "搜索关键字（公司名、注册号、统一社会信用代码或KeyNo）"
+      },
+      {
+        "name": "pageIndex",
+        "type": "String",
+        "ismandatory": false,
+        "description": "页码，默认第一页"
+      },
+      {
+        "name": "pageSize",
+        "type": "String",
+        "ismandatory": false,
+        "description": "每页条数，默认为10，最大不超过20"
+      }
+    ]
+  },
+  "Body": {
+    "title": "请求参数(Body)",
+    "paramList": []
+  },
+  "jsonDemo": {
+    "Description": "JSON返回示例",
+    "content": "{\n  \"Paging\": {\n    \"PageSize\": 2,\n    \"PageIndex\": 1,\n    \"TotalRecords\": 93\n  },\n  \"Result\": {\n    \"VerifyResult\": 1,\n    \"Data\": [\n      {\n        \"Id\": \"9373b50bf4f0aecb8b062fb7332b6dd6\",\n        \"CaseNo\": \"临环罚字[2019]第165号\",\n        \"PunishDate\": \"2019-11-08\",\n        \"IllegalType\": \"\",\n        \"PunishGov\": \"临淄区环保局\"\n      },\n      {\n        \"Id\": \"6dd7fa4c603b00c995b58cf03d32ca37\",\n        \"CaseNo\": \"临环罚字[2019]第174号\",\n        \"PunishDate\": \"2019-11-08\",\n        \"IllegalType\": \"\",\n        \"PunishGov\": \"临淄区环保局\"\n      }\n    ]\n  },\n  \"Status\": \"200\",\n  \"Message\": \"查询成功\",\n  \"OrderNumber\": \"ENVPUNISHMENTCHECK2020071618072246312494\"\n}"
+  },
+  "xmlDemo": {
+    "Description": "XML返回示例",
+    "content": "<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<YJServiceResult xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n <Status>200</Status>\r\n <Message>查询成功</Message>\r\n <OrderNumber>ENVPUNISHMENTCHECK2020071618072958689081</OrderNumber>\r\n <Result>\r\n  <VerifyResult>1</VerifyResult>\r\n  <Data>\r\n   <EnvPunishmentListEntity>\r\n    <Id>9373b50bf4f0aecb8b062fb7332b6dd6</Id>\r\n    <CaseNo>临环罚字[2019]第165号</CaseNo>\r\n    <PunishDate>2019-11-08</PunishDate>\r\n    <IllegalType />\r\n    <PunishGov>临淄区环保局</PunishGov>\r\n   </EnvPunishmentListEntity>\r\n   <EnvPunishmentListEntity>\r\n    <Id>6dd7fa4c603b00c995b58cf03d32ca37</Id>\r\n    <CaseNo>临环罚字[2019]第174号</CaseNo>\r\n    <PunishDate>2019-11-08</PunishDate>\r\n    <IllegalType />\r\n    <PunishGov>临淄区环保局</PunishGov>\r\n   </EnvPunishmentListEntity>\r\n  </Data>\r\n </Result>\r\n <Paging>\r\n  <PageSize>2</PageSize>\r\n  <PageIndex>1</PageIndex>\r\n  <TotalRecords>93</TotalRecords>\r\n </Paging>\r\n</YJServiceResult>"
+  },
+  "Return": {
+    "name": "返回参数(Return)",
+    "type": "Object",
+    "description": "",
+    "length": "",
+    "content": "1",
+    "paramList": [
+      {
+        "name": "VerifyResult",
+        "type": "Int32",
+        "description": "数据是否存在(1-存在，0-不存在)",
+        "length": "1",
+        "content": "0"
+      },
+      {
+        "name": "Data",
+        "type": "List<Object>",
+        "description": "数据信息",
+        "length": "",
+        "content": "1",
+        "paramList": [
+          {
+            "name": "Id",
+            "type": "String",
+            "description": "Id",
+            "length": "36",
+            "content": "0"
+          },
+          {
+            "name": "CaseNo",
+            "type": "String",
+            "description": "决定书文号",
+            "length": "32",
+            "content": "0"
+          },
+          {
+            "name": "PunishDate",
+            "type": "String",
+            "description": "处罚日期",
+            "length": "20",
+            "content": "0"
+          },
+          {
+            "name": "IllegalType",
+            "type": "String",
+            "description": "违法类型",
+            "length": "1024",
+            "content": "0"
+          },
+          {
+            "name": "PunishGov",
+            "type": "String",
+            "description": "处罚单位",
+            "length": "256",
+            "content": "0"
+          }
+        ]
+      }
+    ]
+  }
+}

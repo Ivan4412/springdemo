@@ -1,0 +1,174 @@
+{
+  "Titles": {
+    "title": "接口介绍",
+    "paramList": {
+      "apiUrl": "http://api.qichacha.com/CaseFilingCheck/GetList",
+      "supportFormat": "JSON",
+      "requestMethod": "GET",
+      "requestSample": "http://api.qichacha.com/CaseFilingCheck/GetList?key=AppKey&searchKey=XXXXXX"
+    }
+  },
+  "Headers": {
+    "title": "请求参数(http请求头Headers)",
+    "paramList": [
+      {
+        "name": "Token",
+        "type": "String",
+        "ismandatory": true,
+        "description": "验证加密值 Md5(key+Timespan+SecretKey) 加密的32位大写字符串)"
+      },
+      {
+        "name": "Timespan",
+        "type": "String",
+        "ismandatory": true,
+        "description": "精确到秒的Unix时间戳"
+      }
+    ]
+  },
+  "Query": {
+    "title": "请求参数(Query)",
+    "paramList": [
+      {
+        "name": "key",
+        "type": "String",
+        "ismandatory": true,
+        "description": "应用APPKEY(应用详细页查询)"
+      },
+      {
+        "name": "searchKey",
+        "type": "String",
+        "ismandatory": true,
+        "description": "搜索关键字（公司名、注册号、统一社会信用代码）"
+      },
+      {
+        "name": "caseIdentity",
+        "type": "String",
+        "ismandatory": false,
+        "description": "案件身份（1：被告；2：原告）"
+      },
+      {
+        "name": "pageIndex",
+        "type": "String",
+        "ismandatory": false,
+        "description": "页码，默认第一页"
+      },
+      {
+        "name": "pageSize",
+        "type": "String",
+        "ismandatory": false,
+        "description": "每页条数，默认为10，最大不超过20"
+      }
+    ]
+  },
+  "Body": {
+    "title": "请求参数(Body)",
+    "paramList": []
+  },
+  "jsonDemo": {
+    "Description": "JSON返回示例",
+    "content": "{\n  \"Paging\": {\n    \"PageSize\": 1,\n    \"PageIndex\": 1,\n    \"TotalRecords\": 204\n  },\n  \"Result\": {\n    \"VerifyResult\": 1,\n    \"Data\": [\n      {\n        \"Id\": \"8db8d0e98287c3bb7c2ed8a76554a3e4\",\n        \"CaseNo\": \"（2021）辽0214民诉前调2044号\",\n        \"Court\": \"大连市普兰店区人民法院\",\n        \"PunishDate\": \"2021-04-07\",\n        \"ProsecutorList\": [\n          {\n            \"KeyNo\": \"837e8c3db3440424d29a579e27bd4b95\",\n            \"Name\": \"中国银行股份有限公司\"\n          }\n        ],\n        \"DefendantList\": [\n          {\n            \"KeyNo\": \"\",\n            \"Name\": \"王安平\"\n          },\n          {\n            \"KeyNo\": \"\",\n            \"Name\": \"赵淑娟\"\n          }\n        ]\n      }\n    ]\n  },\n  \"Status\": \"200\",\n  \"Message\": \"【有效请求】查询成功\",\n  \"OrderNumber\": \"CASEFILINGCHECK2021070316485560410505\"\n}"
+  },
+  "xmlDemo": {
+    "Description": "XML返回示例",
+    "content": ""
+  },
+  "Return": {
+    "name": "返回参数(Return)",
+    "type": "Object",
+    "description": "",
+    "length": "",
+    "content": "1",
+    "paramList": [
+      {
+        "name": "VerifyResult",
+        "type": "Int32",
+        "description": "数据是否存在(1-存在，0-不存在)",
+        "length": "1",
+        "content": "0"
+      },
+      {
+        "name": "Data",
+        "type": "List<Object>",
+        "description": "数据信息",
+        "length": "",
+        "content": "1",
+        "paramList": [
+          {
+            "name": "Id",
+            "type": "String",
+            "description": "立案信息Id",
+            "length": "36",
+            "content": "0"
+          },
+          {
+            "name": "CaseNo",
+            "type": "String",
+            "description": "案号",
+            "length": "32",
+            "content": "0"
+          },
+          {
+            "name": "Court",
+            "type": "String",
+            "description": "法院名称",
+            "length": "128",
+            "content": "0"
+          },
+          {
+            "name": "PunishDate",
+            "type": "String",
+            "description": "立案日期",
+            "length": "20",
+            "content": "0"
+          },
+          {
+            "name": "ProsecutorList",
+            "type": "List<Object>",
+            "description": "公诉人/原告/上诉人/申请人",
+            "length": "",
+            "content": "1",
+            "paramList": [
+              {
+                "name": "KeyNo",
+                "type": "String",
+                "description": "内部KeyNo",
+                "length": "32",
+                "content": "0"
+              },
+              {
+                "name": "Name",
+                "type": "String",
+                "description": "名称",
+                "length": "128",
+                "content": "0"
+              }
+            ]
+          },
+          {
+            "name": "DefendantList",
+            "type": "List<Object>",
+            "description": "被告人/被告/被上诉人/被申请人",
+            "length": "",
+            "content": "1",
+            "paramList": [
+              {
+                "name": "KeyNo",
+                "type": "String",
+                "description": "内部KeyNo",
+                "length": "32",
+                "content": "0"
+              },
+              {
+                "name": "Name",
+                "type": "String",
+                "description": "名称",
+                "length": "128",
+                "content": "0"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

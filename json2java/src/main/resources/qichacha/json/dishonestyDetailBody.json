@@ -1,0 +1,187 @@
+{
+  "Titles": {
+    "title": "接口介绍",
+    "paramList": {
+      "apiUrl": "http://api.qichacha.com/ShixinCheck/GetDetail",
+      "supportFormat": "JSON",
+      "requestMethod": "GET",
+      "requestSample": "http://api.qichacha.com/ShixinCheck/GetDetail?key=AppKey&id=XXXXXXXXXX"
+    }
+  },
+  "Headers": {
+    "title": "请求参数(http请求头Headers)",
+    "paramList": [
+      {
+        "name": "Token",
+        "type": "String",
+        "ismandatory": true,
+        "description": "验证加密值 Md5(key+Timespan+SecretKey) 加密的32位大写字符串)"
+      },
+      {
+        "name": "Timespan",
+        "type": "String",
+        "ismandatory": true,
+        "description": "精确到秒的Unix时间戳"
+      }
+    ]
+  },
+  "Query": {
+    "title": "请求参数(Query)",
+    "paramList": [
+      {
+        "name": "key",
+        "type": "String",
+        "ismandatory": true,
+        "description": "应用APPKEY(应用详细页查询)"
+      },
+      {
+        "name": "id",
+        "type": "String",
+        "ismandatory": true,
+        "description": "失信详情Id"
+      }
+    ]
+  },
+  "Body": {
+    "title": "请求参数(Body)",
+    "paramList": []
+  },
+  "jsonDemo": {
+    "Description": "JSON返回示例",
+    "content": "{\r\n    \"Result\": {\r\n        \"Id\": \"c2edc410f8ceed3ed256055baa8df1432\",\r\n        \"Name\": \"乐视网信息技术（北京）股份有限公司\",\r\n        \"Liandate\": \"2021-08-10\",\r\n        \"Anno\": \"（2021）京0105执34224号\",\r\n        \"Orgno\": \"769389051\",\r\n        \"Executegov\": \"北京市朝阳区人民法院\",\r\n        \"Province\": \"北京\",\r\n        \"Executeunite\": \"北京市朝阳区人民法院\",\r\n        \"Yiwu\": \"金钱给付\",\r\n        \"Executestatus\": \"全部未履行\",\r\n        \"Actionremark\": \"有履行能力而拒不履行生效法律文书确定义务\",\r\n        \"Publicdate\": \"2022-01-07\",\r\n        \"Executeno\": \"（2020）京0105民初51653号\",\r\n        \"NameKeyNoInfo\": [\r\n            {\r\n                \"KeyNo\": \"84c17a005a759a5e0d875c1ebb6c9846\",\r\n                \"Name\": \"乐视网信息技术（北京）股份有限公司\"\r\n            }\r\n        ],\r\n        \"Amount\": \"1098000\"\r\n    },\r\n    \"Status\": \"200\",\r\n    \"Message\": \"【有效请求】查询成功\",\r\n    \"OrderNumber\": \"SHIXINCHECK2022022815065433694334\"\r\n}"
+  },
+  "xmlDemo": {
+    "Description": "XML返回示例",
+    "content": "<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<YJServiceResult xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n <Status>200</Status>\r\n <Message>查询成功</Message>\r\n <OrderNumber>SHIXINCHECK2020071617552933532604</OrderNumber>\r\n <Result>\r\n  <Id>289dc576300470c7558c4297478d09b72</Id>\r\n  <Name>乐视网信息技术（北京）股份有限公司</Name>\r\n  <Liandate>2020-05-19</Liandate>\r\n  <Anno>（2020）京03执862号</Anno>\r\n  <Orgno>76938905-1</Orgno>\r\n  <Executegov>北京市第三中级人民法院</Executegov>\r\n  <Province>北京</Province>\r\n  <Executeunite>北京仲裁委员会</Executeunite>\r\n  <Yiwu>应向申请人支付人民币 163,737,808.22 元</Yiwu>\r\n  <Executestatus>全部未履行</Executestatus>\r\n  <Actionremark>违反财产报告制度</Actionremark>\r\n  <Publicdate>2020-07-07</Publicdate>\r\n  <Executeno>（2019）京仲裁字第3215号</Executeno>\r\n  <NameKeyNoInfo>\r\n   <ShixinCheckDetailNameKeyNoEntity>\r\n    <KeyNo>84c17a005a759a5e0d875c1ebb6c9846</KeyNo>\r\n    <Name>乐视网信息技术（北京）股份有限公司</Name>\r\n   </ShixinCheckDetailNameKeyNoEntity>\r\n  </NameKeyNoInfo>\r\n </Result>\r\n</YJServiceResult>"
+  },
+  "Return": {
+    "name": "返回参数(Return)",
+    "type": "Object",
+    "description": "",
+    "length": "",
+    "content": "1",
+    "paramList": [
+      {
+        "name": "Id",
+        "type": "String",
+        "description": "主键",
+        "length": "36",
+        "content": "0"
+      },
+      {
+        "name": "Name",
+        "type": "String",
+        "description": "失信被执行人",
+        "length": "128",
+        "content": "0"
+      },
+      {
+        "name": "Liandate",
+        "type": "String",
+        "description": "立案时间",
+        "length": "20",
+        "content": "0"
+      },
+      {
+        "name": "Anno",
+        "type": "String",
+        "description": "案号",
+        "length": "32",
+        "content": "0"
+      },
+      {
+        "name": "Orgno",
+        "type": "String",
+        "description": "身份证号码/组织机构代码",
+        "length": "20",
+        "content": "0"
+      },
+      {
+        "name": "Executegov",
+        "type": "String",
+        "description": "执行法院",
+        "length": "128",
+        "content": "0"
+      },
+      {
+        "name": "Province",
+        "type": "String",
+        "description": "省份",
+        "length": "10",
+        "content": "0"
+      },
+      {
+        "name": "Executeunite",
+        "type": "String",
+        "description": "做出执行依据单位",
+        "length": "256",
+        "content": "0"
+      },
+      {
+        "name": "Yiwu",
+        "type": "String",
+        "description": "生效法律文书确定的义务",
+        "length": "32",
+        "content": "0"
+      },
+      {
+        "name": "Executestatus",
+        "type": "String",
+        "description": "被执行人的履行情况",
+        "length": "256",
+        "content": "0"
+      },
+      {
+        "name": "Actionremark",
+        "type": "String",
+        "description": "失信被执行人行为具体情形",
+        "length": "256",
+        "content": "0"
+      },
+      {
+        "name": "Publicdate",
+        "type": "String",
+        "description": "发布时间",
+        "length": "20",
+        "content": "0"
+      },
+      {
+        "name": "Executeno",
+        "type": "String",
+        "description": "执行依据文号",
+        "length": "32",
+        "content": "0"
+      },
+      {
+        "name": "NameKeyNoInfo",
+        "type": "List<Object>",
+        "description": "关联的失信被执行人信息",
+        "length": "",
+        "content": "1",
+        "paramList": [
+          {
+            "name": "KeyNo",
+            "type": "String",
+            "description": "KeyNo",
+            "length": "32",
+            "content": "0"
+          },
+          {
+            "name": "Name",
+            "type": "String",
+            "description": "名称",
+            "length": "128",
+            "content": "0"
+          }
+        ]
+      },
+      {
+        "name": "Amount",
+        "type": "String",
+        "description": "涉案金额(元)",
+        "length": "32",
+        "content": "0"
+      }
+    ]
+  }
+}

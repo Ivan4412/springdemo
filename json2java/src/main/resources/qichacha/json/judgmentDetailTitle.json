@@ -1,0 +1,13 @@
+{
+  "apiid": "4baa4d97-aee9-4ae9-a178-9cebcbd9d2aa",
+  "apicode": "887",
+  "seoTitle": "裁判文书详情",
+  "description": "通过搜索关键字获取所查询企业的裁判文书信息，返回包括但不限于文书编号、文书类型、文书名称、执行法院、原告被告信息。",
+  "standardPrice": "0.30",
+  "upNotice": "0",
+  "upTips": "",
+  "isUse": "1",
+  "apiName": "裁判文书详情",
+  "isSupportBalanceBill": 1,
+  "isSupportUserApply": 1
+}

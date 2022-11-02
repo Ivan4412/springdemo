@@ -1,0 +1,13 @@
+{
+  "apiid": "51ba50e1-c1bb-4c3a-9ad9-27fc412d9ac7",
+  "apicode": "752",
+  "seoTitle": "企业股权冻结核查",
+  "description": "核查企业是否存在股权冻结情况，助力风险管控。返回包括但不限于被执行人信息、执行裁定文书、冻结日期、冻结期限、解除冻结情况等信息。\r\n",
+  "standardPrice": "0.20",
+  "upNotice": "0",
+  "upTips": "",
+  "isUse": "1",
+  "apiName": "股权冻结核查",
+  "isSupportBalanceBill": 1,
+  "isSupportUserApply": 1
+}

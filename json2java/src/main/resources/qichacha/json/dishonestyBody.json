@@ -1,0 +1,157 @@
+{
+  "Titles": {
+    "title": "接口介绍",
+    "paramList": {
+      "apiUrl": "http://api.qichacha.com/ShixinCheck/GetList",
+      "supportFormat": "JSON",
+      "requestMethod": "GET",
+      "requestSample": "http://api.qichacha.com/ShixinCheck/GetList?key=AppKey&searchKey=乐视网信息技术（北京）股份有限公司"
+    }
+  },
+  "Headers": {
+    "title": "请求参数(http请求头Headers)",
+    "paramList": [
+      {
+        "name": "Token",
+        "type": "String",
+        "ismandatory": true,
+        "description": "验证加密值 Md5(key+Timespan+SecretKey) 加密的32位大写字符串)"
+      },
+      {
+        "name": "Timespan",
+        "type": "String",
+        "ismandatory": true,
+        "description": "精确到秒的Unix时间戳"
+      }
+    ]
+  },
+  "Query": {
+    "title": "请求参数(Query)",
+    "paramList": [
+      {
+        "name": "key",
+        "type": "String",
+        "ismandatory": true,
+        "description": "应用APPKEY(应用详细页查询)"
+      },
+      {
+        "name": "searchKey",
+        "type": "String",
+        "ismandatory": true,
+        "description": "搜索关键字（公司名、注册号、统一社会信用代码或KeyNo）"
+      },
+      {
+        "name": "pageIndex",
+        "type": "String",
+        "ismandatory": false,
+        "description": "页码，默认第一页"
+      },
+      {
+        "name": "pageSize",
+        "type": "String",
+        "ismandatory": false,
+        "description": "每页条数，默认为10，最大不超过20"
+      }
+    ]
+  },
+  "Body": {
+    "title": "请求参数(Body)",
+    "paramList": []
+  },
+  "jsonDemo": {
+    "Description": "JSON返回示例",
+    "content": "{\r\n    \"Paging\": {\r\n        \"PageSize\": 1,\r\n        \"PageIndex\": 1,\r\n        \"TotalRecords\": 35\r\n    },\r\n    \"Result\": {\r\n        \"VerifyResult\": 1,\r\n        \"Data\": [\r\n            {\r\n                \"Id\": \"c2edc410f8ceed3ed256055baa8df1432\",\r\n                \"Liandate\": \"2021-08-10\",\r\n                \"Anno\": \"（2021）京0105执34224号\",\r\n                \"Executegov\": \"北京市朝阳区人民法院\",\r\n                \"Executestatus\": \"全部未履行\",\r\n                \"Publicdate\": \"2022-01-07\",\r\n                \"Executeno\": \"（2020）京0105民初51653号\",\r\n                \"ActionRemark\": \"有履行能力而拒不履行生效法律文书确定义务\",\r\n                \"Amount\": \"1098000\"\r\n            }\r\n        ]\r\n    },\r\n    \"Status\": \"200\",\r\n    \"Message\": \"【有效请求】查询成功\",\r\n    \"OrderNumber\": \"SHIXINCHECK2022022815011713633136\"\r\n}"
+  },
+  "xmlDemo": {
+    "Description": "XML返回示例",
+    "content": "<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<YJServiceResult xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n <Status>200</Status>\r\n <Message>查询成功</Message>\r\n <OrderNumber>SHIXINCHECK2020071617544866259442</OrderNumber>\r\n <Result>\r\n  <VerifyResult>1</VerifyResult>\r\n  <Data>\r\n   <ShixinCheckListEntity>\r\n    <Id>289dc576300470c7558c4297478d09b72</Id>\r\n    <Liandate>2020-05-19</Liandate>\r\n    <Anno>（2020）京03执862号</Anno>\r\n    <Executegov>北京市第三中级人民法院</Executegov>\r\n    <Executestatus>全部未履行</Executestatus>\r\n    <Publicdate>2020-07-07</Publicdate>\r\n    <Executeno>（2019）京仲裁字第3215号</Executeno>\r\n   </ShixinCheckListEntity>\r\n   <ShixinCheckListEntity>\r\n    <Id>129cbcd76ae3a20d75be32dab45d2cd72</Id>\r\n    <Liandate>2020-05-19</Liandate>\r\n    <Anno>（2020）京03执858号</Anno>\r\n    <Executegov>北京市第三中级人民法院</Executegov>\r\n    <Executestatus>全部未履行</Executestatus>\r\n    <Publicdate>2020-07-07</Publicdate>\r\n    <Executeno>（2020）京仲裁字第0285号</Executeno>\r\n   </ShixinCheckListEntity>\r\n  </Data>\r\n </Result>\r\n <Paging>\r\n  <PageSize>2</PageSize>\r\n  <PageIndex>1</PageIndex>\r\n  <TotalRecords>25</TotalRecords>\r\n </Paging>\r\n</YJServiceResult>"
+  },
+  "Return": {
+    "name": "返回参数(Return)",
+    "type": "Object",
+    "description": "",
+    "length": "",
+    "content": "1",
+    "paramList": [
+      {
+        "name": "VerifyResult",
+        "type": "Int32",
+        "description": "数据是否存在(1-存在，0-不存在)",
+        "length": "1",
+        "content": "0"
+      },
+      {
+        "name": "Data",
+        "type": "List<Object>",
+        "description": "数据信息",
+        "length": "",
+        "content": "1",
+        "paramList": [
+          {
+            "name": "Id",
+            "type": "String",
+            "description": "主键",
+            "length": "36",
+            "content": "0"
+          },
+          {
+            "name": "Liandate",
+            "type": "String",
+            "description": "立案日期，精确到天，如“2022-01-01”",
+            "length": "20",
+            "content": "0"
+          },
+          {
+            "name": "Anno",
+            "type": "String",
+            "description": "案号",
+            "length": "32",
+            "content": "0"
+          },
+          {
+            "name": "Executegov",
+            "type": "String",
+            "description": "执行法院",
+            "length": "128",
+            "content": "0"
+          },
+          {
+            "name": "Executestatus",
+            "type": "String",
+            "description": "被执行人的履行情况",
+            "length": "256",
+            "content": "0"
+          },
+          {
+            "name": "Publicdate",
+            "type": "String",
+            "description": "发布日期，精确到天，如“2022-01-01”",
+            "length": "20",
+            "content": "0"
+          },
+          {
+            "name": "Executeno",
+            "type": "String",
+            "description": "执行依据文号",
+            "length": "32",
+            "content": "0"
+          },
+          {
+            "name": "ActionRemark",
+            "type": "String",
+            "description": "失信行为",
+            "length": "256",
+            "content": "0"
+          },
+          {
+            "name": "Amount",
+            "type": "String",
+            "description": "涉案金额(元)",
+            "length": "32",
+            "content": "0"
+          }
+        ]
+      }
+    ]
+  }
+}

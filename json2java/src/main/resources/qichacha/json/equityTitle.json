@@ -1,0 +1,13 @@
+{
+  "apiid": "1fe795fd-f765-49ee-badf-4609f36569ec",
+  "apicode": "751",
+  "seoTitle": "企业股权出质核查",
+  "description": "核查企业是否存股权出质情况，返回包括但不限于质押登记信息、出质人、质押人等信息。",
+  "standardPrice": "0.20",
+  "upNotice": "0",
+  "upTips": "",
+  "isUse": "1",
+  "apiName": "股权出质核查",
+  "isSupportBalanceBill": 1,
+  "isSupportUserApply": 1
+}

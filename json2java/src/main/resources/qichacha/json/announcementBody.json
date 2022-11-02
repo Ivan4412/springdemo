@@ -1,0 +1,158 @@
+{
+  "Titles": {
+    "title": "接口介绍",
+    "paramList": {
+      "apiUrl": "http://api.qichacha.com/CourtAnnoCheck/GetList",
+      "supportFormat": "JSON",
+      "requestMethod": "GET",
+      "requestSample": "http://api.qichacha.com/CourtAnnoCheck/GetList?key=AppKey&searchKey=XXXXXX"
+    }
+  },
+  "Headers": {
+    "title": "请求参数(http请求头Headers)",
+    "paramList": [
+      {
+        "name": "Token",
+        "type": "String",
+        "ismandatory": true,
+        "description": "验证加密值 Md5(key+Timespan+SecretKey) 加密的32位大写字符串)"
+      },
+      {
+        "name": "Timespan",
+        "type": "String",
+        "ismandatory": true,
+        "description": "精确到秒的Unix时间戳"
+      }
+    ]
+  },
+  "Query": {
+    "title": "请求参数(Query)",
+    "paramList": [
+      {
+        "name": "key",
+        "type": "String",
+        "ismandatory": true,
+        "description": "应用APPKEY(应用详细页查询)"
+      },
+      {
+        "name": "searchKey",
+        "type": "String",
+        "ismandatory": true,
+        "description": "搜索关键字（公司名、注册号、统一社会信用代码）"
+      },
+      {
+        "name": "caseIdentity",
+        "type": "String",
+        "ismandatory": false,
+        "description": "案件身份（1：被告；2：原告）"
+      },
+      {
+        "name": "pageIndex",
+        "type": "String",
+        "ismandatory": false,
+        "description": "页码，默认第一页"
+      },
+      {
+        "name": "pageSize",
+        "type": "String",
+        "ismandatory": false,
+        "description": "每页条数，默认为10，最大不超过20"
+      }
+    ]
+  },
+  "Body": {
+    "title": "请求参数(Body)",
+    "paramList": []
+  },
+  "jsonDemo": {
+    "Description": "JSON返回示例",
+    "content": "{\n  \"Paging\": {\n    \"PageSize\": 1,\n    \"PageIndex\": 1,\n    \"TotalRecords\": 2192\n  },\n  \"Result\": {\n    \"VerifyResult\": 1,\n    \"Data\": [\n      {\n        \"Id\": \"4f04fabe00c6e292a02767eb1fe1da805\",\n        \"CaseNo\": \"（2021）京0102民初13539号\",\n        \"CaseReason\": \"合同纠纷\",\n        \"CourtTime\": \"2021-08-04 14:00:00\",\n        \"PartyList\": [\n          {\n            \"Name\": \"王澜涛\",\n            \"RoleType\": \"2\",\n            \"Keyno\": \"\"\n          },\n          {\n            \"Name\": \"中国银行股份有限公司\",\n            \"RoleType\": \"1\",\n            \"Keyno\": \"837e8c3db3440424d29a579e27bd4b95\"\n          },\n          {\n            \"Name\": \"北京金融街资本运营中心\",\n            \"RoleType\": \"1\",\n            \"Keyno\": \"07ffd864484419644a08ec485a60c336\"\n          }\n        ]\n      }\n    ]\n  },\n  \"Status\": \"200\",\n  \"Message\": \"【有效请求】查询成功\",\n  \"OrderNumber\": \"COURTANNOCHECK2021070316472318171176\"\n}"
+  },
+  "xmlDemo": {
+    "Description": "XML返回示例",
+    "content": ""
+  },
+  "Return": {
+    "name": "返回参数(Return)",
+    "type": "Object",
+    "description": "",
+    "length": "",
+    "content": "1",
+    "paramList": [
+      {
+        "name": "VerifyResult",
+        "type": "Int32",
+        "description": "数据是否存在(1-存在，0-不存在)",
+        "length": "1",
+        "content": "0"
+      },
+      {
+        "name": "Data",
+        "type": "List<Object>",
+        "description": "数据信息",
+        "length": "",
+        "content": "1",
+        "paramList": [
+          {
+            "name": "Id",
+            "type": "String",
+            "description": "开庭公告Id",
+            "length": "36",
+            "content": "0"
+          },
+          {
+            "name": "CaseNo",
+            "type": "String",
+            "description": "案号",
+            "length": "32",
+            "content": "0"
+          },
+          {
+            "name": "CaseReason",
+            "type": "String",
+            "description": "案由",
+            "length": "256",
+            "content": "0"
+          },
+          {
+            "name": "CourtTime",
+            "type": "String",
+            "description": "开庭时间",
+            "length": "20",
+            "content": "0"
+          },
+          {
+            "name": "PartyList",
+            "type": "List<Object>",
+            "description": "当事人信息",
+            "length": "",
+            "content": "1",
+            "paramList": [
+              {
+                "name": "Name",
+                "type": "String",
+                "description": "当事人名称",
+                "length": "64",
+                "content": "0"
+              },
+              {
+                "name": "RoleType",
+                "type": "String",
+                "description": "案件角色（1-被告，2-原告，3-第三方人）",
+                "length": "1",
+                "content": "0"
+              },
+              {
+                "name": "Keyno",
+                "type": "String",
+                "description": "当事人KeyNo",
+                "length": "32",
+                "content": "0"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

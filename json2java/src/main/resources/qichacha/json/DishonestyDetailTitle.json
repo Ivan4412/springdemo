@@ -1,0 +1,13 @@
+{
+  "apiid": "f390019d-8695-4170-84ef-73e8971fbe91",
+  "apicode": "740",
+  "seoTitle": "失信详情",
+  "description": "核查企业的是否存在失信被执行情况，助力风险管控。核查该企业的具体失信情况及履行情况，返回包括但不限于案号、立案信息、失信行为、执行法院、执行标的等信息。",
+  "standardPrice": "0.20",
+  "upNotice": "0",
+  "upTips": "",
+  "isUse": "1",
+  "apiName": "失信详情",
+  "isSupportBalanceBill": 1,
+  "isSupportUserApply": 1
+}

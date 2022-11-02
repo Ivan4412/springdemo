@@ -1,0 +1,282 @@
+{
+  "Titles": {
+    "title": "接口介绍",
+    "paramList": {
+      "apiUrl": "http://api.qichacha.com/TaxIllegalCheck/GetDetail",
+      "supportFormat": "JSON",
+      "requestMethod": "GET",
+      "requestSample": "http://api.qichacha.com/TaxIllegalCheck/GetDetail?key=AppKey&id={id}"
+    }
+  },
+  "Headers": {
+    "title": "请求参数(http请求头Headers)",
+    "paramList": [
+      {
+        "name": "Token",
+        "type": "String",
+        "ismandatory": true,
+        "description": "验证加密值 Md5(key+Timespan+SecretKey) 加密的32位大写字符串)"
+      },
+      {
+        "name": "Timespan",
+        "type": "String",
+        "ismandatory": true,
+        "description": "精确到秒的Unix时间戳"
+      }
+    ]
+  },
+  "Query": {
+    "title": "请求参数(Query)",
+    "paramList": [
+      {
+        "name": "key",
+        "type": "String",
+        "ismandatory": true,
+        "description": "应用APPKEY(应用详细页查询)"
+      },
+      {
+        "name": "id",
+        "type": "String",
+        "ismandatory": true,
+        "description": "详情Id"
+      }
+    ]
+  },
+  "Body": {
+    "title": "请求参数(Body)",
+    "paramList": []
+  },
+  "jsonDemo": {
+    "Description": "JSON返回示例",
+    "content": "{\n  \"Result\": {\n    \"Id\": \"9453dc169226b6093e36fa61c57078d8\",\n    \"TaxpayerId\": \"afef3c87db171d62479c991d85847178\",\n    \"TaxpayerName\": \"淮安民本好吉商贸有限公司\",\n    \"TaxpayerNumber\": \"91320830MA1MCMPY1G\",\n    \"OrgCode\": \"91320830MA1MCMPY1G\",\n    \"Address\": \"淮安市盱眙县盱城金源大道东侧(国贸商城A幢310室)\",\n    \"PublishTime\": \"2017-06-01\",\n    \"CaseNature\": \"虚开增值税专用发票或者虚开用于骗取出口退税、抵扣税款的其他发票\",\n    \"TaxGov\": \"江苏省盱眙县国家税务局稽查局\",\n    \"IllegalContent\": \"经江苏省盱眙县国家税务局稽查局检查，发现其在2015年12月01日至2016年06月30日期间，主要存在以下问题：对外虚开增值税销项发票73份，金额722.00万元，税额122.00万元。依照《中华人民共和国税收征收管理法》等相关法律法规的有关规定，对其处以罚款0.01万元的行政处罚，并依法移送司法机关。\",\n    \"OperInfo\": {\n      \"OperId\": \"p98a588d56f6a018aff7dda4d663199f\",\n      \"OperName\": \"高宏康\",\n      \"OperCerNo\": \"140821********0014\",\n      \"OperGender\": \"男\",\n      \"OperCerType\": \"身份证\"\n    },\n    \"FinanceChiefInfo\": {\n      \"FinanceChiefCerNo\": \"\",\n      \"FinanceChiefGender\": \"\",\n      \"FinanceChiefName\": \"\",\n      \"FinanceChiefId\": \"\",\n      \"FinanceChiefCerType\": \"\"\n    },\n    \"AgencyInfo\": {\n      \"AgencyPersonId\": \"\",\n      \"AgencyCompanyName\": \"\",\n      \"AgencyKeyNo\": \"\",\n      \"AgencyPersonName\": \"\",\n      \"AgencyPersonCerType\": \"\",\n      \"AgencyPersonCerNo\": \"\",\n      \"AgencyPersonGender\": \"\"\n    }\n  },\n  \"Status\": \"200\",\n  \"Message\": \"查询成功\",\n  \"OrderNumber\": \"TAXILLEGALCHECK2020071618263793137549\"\n}"
+  },
+  "xmlDemo": {
+    "Description": "XML返回示例",
+    "content": "<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<YJServiceResult xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n <Status>200</Status>\r\n <Message>查询成功</Message>\r\n <OrderNumber>TAXILLEGALCHECK2020071618264336515919</OrderNumber>\r\n <Result>\r\n  <Id>9453dc169226b6093e36fa61c57078d8</Id>\r\n  <TaxpayerId>afef3c87db171d62479c991d85847178</TaxpayerId>\r\n  <TaxpayerName>淮安民本好吉商贸有限公司</TaxpayerName>\r\n  <TaxpayerNumber>91320830MA1MCMPY1G</TaxpayerNumber>\r\n  <OrgCode>91320830MA1MCMPY1G</OrgCode>\r\n  <Address>淮安市盱眙县盱城金源大道东侧(国贸商城A幢310室)</Address>\r\n  <PublishTime>2017-06-01</PublishTime>\r\n  <CaseNature>虚开增值税专用发票或者虚开用于骗取出口退税、抵扣税款的其他发票</CaseNature>\r\n  <TaxGov>江苏省盱眙县国家税务局稽查局</TaxGov>\r\n  <IllegalContent>经江苏省盱眙县国家税务局稽查局检查，发现其在2015年12月01日至2016年06月30日期间，主要存在以下问题：对外虚开增值税销项发票73份，金额722.00万元，税额122.00万元。依照《中华人民共和国税收征收管理法》等相关法律法规的有关规定，对其处以罚款0.01万元的行政处罚，并依法移送司法机关。</IllegalContent>\r\n  <OperInfo>\r\n   <OperId>p98a588d56f6a018aff7dda4d663199f</OperId>\r\n   <OperName>高宏康</OperName>\r\n   <OperCerNo>140821********0014</OperCerNo>\r\n   <OperGender>男</OperGender>\r\n   <OperCerType>身份证</OperCerType>\r\n  </OperInfo>\r\n  <FinanceChiefInfo>\r\n   <FinanceChiefCerNo />\r\n   <FinanceChiefGender />\r\n   <FinanceChiefName />\r\n   <FinanceChiefId />\r\n   <FinanceChiefCerType />\r\n  </FinanceChiefInfo>\r\n  <AgencyInfo>\r\n   <AgencyPersonId />\r\n   <AgencyCompanyName />\r\n   <AgencyKeyNo />\r\n   <AgencyPersonName />\r\n   <AgencyPersonCerType />\r\n   <AgencyPersonCerNo />\r\n   <AgencyPersonGender />\r\n  </AgencyInfo>\r\n </Result>\r\n</YJServiceResult>"
+  },
+  "Return": {
+    "name": "返回参数(Return)",
+    "type": "Object",
+    "description": "",
+    "length": "",
+    "content": "1",
+    "paramList": [
+      {
+        "name": "Id",
+        "type": "String",
+        "description": "内部ID",
+        "length": "36",
+        "content": "0"
+      },
+      {
+        "name": "TaxpayerId",
+        "type": "String",
+        "description": "纳税人Id",
+        "length": "36",
+        "content": "0"
+      },
+      {
+        "name": "TaxpayerName",
+        "type": "String",
+        "description": "纳税人名称",
+        "length": "128",
+        "content": "0"
+      },
+      {
+        "name": "TaxpayerNumber",
+        "type": "String",
+        "description": "纳税人识别号",
+        "length": "32",
+        "content": "0"
+      },
+      {
+        "name": "OrgCode",
+        "type": "String",
+        "description": "组织机构代码",
+        "length": "32",
+        "content": "0"
+      },
+      {
+        "name": "Address",
+        "type": "String",
+        "description": "注册地址",
+        "length": "128",
+        "content": "0"
+      },
+      {
+        "name": "PublishTime",
+        "type": "String",
+        "description": "发布日期",
+        "length": "20",
+        "content": "0"
+      },
+      {
+        "name": "CaseNature",
+        "type": "String",
+        "description": "案件性质",
+        "length": "20",
+        "content": "0"
+      },
+      {
+        "name": "TaxGov",
+        "type": "String",
+        "description": "所属税务机关",
+        "length": "128",
+        "content": "0"
+      },
+      {
+        "name": "IllegalContent",
+        "type": "String",
+        "description": "主要违法事实、相关法律依据及税务处理处罚情况",
+        "length": "256",
+        "content": "0"
+      },
+      {
+        "name": "OperInfo",
+        "type": "Object",
+        "description": "法定代表人信息",
+        "length": "",
+        "content": "1",
+        "paramList": [
+          {
+            "name": "OperId",
+            "type": "String",
+            "description": "法定代表人Id",
+            "length": "36",
+            "content": "0"
+          },
+          {
+            "name": "OperName",
+            "type": "String",
+            "description": "法定代表人姓名",
+            "length": "50",
+            "content": "0"
+          },
+          {
+            "name": "OperCerNo",
+            "type": "String",
+            "description": "法定代表人证件号",
+            "length": "32",
+            "content": "0"
+          },
+          {
+            "name": "OperGender",
+            "type": "String",
+            "description": "法定代表人性别",
+            "length": "2",
+            "content": "0"
+          },
+          {
+            "name": "OperCerType",
+            "type": "String",
+            "description": "法定代表人证件类型",
+            "length": "10",
+            "content": "0"
+          }
+        ]
+      },
+      {
+        "name": "FinanceChiefInfo",
+        "type": "Object",
+        "description": "负有责任的财务负责人信息",
+        "length": "",
+        "content": "1",
+        "paramList": [
+          {
+            "name": "FinanceChiefCerNo",
+            "type": "String",
+            "description": "财务负责人证件号",
+            "length": "32",
+            "content": "0"
+          },
+          {
+            "name": "FinanceChiefGender",
+            "type": "String",
+            "description": "财务负责人性别",
+            "length": "2",
+            "content": "0"
+          },
+          {
+            "name": "FinanceChiefName",
+            "type": "String",
+            "description": "财务负责人名称",
+            "length": "128",
+            "content": "0"
+          },
+          {
+            "name": "FinanceChiefId",
+            "type": "String",
+            "description": "财务负责人Id",
+            "length": "36",
+            "content": "0"
+          },
+          {
+            "name": "FinanceChiefCerType",
+            "type": "String",
+            "description": "财务负责人证件类型",
+            "length": "10",
+            "content": "0"
+          }
+        ]
+      },
+      {
+        "name": "AgencyInfo",
+        "type": "Object",
+        "description": "负有责任的中介机构",
+        "length": "",
+        "content": "1",
+        "paramList": [
+          {
+            "name": "AgencyPersonId",
+            "type": "String",
+            "description": "负有责任的中介人员Id",
+            "length": "36",
+            "content": "0"
+          },
+          {
+            "name": "AgencyCompanyName",
+            "type": "String",
+            "description": "负有责任的中介机构名称",
+            "length": "128",
+            "content": "0"
+          },
+          {
+            "name": "AgencyKeyNo",
+            "type": "String",
+            "description": "负有责任的中介KeyNo",
+            "length": "32",
+            "content": "0"
+          },
+          {
+            "name": "AgencyPersonName",
+            "type": "String",
+            "description": "负有责任的中介人员名",
+            "length": "128",
+            "content": "0"
+          },
+          {
+            "name": "AgencyPersonCerType",
+            "type": "String",
+            "description": "负有责任的中介证件类型",
+            "length": "10",
+            "content": "0"
+          },
+          {
+            "name": "AgencyPersonCerNo",
+            "type": "String",
+            "description": "负有责任的中介证件号",
+            "length": "32",
+            "content": "0"
+          },
+          {
+            "name": "AgencyPersonGender",
+            "type": "String",
+            "description": "负有责任的中介性别",
+            "length": "2",
+            "content": "0"
+          }
+        ]
+      }
+    ]
+  }
+}

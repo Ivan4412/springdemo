@@ -1,0 +1,371 @@
+{
+  "Titles": {
+    "title": "接口介绍",
+    "paramList": {
+      "apiUrl": "http://api.qichacha.com/ChattelMortgageCheck/GetList",
+      "supportFormat": "JSON",
+      "requestMethod": "GET",
+      "requestSample": "http://api.qichacha.com/ChattelMortgageCheck/GetList?key=AppKey&searchKey=XXXXXX"
+    }
+  },
+  "Headers": {
+    "title": "请求参数(http请求头Headers)",
+    "paramList": [
+      {
+        "name": "Token",
+        "type": "String",
+        "ismandatory": true,
+        "description": "验证加密值 Md5(key+Timespan+SecretKey) 加密的32位大写字符串)"
+      },
+      {
+        "name": "Timespan",
+        "type": "String",
+        "ismandatory": true,
+        "description": "精确到秒的Unix时间戳"
+      }
+    ]
+  },
+  "Query": {
+    "title": "请求参数(Query)",
+    "paramList": [
+      {
+        "name": "key",
+        "type": "String",
+        "ismandatory": true,
+        "description": "应用APPKEY(应用详细页查询)"
+      },
+      {
+        "name": "searchKey",
+        "type": "String",
+        "ismandatory": true,
+        "description": "搜索关键字（公司名、注册号、统一社会信用代码或KeyNo）"
+      },
+      {
+        "name": "pageIndex",
+        "type": "String",
+        "ismandatory": false,
+        "description": "页码，默认第一页"
+      },
+      {
+        "name": "pageSize",
+        "type": "String",
+        "ismandatory": false,
+        "description": "每页条数，默认为10，最大不超过20"
+      }
+    ]
+  },
+  "Body": {
+    "title": "请求参数(Body)",
+    "paramList": []
+  },
+  "jsonDemo": {
+    "Description": "JSON返回示例",
+    "content": "{\n  \"Paging\": {\n    \"PageSize\": 2,\n    \"PageIndex\": 1,\n    \"TotalRecords\": 99\n  },\n  \"Result\": {\n    \"VerifyResult\": 1,\n    \"Data\": [\n      {\n        \"RegisterNo\": \"350981180010-1\",\n        \"RegisterDate\": \"2018-07-19\",\n        \"RegisterOffice\": \"福建省福安市市场监督管理局\",\n        \"DebtSecuredAmount\": \"60404.077688万元人民币\",\n        \"Status\": \"有效\",\n        \"Detail\": {\n          \"Pledge\": {\n            \"RegistNo\": \"350981180010-1\",\n            \"RegistDate\": \"2018-07-19\",\n            \"RegistOffice\": \"福建省福安市市场监督管理局\"\n          },\n          \"PledgeeList\": [\n            {\n              \"Name\": \"中信银行股份有限公司温州分行\",\n              \"IdentityType\": \"营业执照\",\n              \"IdentityNo\": \"913303007236389565\"\n            }\n          ],\n          \"SecuredClaim\": {\n            \"Kind\": \"其他债权\",\n            \"Amount\": \"60404.077688万元人民币\",\n            \"AssuranceScope\": \"包括主合同项下主债权、利息、罚息、复利、违约金、损害赔偿金、及实现债权、抵押权的费用（包括但不限于诉讼费、仲裁费、律师费、差旅费、评估费、过户费、保全费、公告费、执行费等）和其他所有应付的费用。\",\n            \"FulfillObligation\": \"2018-07-19至2023-07-19\",\n            \"Remark\": \"\"\n          },\n          \"GuaranteeList\": [],\n          \"CancelInfo\": null,\n          \"ChangeList\": null\n        },\n        \"DebtorInfo\": {\n          \"KeyNo\": \"e74e02450e3f16245ffef900c60a536c\",\n          \"Name\": \"福建鼎信科技有限公司\"\n        }\n      },\n      {\n        \"RegisterNo\": \"温瓯工商抵登字[2018]第9号\",\n        \"RegisterDate\": \"2018-05-02\",\n        \"RegisterOffice\": \"温州市工商行政管理局瓯海分局\",\n        \"DebtSecuredAmount\": \"8000万元人民币\",\n        \"Status\": \"有效\",\n        \"Detail\": {\n          \"Pledge\": {\n            \"RegistNo\": \"温瓯工商抵登字[2018]第9号\",\n            \"RegistDate\": \"2018-05-02\",\n            \"RegistOffice\": \"温州市工商行政管理局瓯海分局\"\n          },\n          \"PledgeeList\": [\n            {\n              \"Name\": \"中信银行股份有限公司温州分行\",\n              \"IdentityType\": \"工商营业执照\",\n              \"IdentityNo\": \"913303007236389565\"\n            }\n          ],\n          \"SecuredClaim\": {\n            \"Kind\": \"借贷合同\",\n            \"Amount\": \"8000万元人民币\",\n            \"AssuranceScope\": \"担保范围包括主合同项下主债权、利息、罚息、复利、违约金、损害赔偿金及实现债权、抵押权的费用和其他所有应付的费用（详见编号为2018信银温鹿最抵字第20180409275045号的《最高额抵押合同》）\",\n            \"FulfillObligation\": \"2018-04-27至2021-04-27\",\n            \"Remark\": \"\"\n          },\n          \"GuaranteeList\": [\n            {\n              \"Name\": \"北京现代牌汽车\",\n              \"Ownership\": \"温州市奥奔汽车有限公司\",\n              \"Other\": \"抵押人现有的以及将有的价值人民币捌仟万元的北京现代牌汽车，数量：壹仟台，质量：合格，所在地：存放于抵押人位于温州大道378号展厅及其所有停车场、二级网点。\",\n              \"Remark\": \"\",\n              \"KeyNoList\": [\n                {\n                  \"KeyNo\": \"f82cbebaa0b2e50fc148072a24ed33dd\",\n                  \"Name\": \"温州市奥奔汽车有限公司\"\n                }\n              ]\n            }\n          ],\n          \"CancelInfo\": null,\n          \"ChangeList\": null\n        },\n        \"DebtorInfo\": {\n          \"KeyNo\": \"f82cbebaa0b2e50fc148072a24ed33dd\",\n          \"Name\": \"温州市奥奔汽车有限公司\"\n        }\n      }\n    ]\n  },\n  \"Status\": \"200\",\n  \"Message\": \"查询成功\",\n  \"OrderNumber\": \"CHATTELMORTGAGECHECK2020071618090169993390\"\n}"
+  },
+  "xmlDemo": {
+    "Description": "XML返回示例",
+    "content": "<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<YJServiceResult xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n <Status>200</Status>\r\n <Message>查询成功</Message>\r\n <OrderNumber>CHATTELMORTGAGECHECK2020071618091670599758</OrderNumber>\r\n <Result>\r\n  <VerifyResult>1</VerifyResult>\r\n  <Data>\r\n   <ChattelMortgageCheckListEntity>\r\n    <RegisterNo>350981180010-1</RegisterNo>\r\n    <RegisterDate>2018-07-19</RegisterDate>\r\n    <RegisterOffice>福建省福安市市场监督管理局</RegisterOffice>\r\n    <DebtSecuredAmount>60404.077688万元人民币</DebtSecuredAmount>\r\n    <Status>有效</Status>\r\n    <Detail>\r\n     <Pledge>\r\n      <RegistNo>350981180010-1</RegistNo>\r\n      <RegistDate>2018-07-19</RegistDate>\r\n      <RegistOffice>福建省福安市市场监督管理局</RegistOffice>\r\n     </Pledge>\r\n     <PledgeeList>\r\n      <ChattelMortgageCheckListPledgeeListEntity>\r\n       <Name>中信银行股份有限公司温州分行</Name>\r\n       <IdentityType>营业执照</IdentityType>\r\n       <IdentityNo>913303007236389565</IdentityNo>\r\n      </ChattelMortgageCheckListPledgeeListEntity>\r\n     </PledgeeList>\r\n     <SecuredClaim>\r\n      <Kind>其他债权</Kind>\r\n      <Amount>60404.077688万元人民币</Amount>\r\n      <AssuranceScope>包括主合同项下主债权、利息、罚息、复利、违约金、损害赔偿金、及实现债权、抵押权的费用（包括但不限于诉讼费、仲裁费、律师费、差旅费、评估费、过户费、保全费、公告费、执行费等）和其他所有应付的费用。</AssuranceScope>\r\n      <FulfillObligation>2018-07-19至2023-07-19</FulfillObligation>\r\n      <Remark />\r\n     </SecuredClaim>\r\n     <GuaranteeList />\r\n    </Detail>\r\n    <DebtorInfo>\r\n     <KeyNo>e74e02450e3f16245ffef900c60a536c</KeyNo>\r\n     <Name>福建鼎信科技有限公司</Name>\r\n    </DebtorInfo>\r\n   </ChattelMortgageCheckListEntity>\r\n   <ChattelMortgageCheckListEntity>\r\n    <RegisterNo>温瓯工商抵登字[2018]第9号</RegisterNo>\r\n    <RegisterDate>2018-05-02</RegisterDate>\r\n    <RegisterOffice>温州市工商行政管理局瓯海分局</RegisterOffice>\r\n    <DebtSecuredAmount>8000万元人民币</DebtSecuredAmount>\r\n    <Status>有效</Status>\r\n    <Detail>\r\n     <Pledge>\r\n      <RegistNo>温瓯工商抵登字[2018]第9号</RegistNo>\r\n      <RegistDate>2018-05-02</RegistDate>\r\n      <RegistOffice>温州市工商行政管理局瓯海分局</RegistOffice>\r\n     </Pledge>\r\n     <PledgeeList>\r\n      <ChattelMortgageCheckListPledgeeListEntity>\r\n       <Name>中信银行股份有限公司温州分行</Name>\r\n       <IdentityType>工商营业执照</IdentityType>\r\n       <IdentityNo>913303007236389565</IdentityNo>\r\n      </ChattelMortgageCheckListPledgeeListEntity>\r\n     </PledgeeList>\r\n     <SecuredClaim>\r\n      <Kind>借贷合同</Kind>\r\n      <Amount>8000万元人民币</Amount>\r\n      <AssuranceScope>担保范围包括主合同项下主债权、利息、罚息、复利、违约金、损害赔偿金及实现债权、抵押权的费用和其他所有应付的费用（详见编号为2018信银温鹿最抵字第20180409275045号的《最高额抵押合同》）</AssuranceScope>\r\n      <FulfillObligation>2018-04-27至2021-04-27</FulfillObligation>\r\n      <Remark />\r\n     </SecuredClaim>\r\n     <GuaranteeList>\r\n      <ChattelMortgageCheckListGuaranteeListEntity>\r\n       <Name>北京现代牌汽车</Name>\r\n       <Ownership>温州市奥奔汽车有限公司</Ownership>\r\n       <Other>抵押人现有的以及将有的价值人民币捌仟万元的北京现代牌汽车，数量：壹仟台，质量：合格，所在地：存放于抵押人位于温州大道378号展厅及其所有停车场、二级网点。</Other>\r\n       <Remark />\r\n       <KeyNoList>\r\n        <ChattelMortgageCheckCompanyInfo>\r\n         <KeyNo>f82cbebaa0b2e50fc148072a24ed33dd</KeyNo>\r\n         <Name>温州市奥奔汽车有限公司</Name>\r\n        </ChattelMortgageCheckCompanyInfo>\r\n       </KeyNoList>\r\n      </ChattelMortgageCheckListGuaranteeListEntity>\r\n     </GuaranteeList>\r\n    </Detail>\r\n    <DebtorInfo>\r\n     <KeyNo>f82cbebaa0b2e50fc148072a24ed33dd</KeyNo>\r\n     <Name>温州市奥奔汽车有限公司</Name>\r\n    </DebtorInfo>\r\n   </ChattelMortgageCheckListEntity>\r\n  </Data>\r\n </Result>\r\n <Paging>\r\n  <PageSize>2</PageSize>\r\n  <PageIndex>1</PageIndex>\r\n  <TotalRecords>99</TotalRecords>\r\n </Paging>\r\n</YJServiceResult>"
+  },
+  "Return": {
+    "name": "返回参数(Return)",
+    "type": "Object",
+    "description": "",
+    "length": "",
+    "content": "1",
+    "paramList": [
+      {
+        "name": "VerifyResult",
+        "type": "Int32",
+        "description": "数据是否存在(1-存在，0-不存在)",
+        "length": "1",
+        "content": "0"
+      },
+      {
+        "name": "Data",
+        "type": "List<Object>",
+        "description": "数据信息",
+        "length": "",
+        "content": "1",
+        "paramList": [
+          {
+            "name": "RegisterNo",
+            "type": "String",
+            "description": "登记编号",
+            "length": "32",
+            "content": "0"
+          },
+          {
+            "name": "RegisterDate",
+            "type": "String",
+            "description": "登记时间",
+            "length": "20",
+            "content": "0"
+          },
+          {
+            "name": "RegisterOffice",
+            "type": "String",
+            "description": "登记机关",
+            "length": "128",
+            "content": "0"
+          },
+          {
+            "name": "DebtSecuredAmount",
+            "type": "String",
+            "description": "被担保债权数额",
+            "length": "32",
+            "content": "0"
+          },
+          {
+            "name": "Status",
+            "type": "String",
+            "description": "状态",
+            "length": "10",
+            "content": "0"
+          },
+          {
+            "name": "Detail",
+            "type": "Object",
+            "description": "动产抵押详细信息",
+            "length": "",
+            "content": "1",
+            "paramList": [
+              {
+                "name": "Pledge",
+                "type": "Object",
+                "description": "动产抵押登记信息",
+                "length": "",
+                "content": "1",
+                "paramList": [
+                  {
+                    "name": "RegistNo",
+                    "type": "String",
+                    "description": "登记编号",
+                    "length": "32",
+                    "content": "0"
+                  },
+                  {
+                    "name": "RegistDate",
+                    "type": "String",
+                    "description": "登记时间",
+                    "length": "20",
+                    "content": "0"
+                  },
+                  {
+                    "name": "RegistOffice",
+                    "type": "String",
+                    "description": "登记机关",
+                    "length": "128",
+                    "content": "0"
+                  }
+                ]
+              },
+              {
+                "name": "PledgeeList",
+                "type": "List<Object>",
+                "description": "抵押权人",
+                "length": "",
+                "content": "1",
+                "paramList": [
+                  {
+                    "name": "Name",
+                    "type": "String",
+                    "description": "名称",
+                    "length": "128",
+                    "content": "0"
+                  },
+                  {
+                    "name": "IdentityType",
+                    "type": "String",
+                    "description": "抵押权人证照类型",
+                    "length": "10",
+                    "content": "0"
+                  },
+                  {
+                    "name": "IdentityNo",
+                    "type": "String",
+                    "description": "证件号码",
+                    "length": "32",
+                    "content": "0"
+                  }
+                ]
+              },
+              {
+                "name": "SecuredClaim",
+                "type": "Object",
+                "description": "被担保债权概况",
+                "length": "",
+                "content": "1",
+                "paramList": [
+                  {
+                    "name": "Kind",
+                    "type": "String",
+                    "description": "种类",
+                    "length": "10",
+                    "content": "0"
+                  },
+                  {
+                    "name": "Amount",
+                    "type": "String",
+                    "description": "数额",
+                    "length": "32",
+                    "content": "0"
+                  },
+                  {
+                    "name": "AssuranceScope",
+                    "type": "String",
+                    "description": "担保的范围",
+                    "length": "10",
+                    "content": "0"
+                  },
+                  {
+                    "name": "FulfillObligation",
+                    "type": "String",
+                    "description": "债务人履行债务的期限",
+                    "length": "32",
+                    "content": "0"
+                  },
+                  {
+                    "name": "Remark",
+                    "type": "String",
+                    "description": "备注",
+                    "length": "256",
+                    "content": "0"
+                  }
+                ]
+              },
+              {
+                "name": "GuaranteeList",
+                "type": "List<Object>",
+                "description": "抵押物信息",
+                "length": "",
+                "content": "1",
+                "paramList": [
+                  {
+                    "name": "Name",
+                    "type": "String",
+                    "description": "名称",
+                    "length": "128",
+                    "content": "0"
+                  },
+                  {
+                    "name": "Ownership",
+                    "type": "String",
+                    "description": "所有权或使用权归属",
+                    "length": "256",
+                    "content": "0"
+                  },
+                  {
+                    "name": "Other",
+                    "type": "String",
+                    "description": "数量、质量、状况、所在地等情况",
+                    "length": "256",
+                    "content": "0"
+                  },
+                  {
+                    "name": "Remark",
+                    "type": "String",
+                    "description": "备注",
+                    "length": "256",
+                    "content": "0"
+                  },
+                  {
+                    "name": "KeyNoList",
+                    "type": "List<Object>",
+                    "description": "所有权或使用权归属信息",
+                    "length": "",
+                    "content": "1",
+                    "paramList": [
+                      {
+                        "name": "KeyNo",
+                        "type": "String",
+                        "description": "KeyNo",
+                        "length": "32",
+                        "content": "0"
+                      },
+                      {
+                        "name": "Name",
+                        "type": "String",
+                        "description": "名称",
+                        "length": "128",
+                        "content": "0"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "CancelInfo",
+                "type": "Object",
+                "description": "动产抵押登记注销信息",
+                "length": "",
+                "content": "1",
+                "paramList": [
+                  {
+                    "name": "CancelDate",
+                    "type": "String",
+                    "description": "动产抵押登记注销时间",
+                    "length": "20",
+                    "content": "0"
+                  },
+                  {
+                    "name": "CancelReason",
+                    "type": "String",
+                    "description": "动产抵押登记注销原因",
+                    "length": "256",
+                    "content": "0"
+                  }
+                ]
+              },
+              {
+                "name": "ChangeList",
+                "type": "List<Object>",
+                "description": "动产抵押登记变更信息",
+                "length": "",
+                "content": "1",
+                "paramList": [
+                  {
+                    "name": "ChangeDate",
+                    "type": "String",
+                    "description": "动产抵押登记变更日期",
+                    "length": "20",
+                    "content": "0"
+                  },
+                  {
+                    "name": "ChangeContent",
+                    "type": "String",
+                    "description": "动产抵押登记变更内容",
+                    "length": "4096",
+                    "content": "0"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "DebtorInfo",
+            "type": "Object",
+            "description": "债务人信息",
+            "length": "",
+            "content": "1",
+            "paramList": [
+              {
+                "name": "KeyNo",
+                "type": "String",
+                "description": "KeyNo",
+                "length": "32",
+                "content": "0"
+              },
+              {
+                "name": "Name",
+                "type": "String",
+                "description": "名称",
+                "length": "128",
+                "content": "0"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "apiid": "cdeea4d1-ddcb-42e7-9ac1-bdd5c9b720d0",
+  "apicode": "618",
+  "seoTitle": "企业联系信息查询",
+  "description": "通过查询关键字，查询企业的联系信息，返回包括但不限于公司名称、法定代表人、成立日期、状态、统一社会信用代码、注册资金、联系电话等字段。",
+  "standardPrice": "0.30",
+  "upNotice": "0",
+  "upTips": "",
+  "isUse": "1",
+  "apiName": "联系信息查询",
+  "isSupportBalanceBill": 1,
+  "isSupportUserApply": 1
+}

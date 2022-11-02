@@ -1,0 +1,32 @@
+package cn.utrust.fintech.cdcp2.core.dto.qichacha.resp;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.List;
+
+/**
+ * ${classNickName}
+ *
+ * ${author}
+ * ${date}
+ */
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class ${className} {
+    #for
+    /**
+    * ${data.columnComment}
+    */
+    #ifDate
+    @ApiModelProperty("${data.columnComment}")
+    @JsonProperty(value = "${data.columnJsonName}")
+    protected ${data.dataType} ${data.columnName};
+    #ifObject
+    #end
+
+}

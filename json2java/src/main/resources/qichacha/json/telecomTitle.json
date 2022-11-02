@@ -1,0 +1,13 @@
+{
+  "apiid": "464238e5-e2e6-425b-a8b8-2f1c4fd04d73",
+  "apicode": "726",
+  "seoTitle": "企业电信许可",
+  "description": "企业电信许可范围，公司名称，电信许可证号、许可业务、有效期。",
+  "standardPrice": "0.20",
+  "upNotice": "0",
+  "upTips": "",
+  "isUse": "1",
+  "apiName": "电信许可",
+  "isSupportBalanceBill": 1,
+  "isSupportUserApply": 1
+}

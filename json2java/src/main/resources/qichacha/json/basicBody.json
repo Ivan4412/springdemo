@@ -1,0 +1,787 @@
+{
+  "Titles": {
+    "title": "接口介绍",
+    "paramList": {
+      "apiUrl": "http://api.qichacha.com/ECIComplement/GetInfo",
+      "supportFormat": "JSON",
+      "requestMethod": "GET",
+      "requestSample": "http://api.qichacha.com/ECIComplement/GetInfo?key=AppKey&searchKey=xxxxxx"
+    }
+  },
+  "Headers": {
+    "title": "请求参数(http请求头Headers)",
+    "paramList": [
+      {
+        "name": "Token",
+        "type": "String",
+        "ismandatory": true,
+        "description": "验证加密值 Md5(key+Timespan+SecretKey) 加密的32位大写字符串)"
+      },
+      {
+        "name": "Timespan",
+        "type": "String",
+        "ismandatory": true,
+        "description": "精确到秒的Unix时间戳"
+      }
+    ]
+  },
+  "Query": {
+    "title": "请求参数(Query)",
+    "paramList": [
+      {
+        "name": "key",
+        "type": "String",
+        "ismandatory": true,
+        "description": "应用APPKEY(应用详细页查询)"
+      },
+      {
+        "name": "searchKey",
+        "type": "String",
+        "ismandatory": true,
+        "description": "搜索关键字（企业名称、统一社会信用代码、注册号）"
+      }
+    ]
+  },
+  "Body": {
+    "title": "请求参数(Body)",
+    "paramList": []
+  },
+  "jsonDemo": {
+    "Description": "JSON返回示例",
+    "content": "{\r\n    \"Status\": \"200\",\r\n    \"Message\": \"【有效请求】查询成功\",\r\n    \"OrderNumber\": \"ECICOMPLEMENT2022030816573925429578\",\r\n    \"Result\": {\r\n        \"KeyNo\": \"xxxxxxxxxxxxxxxxx\",\r\n        \"Name\": \"xxxxxxxxxx\",\r\n        \"OperId\": \"xxxxxxxx\",\r\n        \"OperName\": \"xxxxxxxxx\",\r\n        \"Status\": \"存续（在营、开业、在册）\",\r\n        \"StartDate\": \"2010-03-03\",\r\n        \"RegistCapi\": \"185000万元人民币\",\r\n        \"RecCap\": \"185000万元人民币\",\r\n        \"CheckDate\": \"2021-04-27\",\r\n        \"OrgNo\": \"xxxxxxxx\",\r\n        \"No\": \"xxxxxxxxx\",\r\n        \"CreditCode\": \"xxxxxxxx\",\r\n        \"EconKind\": \"有限责任公司（自然人投资或控股）\",\r\n        \"TermStart\": \"2010-03-03\",\r\n        \"TermEnd\": \"2030-03-02\",\r\n        \"TaxpayerType\": \"一般纳税人\",\r\n        \"BelongOrg\": \"xxxxxxxxxx市场监督管理局\",\r\n        \"PersonScope\": \"10000以上\",\r\n        \"InsuredCount\": \"114\",\r\n        \"EnglishName\": \"xxxxxxxxxx\",\r\n        \"IXCode\": \"xxxxxxxxxx\",\r\n        \"Address\": \"xxxxxxxxxxxxxxxxx\",\r\n        \"Scope\": \"xxxxxxxxxxxxxxxxx\",\r\n        \"IsOnStock\": \"0\",\r\n        \"StockNumber\": \"\",\r\n        \"StockType\": \"\",\r\n        \"ImageUrl\": \"xxxxxxxxx\",\r\n        \"PhoneNumber\": \"010-60601234\",\r\n        \"Email\": \"xxxxxxxx\",\r\n        \"WebSiteUrl\": \"http://www.mi.com\",\r\n        \"EntNature\": \"0\",\r\n        \"Area\": {\r\n            \"Province\": \"北京市\",\r\n            \"City\": \"北京市\",\r\n            \"County\": \"海淀区\"\r\n        },\r\n        \"AreaCode\": \"320571\",\r\n        \"Industry\": {\r\n            \"IndustryCode\": \"M\",\r\n            \"Industry\": \"科学研究和技术服务业\",\r\n            \"SubIndustryCode\": \"75\",\r\n            \"SubIndustry\": \"科技推广和应用服务业\",\r\n            \"MiddleCategoryCode\": \"751\",\r\n            \"MiddleCategory\": \"技术推广服务\",\r\n            \"SmallCategoryCode\": \"7519\",\r\n            \"SmallCategory\": \"其他技术推广服务\"\r\n        },\r\n        \"UsedNameList\": [\r\n            {\r\n                \"Name\": \"xxxxxxxxxx\",\r\n                \"ChangeDate\": \"1970-01-17\"\r\n            }\r\n        ],\r\n        \"RevokeInfo\": null,\r\n        \"ShareHolderList\": [\r\n            {\r\n                \"KeyNo\": \"xxxxxxxxx\",\r\n                \"StockName\": \"xxxxx\"\r\n            }\r\n        ],\r\n        \"EmployeeList\": [\r\n            {\r\n                \"KeyNo\": \"xxxxxxx\",\r\n                \"Name\": \"xxxxxxx\",\r\n                \"Job\": \"xxxxxxxxxx\"\r\n            }\r\n        ],\r\n        \"InvestList\": [\r\n            {\r\n                \"KeyNo\": \"xxxxxxxxxx\",\r\n                \"Name\": \"xxxxxxxxxx\",\r\n                \"RegistCapi\": \"247655.7552万元人民币\",\r\n                \"StartDate\": \"2013-12-26\",\r\n                \"Status\": \"存续\",\r\n                \"OperName\": \"xxxxxxx\"\r\n            }\r\n        ],\r\n        \"ChangeList\": [\r\n            {\r\n                \"ProjectName\": \"经营范围\",\r\n                \"BeforeList\": [\r\n                    \"技术开发\",\r\n                    \"货物进出口、技术进出口、代理进出口\"\r\n                ],\r\n                \"AfterList\": [\r\n                    \"技术开发\",\r\n                    \"货物进出口、技术进出口、代理进出口\"\r\n                ],\r\n                \"ChangeDate\": \"1970-01-20\"\r\n            }\r\n        ],\r\n        \"ControlList\": [\r\n            {\r\n                \"KeyNo\": \"xxxxxxxx\",\r\n                \"Name\": \"xxx\",\r\n                \"Province\": \"天津市\",\r\n                \"Industry\": \"金融业\",\r\n                \"Status\": \"存续\"\r\n            }\r\n        ],\r\n        \"BranchList\": [\r\n            {\r\n                \"KeyNo\": \"xxxxxxxxxxx\",\r\n                \"Name\": \"xxxxxxx\",\r\n                \"DirectorName\": \"xxx\",\r\n                \"Status\": \"存续\"\r\n            }\r\n        ],\r\n        \"ParentInfo\": null,\r\n        \"MoreEmailList\": [],\r\n        \"MoreTelList\": [\r\n            {\r\n                \"Source\": \"2020年报\",\r\n                \"Value\": \"xxxx\"\r\n            },\r\n            {\r\n                \"Source\": \"2013年报\",\r\n                \"Value\": \"xxxxx\"\r\n            },\r\n            {\r\n                \"Source\": \"互联网\",\r\n                \"Value\": \"xxxxxxx\"\r\n            },\r\n            {\r\n                \"Source\": \"互联网\",\r\n                \"Value\": \"xxxxxxx\"\r\n            }\r\n        ],\r\n        \"EntTagList\": [\r\n            {\r\n                \"Type\": \"903\",\r\n                \"Name\": \"存续\"\r\n            },\r\n            {\r\n                \"Type\": \"99\",\r\n                \"Name\": \"曾用名\"\r\n            },\r\n            {\r\n                \"Type\": \"108\",\r\n                \"Name\": \"高新技术企业\"\r\n            }\r\n        ]\r\n    }\r\n}"
+  },
+  "xmlDemo": {
+    "Description": "XML返回示例",
+    "content": ""
+  },
+  "Return": {
+    "name": "返回参数(Return)",
+    "type": "Object",
+    "description": "",
+    "length": "",
+    "content": "1",
+    "paramList": [
+      {
+        "name": "KeyNo",
+        "type": "String",
+        "description": "企业KeyNo",
+        "length": "32",
+        "content": "0"
+      },
+      {
+        "name": "Name",
+        "type": "String",
+        "description": "企业名称",
+        "length": "128",
+        "content": "0"
+      },
+      {
+        "name": "OperId",
+        "type": "String",
+        "description": "法定代表人ID",
+        "length": "36",
+        "content": "0"
+      },
+      {
+        "name": "OperName",
+        "type": "String",
+        "description": "法定代表人",
+        "length": "50",
+        "content": "0"
+      },
+      {
+        "name": "Status",
+        "type": "String",
+        "description": "登记状态",
+        "length": "32",
+        "content": "0"
+      },
+      {
+        "name": "StartDate",
+        "type": "String",
+        "description": "成立日期，精确到天，如“2022-01-01”",
+        "length": "20",
+        "content": "0"
+      },
+      {
+        "name": "RegistCapi",
+        "type": "String",
+        "description": "注册资本",
+        "length": "32",
+        "content": "0"
+      },
+      {
+        "name": "RecCap",
+        "type": "String",
+        "description": "实缴资本",
+        "length": "32",
+        "content": "0"
+      },
+      {
+        "name": "CheckDate",
+        "type": "String",
+        "description": "核准日期，精确到天，如“2022-01-01”",
+        "length": "20",
+        "content": "0"
+      },
+      {
+        "name": "OrgNo",
+        "type": "String",
+        "description": "组织机构代码",
+        "length": "20",
+        "content": "0"
+      },
+      {
+        "name": "No",
+        "type": "String",
+        "description": "工商注册号",
+        "length": "20",
+        "content": "0"
+      },
+      {
+        "name": "CreditCode",
+        "type": "String",
+        "description": "统一社会信用代码",
+        "length": "20",
+        "content": "0"
+      },
+      {
+        "name": "EconKind",
+        "type": "String",
+        "description": "企业类型",
+        "length": "48",
+        "content": "0"
+      },
+      {
+        "name": "TermStart",
+        "type": "String",
+        "description": "营业期限始，精确到天，如“2022-01-01”",
+        "length": "20",
+        "content": "0"
+      },
+      {
+        "name": "TermEnd",
+        "type": "String",
+        "description": "营业期限至，精确到天，如无规定期限，则为空",
+        "length": "20",
+        "content": "0"
+      },
+      {
+        "name": "TaxpayerType",
+        "type": "String",
+        "description": "纳税人资质",
+        "length": "10",
+        "content": "0"
+      },
+      {
+        "name": "BelongOrg",
+        "type": "String",
+        "description": "登记机关",
+        "length": "128",
+        "content": "0"
+      },
+      {
+        "name": "PersonScope",
+        "type": "String",
+        "description": "人员规模",
+        "length": "10",
+        "content": "0"
+      },
+      {
+        "name": "InsuredCount",
+        "type": "String",
+        "description": "参保人数",
+        "length": "10",
+        "content": "0"
+      },
+      {
+        "name": "EnglishName",
+        "type": "String",
+        "description": "英文名",
+        "length": "128",
+        "content": "0"
+      },
+      {
+        "name": "IXCode",
+        "type": "String",
+        "description": "进出口企业代码",
+        "length": "20",
+        "content": "0"
+      },
+      {
+        "name": "Address",
+        "type": "String",
+        "description": "注册地址",
+        "length": "128",
+        "content": "0"
+      },
+      {
+        "name": "Scope",
+        "type": "String",
+        "description": "经营范围",
+        "length": "1024",
+        "content": "0"
+      },
+      {
+        "name": "IsOnStock",
+        "type": "String",
+        "description": "是否上市（0-未上市，1-上市）",
+        "length": "1",
+        "content": "0"
+      },
+      {
+        "name": "StockNumber",
+        "type": "String",
+        "description": "股票代码（如A股和港股同时存在，优先显示A股代码）",
+        "length": "10",
+        "content": "0"
+      },
+      {
+        "name": "StockType",
+        "type": "String",
+        "description": "上市类型（A股、中概股、港股、科创板、新三板、新四板）",
+        "length": "10",
+        "content": "0"
+      },
+      {
+        "name": "ImageUrl",
+        "type": "String",
+        "description": "Logo地址",
+        "length": "128",
+        "content": "0"
+      },
+      {
+        "name": "PhoneNumber",
+        "type": "String",
+        "description": "联系电话",
+        "length": "32",
+        "content": "0"
+      },
+      {
+        "name": "Email",
+        "type": "String",
+        "description": "邮箱",
+        "length": "32",
+        "content": "0"
+      },
+      {
+        "name": "WebSiteUrl",
+        "type": "String",
+        "description": "官网",
+        "length": "128",
+        "content": "0"
+      },
+      {
+        "name": "EntNature",
+        "type": "String",
+        "description": "企业性质，0-大陆企业，1-社会组织 ，3-中国香港公司，4-事业单位，5-中国台湾公司，6-基金会，7-医院，8-海外公司，9-律师事务所，10-学校 ，11-机关单位，-1-其他",
+        "length": "2",
+        "content": "0"
+      },
+      {
+        "name": "Area",
+        "type": "Object",
+        "description": "所属区域",
+        "length": "",
+        "content": "1",
+        "paramList": [
+          {
+            "name": "Province",
+            "type": "String",
+            "description": "省份",
+            "length": "32",
+            "content": "0"
+          },
+          {
+            "name": "City",
+            "type": "String",
+            "description": "城市",
+            "length": "32",
+            "content": "0"
+          },
+          {
+            "name": "County",
+            "type": "String",
+            "description": "区域",
+            "length": "32",
+            "content": "0"
+          }
+        ]
+      },
+      {
+        "name": "AreaCode",
+        "type": "String",
+        "description": "行政区划代码",
+        "length": "6",
+        "content": "0"
+      },
+      {
+        "name": "Industry",
+        "type": "Object",
+        "description": "国民行业分类数据",
+        "length": "",
+        "content": "1",
+        "paramList": [
+          {
+            "name": "IndustryCode",
+            "type": "String",
+            "description": "行业门类code",
+            "length": "5",
+            "content": "0"
+          },
+          {
+            "name": "Industry",
+            "type": "String",
+            "description": "行业门类描述",
+            "length": "50",
+            "content": "0"
+          },
+          {
+            "name": "SubIndustryCode",
+            "type": "String",
+            "description": "行业大类code",
+            "length": "5",
+            "content": "0"
+          },
+          {
+            "name": "SubIndustry",
+            "type": "String",
+            "description": "行业大类描述",
+            "length": "50",
+            "content": "0"
+          },
+          {
+            "name": "MiddleCategoryCode",
+            "type": "String",
+            "description": "行业中类code",
+            "length": "5",
+            "content": "0"
+          },
+          {
+            "name": "MiddleCategory",
+            "type": "String",
+            "description": "行业中类描述",
+            "length": "50",
+            "content": "0"
+          },
+          {
+            "name": "SmallCategoryCode",
+            "type": "String",
+            "description": "行业小类code",
+            "length": "5",
+            "content": "0"
+          },
+          {
+            "name": "SmallCategory",
+            "type": "String",
+            "description": "行业小类描述",
+            "length": "50",
+            "content": "0"
+          }
+        ]
+      },
+      {
+        "name": "UsedNameList",
+        "type": "List<Object>",
+        "description": "曾用名",
+        "length": "",
+        "content": "1",
+        "paramList": [
+          {
+            "name": "Name",
+            "type": "String",
+            "description": "名称",
+            "length": "128",
+            "content": "0"
+          },
+          {
+            "name": "ChangeDate",
+            "type": "String",
+            "description": "变更日期",
+            "length": "20",
+            "content": "0"
+          }
+        ]
+      },
+      {
+        "name": "RevokeInfo",
+        "type": "Object",
+        "description": "注销吊销信息",
+        "length": "",
+        "content": "1",
+        "paramList": [
+          {
+            "name": "CancelDate",
+            "type": "String",
+            "description": "注销日期",
+            "length": "20",
+            "content": "0"
+          },
+          {
+            "name": "CancelReason",
+            "type": "String",
+            "description": "注销原因",
+            "length": "256",
+            "content": "0"
+          },
+          {
+            "name": "RevokeDate",
+            "type": "String",
+            "description": "吊销日期",
+            "length": "20",
+            "content": "0"
+          },
+          {
+            "name": "RevokeReason",
+            "type": "String",
+            "description": "吊销原因",
+            "length": "256",
+            "content": "0"
+          }
+        ]
+      },
+      {
+        "name": "ShareHolderList",
+        "type": "List<Object>",
+        "description": "工商登记股东信息（最多展示100条）",
+        "length": "",
+        "content": "1",
+        "paramList": [
+          {
+            "name": "KeyNo",
+            "type": "String",
+            "description": "内部KeyNo",
+            "length": "32",
+            "content": "0"
+          },
+          {
+            "name": "StockName",
+            "type": "String",
+            "description": "股东姓名",
+            "length": "128",
+            "content": "0"
+          }
+        ]
+      },
+      {
+        "name": "EmployeeList",
+        "type": "List<Object>",
+        "description": "工商登记主要人员信息（最多展示100条）",
+        "length": "",
+        "content": "1",
+        "paramList": [
+          {
+            "name": "KeyNo",
+            "type": "String",
+            "description": "内部KeyNo",
+            "length": "32",
+            "content": "0"
+          },
+          {
+            "name": "Name",
+            "type": "String",
+            "description": "姓名",
+            "length": "128",
+            "content": "0"
+          },
+          {
+            "name": "Job",
+            "type": "String",
+            "description": "职务",
+            "length": "20",
+            "content": "0"
+          }
+        ]
+      },
+      {
+        "name": "InvestList",
+        "type": "List<Object>",
+        "description": "对外投资企业信息（最多展示100条）",
+        "length": "",
+        "content": "1",
+        "paramList": [
+          {
+            "name": "KeyNo",
+            "type": "String",
+            "description": "被投资企业KeyNo",
+            "length": "32",
+            "content": "0"
+          },
+          {
+            "name": "Name",
+            "type": "String",
+            "description": "被投资企业名称",
+            "length": "128",
+            "content": "0"
+          },
+          {
+            "name": "RegistCapi",
+            "type": "String",
+            "description": "被投资企业注册资本",
+            "length": "32",
+            "content": "0"
+          },
+          {
+            "name": "StartDate",
+            "type": "String",
+            "description": "被投资企业成立日期，精确到天，如“2022-01-01”",
+            "length": "20",
+            "content": "0"
+          },
+          {
+            "name": "Status",
+            "type": "String",
+            "description": "被投资企业企业状态",
+            "length": "10",
+            "content": "0"
+          },
+          {
+            "name": "OperName",
+            "type": "String",
+            "description": "被投资企业法定代表人",
+            "length": "50",
+            "content": "0"
+          }
+        ]
+      },
+      {
+        "name": "ChangeList",
+        "type": "List<Object>",
+        "description": "变更记录信息",
+        "length": "",
+        "content": "1",
+        "paramList": [
+          {
+            "name": "ProjectName",
+            "type": "String",
+            "description": "变更项目",
+            "length": "128",
+            "content": "0"
+          },
+          {
+            "name": "BeforeList",
+            "type": "List<string>",
+            "description": "变更前内容",
+            "length": "",
+            "content": "0"
+          },
+          {
+            "name": "AfterList",
+            "type": "List<string>",
+            "description": "变更后内容",
+            "length": "",
+            "content": "0"
+          },
+          {
+            "name": "ChangeDate",
+            "type": "String",
+            "description": "变更日期，精确到天，如“2022-01-01”",
+            "length": "20",
+            "content": "0"
+          }
+        ]
+      },
+      {
+        "name": "ControlList",
+        "type": "List<Object>",
+        "description": "控制企业信息（最多展示100条）",
+        "length": "",
+        "content": "1",
+        "paramList": [
+          {
+            "name": "KeyNo",
+            "type": "String",
+            "description": "控制企业KeyNo",
+            "length": "32",
+            "content": "0"
+          },
+          {
+            "name": "Name",
+            "type": "String",
+            "description": "控制企业名称",
+            "length": "128",
+            "content": "0"
+          },
+          {
+            "name": "Province",
+            "type": "String",
+            "description": "省份",
+            "length": "10",
+            "content": "0"
+          },
+          {
+            "name": "Industry",
+            "type": "String",
+            "description": "行业",
+            "length": "50",
+            "content": "0"
+          },
+          {
+            "name": "Status",
+            "type": "String",
+            "description": "控制企业状态",
+            "length": "10",
+            "content": "0"
+          }
+        ]
+      },
+      {
+        "name": "BranchList",
+        "type": "List<Object>",
+        "description": "分支机构信息（最多展示100条）",
+        "length": "",
+        "content": "1",
+        "paramList": [
+          {
+            "name": "KeyNo",
+            "type": "String",
+            "description": "企业KeyNo",
+            "length": "32",
+            "content": "0"
+          },
+          {
+            "name": "Name",
+            "type": "String",
+            "description": "企业名称",
+            "length": "128",
+            "content": "0"
+          },
+          {
+            "name": "DirectorName",
+            "type": "String",
+            "description": "负责人名称",
+            "length": "128",
+            "content": "0"
+          },
+          {
+            "name": "Status",
+            "type": "String",
+            "description": "状态",
+            "length": "10",
+            "content": "0"
+          }
+        ]
+      },
+      {
+        "name": "ParentInfo",
+        "type": "Object",
+        "description": "总公司信息",
+        "length": "",
+        "content": "1",
+        "paramList": [
+          {
+            "name": "KeyNo",
+            "type": "String",
+            "description": "企业KeyNo",
+            "length": "32",
+            "content": "0"
+          },
+          {
+            "name": "Name",
+            "type": "String",
+            "description": "企业名称",
+            "length": "128",
+            "content": "0"
+          },
+          {
+            "name": "OperName",
+            "type": "String",
+            "description": "法定代表人姓名",
+            "length": "50",
+            "content": "0"
+          },
+          {
+            "name": "RegistCapi",
+            "type": "String",
+            "description": "注册资本",
+            "length": "32",
+            "content": "0"
+          },
+          {
+            "name": "StartDate",
+            "type": "String",
+            "description": "成立日期，精确到天，如“2022-01-01”",
+            "length": "20",
+            "content": "0"
+          },
+          {
+            "name": "Status",
+            "type": "String",
+            "description": "状态",
+            "length": "10",
+            "content": "0"
+          }
+        ]
+      },
+      {
+        "name": "MoreEmailList",
+        "type": "List<Object>",
+        "description": "更多邮箱",
+        "length": "",
+        "content": "1",
+        "paramList": [
+          {
+            "name": "Source",
+            "type": "String",
+            "description": "来源，如“互联网”",
+            "length": "32",
+            "content": "0"
+          },
+          {
+            "name": "Value",
+            "type": "String",
+            "description": "对应的值",
+            "length": "32",
+            "content": "0"
+          }
+        ]
+      },
+      {
+        "name": "MoreTelList",
+        "type": "List<Object>",
+        "description": "更多电话",
+        "length": "",
+        "content": "1",
+        "paramList": [
+          {
+            "name": "Source",
+            "type": "String",
+            "description": "来源，如“互联网”",
+            "length": "32",
+            "content": "0"
+          },
+          {
+            "name": "Value",
+            "type": "String",
+            "description": "对应的值",
+            "length": "32",
+            "content": "0"
+          }
+        ]
+      },
+      {
+        "name": "EntTagList",
+        "type": "List<Object>",
+        "description": "企业标签\\企业画像",
+        "length": "",
+        "content": "1",
+        "paramList": [
+          {
+            "name": "Type",
+            "type": "String",
+            "description": "类型",
+            "length": "10",
+            "content": "0"
+          },
+          {
+            "name": "Name",
+            "type": "String",
+            "description": "类型说明",
+            "length": "50",
+            "content": "0"
+          }
+        ]
+      }
+    ]
+  }
+}

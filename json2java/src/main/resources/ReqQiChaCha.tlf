@@ -1,0 +1,32 @@
+package cn.utrust.fintech.cdcp2.core.dto.qichacha.req;
+
+import cn.utrust.fintech.cdcp2.dto.BaseKeywordReq;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
+/**
+ * ${classNickName}
+ *
+ * ${author}
+ * ${date}
+ */
+@Data
+@EqualsAndHashCode(callSuper = true)
+public class ${className} extends BaseKeywordReq {
+
+   @ApiModelProperty(value = "搜索关键字（企业名称、统一社会信用代码、注册号）", required = true)
+    @Override
+    public String getKeyword() {
+        return keyword;
+    }
+
+    #for
+    /**
+    * ${data.columnComment}
+    */
+    @ApiModelProperty("${data.columnComment}")
+    protected ${data.dataType} ${data.columnName};
+    #end
+}

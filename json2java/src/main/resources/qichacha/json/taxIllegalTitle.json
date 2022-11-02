@@ -1,0 +1,13 @@
+{
+  "apiid": "0e3d345e-130c-4d77-956a-11defeb3cb9d",
+  "apicode": "756",
+  "seoTitle": "企业税收违法核查",
+  "description": "核查企业是否存在税收违法情况，助力风险管控。返回包括但不限于纳税人情况、案件性质、违法事实、法律依据、处罚情况等信息。",
+  "standardPrice": "0.20",
+  "upNotice": "0",
+  "upTips": "",
+  "isUse": "1",
+  "apiName": "税收违法核查",
+  "isSupportBalanceBill": 1,
+  "isSupportUserApply": 1
+}

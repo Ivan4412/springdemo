@@ -1,0 +1,173 @@
+{
+  "Titles": {
+    "title": "接口介绍",
+    "paramList": {
+      "apiUrl": "http://api.qichacha.com/TaxOweNoticeCheck/GetDetail",
+      "supportFormat": "JSON",
+      "requestMethod": "GET",
+      "requestSample": "http://api.qichacha.com/TaxOweNoticeCheck/GetDetail?key=AppKey&id={id}"
+    }
+  },
+  "Headers": {
+    "title": "请求参数(http请求头Headers)",
+    "paramList": [
+      {
+        "name": "Token",
+        "type": "String",
+        "ismandatory": true,
+        "description": "验证加密值 Md5(key+Timespan+SecretKey) 加密的32位大写字符串)"
+      },
+      {
+        "name": "Timespan",
+        "type": "String",
+        "ismandatory": true,
+        "description": "精确到秒的Unix时间戳"
+      }
+    ]
+  },
+  "Query": {
+    "title": "请求参数(Query)",
+    "paramList": [
+      {
+        "name": "key",
+        "type": "String",
+        "ismandatory": true,
+        "description": "应用APPKEY(应用详细页查询)"
+      },
+      {
+        "name": "id",
+        "type": "String",
+        "ismandatory": true,
+        "description": "详情Id"
+      }
+    ]
+  },
+  "Body": {
+    "title": "请求参数(Body)",
+    "paramList": []
+  },
+  "jsonDemo": {
+    "Description": "JSON返回示例",
+    "content": "{\n  \"Result\": {\n    \"Id\": \"05372c63c506d7508e266c553ea750fc\",\n    \"KeyNo\": \"e975eefd96adf7d48bd72c013717efd5\",\n    \"CompanyName\": \"北京美朋长兴商贸有限公司\",\n    \"Type\": \"企业或单位\",\n    \"IdentifyNo\": \"110109317965353\",\n    \"IdNo\": \"372922********7453\",\n    \"Addr\": \"北京市丰台区丰管3号院13号楼210号\",\n    \"Category\": \"增值税\",\n    \"NewBal\": \"0\",\n    \"IssuedBy\": \"北京市国家税务局\",\n    \"PublishDate\": \"2017-05-12\",\n    \"Balance\": \"126253.14\",\n    \"Oper\": {\n      \"Name\": \"张庆良\",\n      \"KeyNo\": \"p768e75007404869a0439d12e829f93a\"\n    }\n  },\n  \"Status\": \"200\",\n  \"Message\": \"查询成功\",\n  \"OrderNumber\": \"TAXOWENOTICECHECK2020071618283738823245\"\n}"
+  },
+  "xmlDemo": {
+    "Description": "XML返回示例",
+    "content": "<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<YJServiceResult xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n <Status>200</Status>\r\n <Message>查询成功</Message>\r\n <OrderNumber>TAXOWENOTICECHECK2020071618284314494067</OrderNumber>\r\n <Result>\r\n  <Id>05372c63c506d7508e266c553ea750fc</Id>\r\n  <KeyNo>e975eefd96adf7d48bd72c013717efd5</KeyNo>\r\n  <CompanyName>北京美朋长兴商贸有限公司</CompanyName>\r\n  <Type>企业或单位</Type>\r\n  <IdentifyNo>110109317965353</IdentifyNo>\r\n  <IdNo>372922********7453</IdNo>\r\n  <Addr>北京市丰台区丰管3号院13号楼210号</Addr>\r\n  <Category>增值税</Category>\r\n  <NewBal>0</NewBal>\r\n  <IssuedBy>北京市国家税务局</IssuedBy>\r\n  <PublishDate>2017-05-12</PublishDate>\r\n  <Balance>126253.14</Balance>\r\n  <Oper>\r\n   <Name>张庆良</Name>\r\n   <KeyNo>p768e75007404869a0439d12e829f93a</KeyNo>\r\n  </Oper>\r\n </Result>\r\n</YJServiceResult>"
+  },
+  "Return": {
+    "name": "返回参数(Return)",
+    "type": "Object",
+    "description": "",
+    "length": "",
+    "content": "1",
+    "paramList": [
+      {
+        "name": "Id",
+        "type": "String",
+        "description": "内部ID",
+        "length": "36",
+        "content": "0"
+      },
+      {
+        "name": "KeyNo",
+        "type": "String",
+        "description": "企业KeyNo",
+        "length": "32",
+        "content": "0"
+      },
+      {
+        "name": "CompanyName",
+        "type": "String",
+        "description": "企业名称",
+        "length": "128",
+        "content": "0"
+      },
+      {
+        "name": "Type",
+        "type": "String",
+        "description": "纳税人类型",
+        "length": "10",
+        "content": "0"
+      },
+      {
+        "name": "IdentifyNo",
+        "type": "String",
+        "description": "纳税人识别号",
+        "length": "32",
+        "content": "0"
+      },
+      {
+        "name": "IdNo",
+        "type": "String",
+        "description": "证件号码",
+        "length": "32",
+        "content": "0"
+      },
+      {
+        "name": "Addr",
+        "type": "String",
+        "description": "经营地点",
+        "length": "128",
+        "content": "0"
+      },
+      {
+        "name": "Category",
+        "type": "String",
+        "description": "欠税税种",
+        "length": "32",
+        "content": "0"
+      },
+      {
+        "name": "NewBal",
+        "type": "String",
+        "description": "当前新发生的欠税余额（元）",
+        "length": "2",
+        "content": "0"
+      },
+      {
+        "name": "IssuedBy",
+        "type": "String",
+        "description": "发布单位",
+        "length": "256",
+        "content": "0"
+      },
+      {
+        "name": "PublishDate",
+        "type": "String",
+        "description": "发布日期",
+        "length": "20",
+        "content": "0"
+      },
+      {
+        "name": "Balance",
+        "type": "String",
+        "description": "欠税余额（元）",
+        "length": "32",
+        "content": "0"
+      },
+      {
+        "name": "Oper",
+        "type": "Object",
+        "description": "负责人信息",
+        "length": "",
+        "content": "1",
+        "paramList": [
+          {
+            "name": "Name",
+            "type": "String",
+            "description": "负责人名称",
+            "length": "128",
+            "content": "0"
+          },
+          {
+            "name": "KeyNo",
+            "type": "String",
+            "description": "负责人Id",
+            "length": "32",
+            "content": "0"
+          }
+        ]
+      }
+    ]
+  }
+}

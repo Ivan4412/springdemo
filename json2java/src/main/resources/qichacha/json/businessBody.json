@@ -1,0 +1,345 @@
+{
+  "Titles": {
+    "title": "接口介绍",
+    "paramList": {
+      "apiUrl": "http://api.qichacha.com/ECIV4/GetBasicDetailsByName",
+      "supportFormat": "JSON",
+      "requestMethod": "GET",
+      "requestSample": "http://api.qichacha.com/ECIV4/GetBasicDetailsByName?key=AppKey&keyword=XXXXXX"
+    }
+  },
+  "Headers": {
+    "title": "请求参数(http请求头Headers)",
+    "paramList": [
+      {
+        "name": "Token",
+        "type": "String",
+        "ismandatory": true,
+        "description": "验证加密值 Md5(key+Timespan+SecretKey) 加密的32位大写字符串)"
+      },
+      {
+        "name": "Timespan",
+        "type": "String",
+        "ismandatory": true,
+        "description": "精确到秒的Unix时间戳"
+      }
+    ]
+  },
+  "Query": {
+    "title": "请求参数(Query)",
+    "paramList": [
+      {
+        "name": "key",
+        "type": "String",
+        "ismandatory": true,
+        "description": "应用APPKEY(应用详细页查询)"
+      },
+      {
+        "name": "keyword",
+        "type": "String",
+        "ismandatory": true,
+        "description": "搜索关键字（公司名、注册号、统一社会信用代码或KeyNo）注：社会组织、中国香港企业仅支持通过企业名称和KeyNo查询"
+      }
+    ]
+  },
+  "Body": {
+    "title": "请求参数(Body)",
+    "paramList": []
+  },
+  "jsonDemo": {
+    "Description": "JSON返回示例",
+    "content": "{\r\n    \"Result\": {\r\n        \"KeyNo\": \"xxxxxxxxxxxx\",\r\n        \"Name\": \"xxxxxxx公司\",\r\n        \"No\": \"xxxxxxxxxxxxxxx\",\r\n        \"BelongOrg\": \"xxxxxxxxxxxx管理局\",\r\n        \"OperId\": \"xxxxxxxxxxxxx\",\r\n        \"OperName\": \"xxx\",\r\n        \"StartDate\": \"1994-03-04 00:00:00\",\r\n        \"EndDate\": \"\",\r\n        \"Status\": \"注销\",\r\n        \"Province\": \"JS\",\r\n        \"UpdatedDate\": \"2021-12-17 12:34:53\",\r\n        \"CreditCode\": \"\",\r\n        \"RegistCapi\": \"xxxxxxxx\",\r\n        \"EconKind\": \"全民所有制\",\r\n        \"Address\": \"xxx\",\r\n        \"Scope\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\r\n        \"TermStart\": \"1994-03-04 00:00:00\",\r\n        \"TeamEnd\": \"\",\r\n        \"CheckDate\": \"2018-06-28 00:00:00\",\r\n        \"OrgNo\": null,\r\n        \"IsOnStock\": \"0\",\r\n        \"StockNumber\": null,\r\n        \"StockType\": null,\r\n        \"OriginalName\": [],\r\n        \"ImageUrl\": \"xxxxxxxxxxxxxxxxxxxxx\",\r\n        \"EntType\": \"0\",\r\n        \"RecCap\": \"xxxxxxxx\",\r\n        \"RevokeInfo\": {\r\n            \"CancelDate\": \"2018-06-28\",\r\n            \"CancelReason\": \"其他原因\",\r\n            \"RevokeDate\": \"\",\r\n            \"RevokeReason\": \"\"\r\n        },\r\n        \"Area\": {\r\n            \"Province\": \"江苏省\",\r\n            \"City\": \"苏州市\",\r\n            \"County\": \"苏州工业园区\"\r\n        },\r\n        \"AreaCode\": \"320571\"\r\n    },\r\n    \"Status\": \"200\",\r\n    \"Message\": \"【有效请求】查询成功\",\r\n    \"OrderNumber\": \"ECI2021123010294871571463\"\r\n}"
+  },
+  "xmlDemo": {
+    "Description": "XML返回示例",
+    "content": "<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<YJServiceResult xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n <Status>200</Status>\r\n <Message>查询成功</Message>\r\n <Result>\r\n  <KeyNo>4659626b1e5e43f1bcad8c268753216e</KeyNo>\r\n  <Name>北京小桔科技有限公司</Name>\r\n  <No>110108015068911</No>\r\n  <BelongOrg>北京市工商行政管理局海淀分局</BelongOrg>\r\n  <OperName>程维</OperName>\r\n  <StartDate>2012-07-10 00:00:00</StartDate>\r\n  <EndDate />\r\n  <Status>开业</Status>\r\n  <Province>BJ</Province>\r\n  <UpdatedDate>2019-06-18 12:06:00</UpdatedDate>\r\n  <CreditCode>9111010859963405XW</CreditCode>\r\n  <RegistCapi>1000万元人民币</RegistCapi>\r\n  <EconKind>有限责任公司(自然人投资或控股)</EconKind>\r\n  <Address>北京市海淀区东北旺西路8号院35号楼5层501室</Address>\r\n  <Scope>技术开发、技术咨询、技术服务、技术推广;基础软件服务;应用软件服务;设计、制作、代理、发布广告;软件开发;销售自行开发后的产品;企业管理咨询;计算机系统服务;组织文化艺术交流活动(不含营业性演出);公共关系服务;企业策划、设计;会议服务;市场调查;货物进出口、技术进出口、代理进出口;从事互联网文化活动;互联网信息服务;经营电信业务。(企业依法自主选择经营项目,开展经营活动;从事互联网文化活动、互联网信息服务、经营电信业务以及依法须经批准的项目,经相关部门批准后依批准的内容开展经营活动;不得从事本市产业政策禁止和限制类项目的经营活动。)</Scope>\r\n  <TermStart>2012-07-10 00:00:00</TermStart>\r\n  <TeamEnd>2032-07-09 00:00:00</TeamEnd>\r\n  <CheckDate>2017-12-11 00:00:00</CheckDate>\r\n  <OrgNo>59963405-X</OrgNo>\r\n  <IsOnStock>0</IsOnStock>\r\n  <OriginalName />\r\n  <ImageUrl>https://co-image.qichacha.com/CompanyImage/4659626b1e5e43f1bcad8c268753216e.jpg?x-oss-process=image/resize,w_160</ImageUrl>\r\n  <EntType>0</EntType>\r\n  <RecCap>100万元人民币</RecCap>\r\n </Result>\r\n <OrderNumber>ECI2019061819445464593897</OrderNumber>\r\n</YJServiceResult>"
+  },
+  "Return": {
+    "name": "返回参数(Return)",
+    "type": "Object",
+    "description": "",
+    "length": "",
+    "content": "1",
+    "paramList": [
+      {
+        "name": "KeyNo",
+        "type": "String",
+        "description": "内部KeyNo",
+        "length": "32",
+        "content": "0"
+      },
+      {
+        "name": "Name",
+        "type": "String",
+        "description": "企业名称",
+        "length": "128",
+        "content": "0"
+      },
+      {
+        "name": "No",
+        "type": "String",
+        "description": "工商注册号",
+        "length": "20",
+        "content": "0"
+      },
+      {
+        "name": "BelongOrg",
+        "type": "String",
+        "description": "登记机关",
+        "length": "128",
+        "content": "0"
+      },
+      {
+        "name": "OperId",
+        "type": "String",
+        "description": "法定代表人ID",
+        "length": "36",
+        "content": "0"
+      },
+      {
+        "name": "OperName",
+        "type": "String",
+        "description": "法定代表人名称",
+        "length": "50",
+        "content": "0"
+      },
+      {
+        "name": "StartDate",
+        "type": "String",
+        "description": "成立日期",
+        "length": "20",
+        "content": "0"
+      },
+      {
+        "name": "EndDate",
+        "type": "String",
+        "description": "吊销日期",
+        "length": "20",
+        "content": "0"
+      },
+      {
+        "name": "Status",
+        "type": "String",
+        "description": "登记状态",
+        "length": "32",
+        "content": "0"
+      },
+      {
+        "name": "Province",
+        "type": "String",
+        "description": "省份",
+        "length": "10",
+        "content": "0"
+      },
+      {
+        "name": "UpdatedDate",
+        "type": "String",
+        "description": "更新日期",
+        "length": "20",
+        "content": "0"
+      },
+      {
+        "name": "CreditCode",
+        "type": "String",
+        "description": "统一社会信用代码",
+        "length": "20",
+        "content": "0"
+      },
+      {
+        "name": "RegistCapi",
+        "type": "String",
+        "description": "注册资本",
+        "length": "32",
+        "content": "0"
+      },
+      {
+        "name": "EconKind",
+        "type": "String",
+        "description": "企业类型",
+        "length": "48",
+        "content": "0"
+      },
+      {
+        "name": "Address",
+        "type": "String",
+        "description": "注册地址",
+        "length": "128",
+        "content": "0"
+      },
+      {
+        "name": "Scope",
+        "type": "String",
+        "description": "经营范围",
+        "length": "1024",
+        "content": "0"
+      },
+      {
+        "name": "TermStart",
+        "type": "String",
+        "description": "营业期限始",
+        "length": "20",
+        "content": "0"
+      },
+      {
+        "name": "TeamEnd",
+        "type": "String",
+        "description": "营业期限至",
+        "length": "20",
+        "content": "0"
+      },
+      {
+        "name": "CheckDate",
+        "type": "String",
+        "description": "核准日期",
+        "length": "20",
+        "content": "0"
+      },
+      {
+        "name": "OrgNo",
+        "type": "String",
+        "description": "组织机构代码",
+        "length": "20",
+        "content": "0"
+      },
+      {
+        "name": "IsOnStock",
+        "type": "String",
+        "description": "是否上市（0-未上市，1-上市）",
+        "length": "1",
+        "content": "0"
+      },
+      {
+        "name": "StockNumber",
+        "type": "String",
+        "description": "股票代码（如A股和港股同时存在，优先显示A股代码）",
+        "length": "10",
+        "content": "0"
+      },
+      {
+        "name": "StockType",
+        "type": "String",
+        "description": "上市类型（A股、中概股、港股、科创板、新三板、新四板）",
+        "length": "10",
+        "content": "0"
+      },
+      {
+        "name": "OriginalName",
+        "type": "List<Object>",
+        "description": "曾用名",
+        "length": "",
+        "content": "1",
+        "paramList": [
+          {
+            "name": "Name",
+            "type": "String",
+            "description": "曾用名",
+            "length": "128",
+            "content": "0"
+          },
+          {
+            "name": "ChangeDate",
+            "type": "String",
+            "description": "变更日期",
+            "length": "20",
+            "content": "0"
+          }
+        ]
+      },
+      {
+        "name": "ImageUrl",
+        "type": "String",
+        "description": "企业Logo地址",
+        "length": "128",
+        "content": "0"
+      },
+      {
+        "name": "EntType",
+        "type": "String",
+        "description": "企业性质，0-大陆企业，1-社会组织 ，3-中国香港公司，4-事业单位，5-中国台湾公司，6-基金会，7-医院，8-海外公司，9-律师事务所，10-学校 ，11-机关单位，-1-其他",
+        "length": "2",
+        "content": "0"
+      },
+      {
+        "name": "RecCap",
+        "type": "String",
+        "description": "实缴资本",
+        "length": "32",
+        "content": "0"
+      },
+      {
+        "name": "RevokeInfo",
+        "type": "Object",
+        "description": "注销吊销信息",
+        "length": "",
+        "content": "1",
+        "paramList": [
+          {
+            "name": "CancelDate",
+            "type": "String",
+            "description": "注销日期",
+            "length": "20",
+            "content": "0"
+          },
+          {
+            "name": "CancelReason",
+            "type": "String",
+            "description": "注销原因",
+            "length": "256",
+            "content": "0"
+          },
+          {
+            "name": "RevokeDate",
+            "type": "String",
+            "description": "吊销日期",
+            "length": "20",
+            "content": "0"
+          },
+          {
+            "name": "RevokeReason",
+            "type": "String",
+            "description": "吊销原因",
+            "length": "256",
+            "content": "0"
+          }
+        ]
+      },
+      {
+        "name": "Area",
+        "type": "Object",
+        "description": "行政区域",
+        "length": "",
+        "content": "1",
+        "paramList": [
+          {
+            "name": "Province",
+            "type": "String",
+            "description": "省份",
+            "length": "32",
+            "content": "0"
+          },
+          {
+            "name": "City",
+            "type": "String",
+            "description": "城市",
+            "length": "32",
+            "content": "0"
+          },
+          {
+            "name": "County",
+            "type": "String",
+            "description": "区域",
+            "length": "32",
+            "content": "0"
+          }
+        ]
+      },
+      {
+        "name": "AreaCode",
+        "type": "String",
+        "description": "行政区划代码",
+        "length": "6",
+        "content": "0"
+      }
+    ]
+  }
+}

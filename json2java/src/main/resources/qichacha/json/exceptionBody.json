@@ -1,0 +1,124 @@
+{
+  "Titles": {
+    "title": "接口介绍",
+    "paramList": {
+      "apiUrl": "http://api.qichacha.com/ExceptionCheck/GetList",
+      "supportFormat": "JSON",
+      "requestMethod": "GET",
+      "requestSample": "http://api.qichacha.com/ExceptionCheck/GetList?key=AppKey&searchKey=苏州市苏阿姨食品有限责任公司"
+    }
+  },
+  "Headers": {
+    "title": "请求参数(http请求头Headers)",
+    "paramList": [
+      {
+        "name": "Token",
+        "type": "String",
+        "ismandatory": true,
+        "description": "验证加密值 Md5(key+Timespan+SecretKey) 加密的32位大写字符串)"
+      },
+      {
+        "name": "Timespan",
+        "type": "String",
+        "ismandatory": true,
+        "description": "精确到秒的Unix时间戳"
+      }
+    ]
+  },
+  "Query": {
+    "title": "请求参数(Query)",
+    "paramList": [
+      {
+        "name": "key",
+        "type": "String",
+        "ismandatory": true,
+        "description": "应用APPKEY(应用详细页查询)"
+      },
+      {
+        "name": "searchKey",
+        "type": "String",
+        "ismandatory": true,
+        "description": "搜索关键字（公司名、注册号、统一社会信用代码或KeyNo）"
+      }
+    ]
+  },
+  "Body": {
+    "title": "请求参数(Body)",
+    "paramList": []
+  },
+  "jsonDemo": {
+    "Description": "JSON返回示例",
+    "content": "{\n    \"Result\": {\n        \"VerifyResult\": 1,\n        \"Data\": [\n            {\n                \"AddReason\": \"未依照《企业信息公示暂行条例》第八条规定的期限公示年度报告的\",\n                \"AddDate\": \"2017-07-03 00:00:00\",\n                \"RomoveReason\": \"\",\n                \"RemoveDate\": \"\",\n                \"DecisionOffice\": \"苏州市姑苏区市场监督管理局苏州国家历史文化名城保护区市场监督管理局\",\n                \"RemoveDecisionOffice\": \"\"\n            },\n            {\n                \"AddReason\": \"未依照《企业信息公示暂行条例》第八条规定的期限公示年度报告的\",\n                \"AddDate\": \"2018-07-02 00:00:00\",\n                \"RomoveReason\": \"\",\n                \"RemoveDate\": \"\",\n                \"DecisionOffice\": \"苏州市姑苏区市场监督管理局苏州国家历史文化名城保护区市场监督管理局\",\n                \"RemoveDecisionOffice\": \"\"\n            },\n            {\n                \"AddReason\": \"未依照《企业信息公示暂行条例》第八条规定的期限公示年度报告的\",\n                \"AddDate\": \"2019-07-01 00:00:00\",\n                \"RomoveReason\": \"\",\n                \"RemoveDate\": \"\",\n                \"DecisionOffice\": \"苏州市姑苏区市场监督管理局苏州国家历史文化名城保护区市场监督管理局\",\n                \"RemoveDecisionOffice\": \"\"\n            },\n            {\n                \"AddReason\": \"通过登记的住所或者经营场所无法联系的\",\n                \"AddDate\": \"2020-04-20 00:00:00\",\n                \"RomoveReason\": \"\",\n                \"RemoveDate\": \"\",\n                \"DecisionOffice\": \"苏州市姑苏区市场监督管理局苏州国家历史文化名城保护区市场监督管理局\",\n                \"RemoveDecisionOffice\": \"\"\n            }\n        ]\n    },\n    \"Status\": \"200\",\n    \"Message\": \"查询成功\",\n    \"OrderNumber\": \"EXCEPTIONCHECK2020071617333138549220\"\n}"
+  },
+  "xmlDemo": {
+    "Description": "XML返回示例",
+    "content": "<YJServiceResult xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n    <Status>200</Status>\r\n    <Message>查询成功</Message>\r\n    <OrderNumber>EXCEPTIONCHECK2020071617322137464927</OrderNumber>\r\n    <Result>\r\n        <VerifyResult>1</VerifyResult>\r\n        <Data>\r\n            <OperateException>\r\n                <AddReason>未依照《企业信息公示暂行条例》第八条规定的期限公示年度报告的</AddReason>\r\n                <AddDate>2017-07-03 00:00:00</AddDate>\r\n                <RomoveReason />\r\n                <RemoveDate />\r\n                <DecisionOffice>苏州市姑苏区市场监督管理局苏州国家历史文化名城保护区市场监督管理局</DecisionOffice>\r\n                <RemoveDecisionOffice />\r\n            </OperateException>\r\n            <OperateException>\r\n                <AddReason>未依照《企业信息公示暂行条例》第八条规定的期限公示年度报告的</AddReason>\r\n                <AddDate>2018-07-02 00:00:00</AddDate>\r\n                <RomoveReason />\r\n                <RemoveDate />\r\n                <DecisionOffice>苏州市姑苏区市场监督管理局苏州国家历史文化名城保护区市场监督管理局</DecisionOffice>\r\n                <RemoveDecisionOffice />\r\n            </OperateException>\r\n            <OperateException>\r\n                <AddReason>未依照《企业信息公示暂行条例》第八条规定的期限公示年度报告的</AddReason>\r\n                <AddDate>2019-07-01 00:00:00</AddDate>\r\n                <RomoveReason />\r\n                <RemoveDate />\r\n                <DecisionOffice>苏州市姑苏区市场监督管理局苏州国家历史文化名城保护区市场监督管理局</DecisionOffice>\r\n                <RemoveDecisionOffice />\r\n            </OperateException>\r\n            <OperateException>\r\n                <AddReason>通过登记的住所或者经营场所无法联系的</AddReason>\r\n                <AddDate>2020-04-20 00:00:00</AddDate>\r\n                <RomoveReason />\r\n                <RemoveDate />\r\n                <DecisionOffice>苏州市姑苏区市场监督管理局苏州国家历史文化名城保护区市场监督管理局</DecisionOffice>\r\n                <RemoveDecisionOffice />\r\n            </OperateException>\r\n        </Data>\r\n    </Result>\r\n</YJServiceResult>"
+  },
+  "Return": {
+    "name": "返回参数(Return)",
+    "type": "Object",
+    "description": "",
+    "length": "",
+    "content": "1",
+    "paramList": [
+      {
+        "name": "VerifyResult",
+        "type": "Int32",
+        "description": "数据是否存在(1-存在，0-不存在)",
+        "length": "1",
+        "content": "0"
+      },
+      {
+        "name": "Data",
+        "type": "List<Object>",
+        "description": "数据信息",
+        "length": "",
+        "content": "1",
+        "paramList": [
+          {
+            "name": "AddReason",
+            "type": "String",
+            "description": "列入经营异常名录原因",
+            "length": "256",
+            "content": "0"
+          },
+          {
+            "name": "AddDate",
+            "type": "String",
+            "description": "列入日期",
+            "length": "20",
+            "content": "0"
+          },
+          {
+            "name": "RomoveReason",
+            "type": "String",
+            "description": "移出经营异常名录原因（保留字段）",
+            "length": "256",
+            "content": "0"
+          },
+          {
+            "name": "RemoveDate",
+            "type": "String",
+            "description": "移出日期（保留字段）",
+            "length": "20",
+            "content": "0"
+          },
+          {
+            "name": "DecisionOffice",
+            "type": "String",
+            "description": "作出决定机关",
+            "length": "128",
+            "content": "0"
+          },
+          {
+            "name": "RemoveDecisionOffice",
+            "type": "String",
+            "description": "移出决定机关（保留字段）",
+            "length": "128",
+            "content": "0"
+          }
+        ]
+      }
+    ]
+  }
+}

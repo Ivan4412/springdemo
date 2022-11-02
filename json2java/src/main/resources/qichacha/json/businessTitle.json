@@ -1,0 +1,13 @@
+{
+  "apiid": "f738e318-62b5-11e7-bbdd-00155d0ab207",
+  "apicode": "410",
+  "seoTitle": "企业工商照面",
+  "description": "实时查询企业工商照面信息，返回企业名称、企业类型、注册资本、统一社会信用代码、经营范围、营业期限、上市状态等信息。",
+  "standardPrice": "0.20",
+  "upNotice": "0",
+  "upTips": "",
+  "isUse": "1",
+  "apiName": "企业工商照面",
+  "isSupportBalanceBill": 1,
+  "isSupportUserApply": 1
+}

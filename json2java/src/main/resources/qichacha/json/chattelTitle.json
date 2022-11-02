@@ -1,0 +1,13 @@
+{
+  "apiid": "d983dc15-3b66-483f-bd1f-4905d6717a4a",
+  "apicode": "747",
+  "seoTitle": "企业动产抵押核查",
+  "description": "核查企业是否存在动产抵押信息，助力风险管控。返回包括但不限于登记信息、抵押物详细信息、抵押权人信息、被担保债权情况、债务人履行债务期限、登记注销时间、变更时间等信息。",
+  "standardPrice": "0.30",
+  "upNotice": "0",
+  "upTips": "",
+  "isUse": "1",
+  "apiName": "动产抵押核查",
+  "isSupportBalanceBill": 1,
+  "isSupportUserApply": 1
+}

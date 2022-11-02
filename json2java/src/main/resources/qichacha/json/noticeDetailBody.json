@@ -1,0 +1,154 @@
+{
+  "Titles": {
+    "title": "接口介绍",
+    "paramList": {
+      "apiUrl": "http://api.qichacha.com/CourtNoticeCheck/GetDetail",
+      "supportFormat": "JSON",
+      "requestMethod": "GET",
+      "requestSample": "http://api.qichacha.com/CourtNoticeCheck/GetDetail?key=AppKey&id={id}"
+    }
+  },
+  "Headers": {
+    "title": "请求参数(http请求头Headers)",
+    "paramList": [
+      {
+        "name": "Token",
+        "type": "String",
+        "ismandatory": true,
+        "description": "验证加密值 Md5(key+Timespan+SecretKey) 加密的32位大写字符串)"
+      },
+      {
+        "name": "Timespan",
+        "type": "String",
+        "ismandatory": true,
+        "description": "精确到秒的Unix时间戳"
+      }
+    ]
+  },
+  "Query": {
+    "title": "请求参数(Query)",
+    "paramList": [
+      {
+        "name": "key",
+        "type": "String",
+        "ismandatory": true,
+        "description": "应用APPKEY(应用详细页查询)"
+      },
+      {
+        "name": "id",
+        "type": "String",
+        "ismandatory": true,
+        "description": "法院公告Id"
+      }
+    ]
+  },
+  "Body": {
+    "title": "请求参数(Body)",
+    "paramList": []
+  },
+  "jsonDemo": {
+    "Description": "JSON返回示例",
+    "content": "{\n  \"Result\": {\n    \"Court\": \"四川省乐山市市中区人民法院\",\n    \"CaseNo\": \"（2021）川1102民初4373号\",\n    \"Category\": \"其他\",\n    \"PublishDate\": \"2021-06-29\",\n    \"PublishPage\": \"G66\",\n    \"Content\": \"邛莫王加、阿兵：本院受理（2021）川1102民初4373号原告中国银行股份有限公司与被告邛莫王加、阿兵金融借款合同纠纷一案。现依法向你公告送达起诉状副本、应诉通知书、举证通知书、开庭传票、民事裁定书、民事案件当事人须知、民事诉讼风险提示书、合议庭组成人员告知书。自本公告发出之日起60日即视为送达。提出答辩状的期限为公告期满后的15日内。举证期限为公告期满后的30日内。并定于举证期满后第3日上午9时30分（遇节假日顺延）在本院二楼审判庭开庭审理，届时未到，本院将依法缺席裁判。\",\n    \"ProsecutorList\": [\n      {\n        \"KeyNo\": \"837e8c3db3440424d29a579e27bd4b95\",\n        \"Name\": \"中国银行股份有限公司\"\n      }\n    ],\n    \"DefendantList\": [\n      {\n        \"KeyNo\": \"\",\n        \"Name\": \"邛莫王加\"\n      },\n      {\n        \"KeyNo\": \"\",\n        \"Name\": \"阿兵\"\n      }\n    ]\n  },\n  \"Status\": \"200\",\n  \"Message\": \"【有效请求】查询成功\",\n  \"OrderNumber\": \"COURTNOTICECHECK2021070316412992448066\"\n}"
+  },
+  "xmlDemo": {
+    "Description": "XML返回示例",
+    "content": "<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<YJServiceResult xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n <Status>200</Status>\r\n <Message>查询成功</Message>\r\n <OrderNumber>COURTNOTICECHECK2020103016415823907536</OrderNumber>\r\n <Result>\r\n  <Court>重庆市江北区人民法院</Court>\r\n  <CaseNo>（2020）渝0105民初2759号</CaseNo>\r\n  <Category>诉状副本及开庭传票</Category>\r\n  <PublishDate>2020-07-02</PublishDate>\r\n  <PublishPage>G63</PublishPage>\r\n  <Content>刘鸿：本院受理的（2020）渝0105民初2759号原告<a href=\"https://www.qcc.com/firm_47ca87a2998691ad99f5132b0836e6aa\" target=\"_blank\">中国太平洋财产保险股份有限公司重庆分公司</a>与被告刘鸿、<a href=\"https://www.qcc.com/firm_4659626b1e5e43f1bcad8c268753216e\" target=\"_blank\">北京小桔科技有限公司</a>保险人代位求偿权纠纷一案，因你方下落不明，现依法向你方公告送达应诉通知书、起诉状副本、举证通知书、民事裁定书、开庭传票、廉政监督卡等诉讼文书。限你自公告之日起60日内来院领取，逾期则视为送达。提出答辩状的期限为公告期满后的15日内。举证期限为公告期满后的30日内。本案定于2020年10月15日14时30分在本院巨宇第七审判庭（诉调速裁中心）公开开庭审理。逾期未答辩、未举证、未到庭，本院将依法缺席审理裁判。</Content>\r\n  <ProsecutorList>\r\n   <CourtNoticeCheckProsecutorEntity>\r\n    <KeyNo>47ca87a2998691ad99f5132b0836e6aa</KeyNo>\r\n    <Name>中国太平洋财产保险股份有限公司重庆分公司</Name>\r\n   </CourtNoticeCheckProsecutorEntity>\r\n  </ProsecutorList>\r\n  <DefendantList>\r\n   <CourtNoticeCheckProsecutorEntity>\r\n    <KeyNo />\r\n    <Name>刘鸿</Name>\r\n   </CourtNoticeCheckProsecutorEntity>\r\n   <CourtNoticeCheckProsecutorEntity>\r\n    <KeyNo>4659626b1e5e43f1bcad8c268753216e</KeyNo>\r\n    <Name>北京小桔科技有限公司</Name>\r\n   </CourtNoticeCheckProsecutorEntity>\r\n  </DefendantList>\r\n </Result>\r\n</YJServiceResult>"
+  },
+  "Return": {
+    "name": "返回参数(Return)",
+    "type": "Object",
+    "description": "",
+    "length": "",
+    "content": "1",
+    "paramList": [
+      {
+        "name": "Court",
+        "type": "String",
+        "description": "公告人",
+        "length": "256",
+        "content": "0"
+      },
+      {
+        "name": "CaseNo",
+        "type": "String",
+        "description": "案号",
+        "length": "32",
+        "content": "0"
+      },
+      {
+        "name": "Category",
+        "type": "String",
+        "description": "公告类型",
+        "length": "32",
+        "content": "0"
+      },
+      {
+        "name": "PublishDate",
+        "type": "String",
+        "description": "刊登日期",
+        "length": "20",
+        "content": "0"
+      },
+      {
+        "name": "PublishPage",
+        "type": "String",
+        "description": "刊登版面",
+        "length": "32",
+        "content": "0"
+      },
+      {
+        "name": "Content",
+        "type": "String",
+        "description": "内容",
+        "length": "4096",
+        "content": "0"
+      },
+      {
+        "name": "ProsecutorList",
+        "type": "List<Object>",
+        "description": "公诉人/原告/上诉人/申请人",
+        "length": "",
+        "content": "1",
+        "paramList": [
+          {
+            "name": "KeyNo",
+            "type": "String",
+            "description": "内部KeyNo",
+            "length": "32",
+            "content": "0"
+          },
+          {
+            "name": "Name",
+            "type": "String",
+            "description": "名称",
+            "length": "128",
+            "content": "0"
+          }
+        ]
+      },
+      {
+        "name": "DefendantList",
+        "type": "List<Object>",
+        "description": "被告人/被告/被上诉人/被申请人",
+        "length": "",
+        "content": "1",
+        "paramList": [
+          {
+            "name": "KeyNo",
+            "type": "String",
+            "description": "内部KeyNo",
+            "length": "32",
+            "content": "0"
+          },
+          {
+            "name": "Name",
+            "type": "String",
+            "description": "名称",
+            "length": "128",
+            "content": "0"
+          }
+        ]
+      }
+    ]
+  }
+}

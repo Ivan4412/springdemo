@@ -1,0 +1,152 @@
+{
+  "Titles": {
+    "title": "接口介绍",
+    "paramList": {
+      "apiUrl": "http://api.qichacha.com/EnvPunishmentCheck/GetDetail",
+      "supportFormat": "JSON",
+      "requestMethod": "GET",
+      "requestSample": "http://api.qichacha.com/EnvPunishmentCheck/GetDetail?key=AppKey&id=XXXXXX"
+    }
+  },
+  "Headers": {
+    "title": "请求参数(http请求头Headers)",
+    "paramList": [
+      {
+        "name": "Token",
+        "type": "String",
+        "ismandatory": true,
+        "description": "验证加密值 Md5(key+Timespan+SecretKey) 加密的32位大写字符串)"
+      },
+      {
+        "name": "Timespan",
+        "type": "String",
+        "ismandatory": true,
+        "description": "精确到秒的Unix时间戳"
+      }
+    ]
+  },
+  "Query": {
+    "title": "请求参数(Query)",
+    "paramList": [
+      {
+        "name": "key",
+        "type": "String",
+        "ismandatory": true,
+        "description": "应用APPKEY(应用详细页查询)"
+      },
+      {
+        "name": "id",
+        "type": "String",
+        "ismandatory": true,
+        "description": "详情Id"
+      }
+    ]
+  },
+  "Body": {
+    "title": "请求参数(Body)",
+    "paramList": []
+  },
+  "jsonDemo": {
+    "Description": "JSON返回示例",
+    "content": "{\n  \"Result\": {\n    \"Id\": \"9373b50bf4f0aecb8b062fb7332b6dd6\",\n    \"CaseNo\": \"临环罚字[2019]第165号\",\n    \"IllegalType\": \"\",\n    \"PunishReason\": \"齐鲁一净化站点2019年9月11日总氮浓度日均值为21.5毫克每立方米，超标0.075倍。\",\n    \"PunishBasis\": \"\",\n    \"PunishmentResult\": \"\",\n    \"PunishDate\": \"2019-11-08\",\n    \"PunishGov\": \"临淄区环保局\",\n    \"Implementation\": \"已核销\",\n    \"CompanyInfoList\": [\n      {\n        \"KeyNo\": \"340ad925a9e90c39c676a6e6ea61388f\",\n        \"Name\": \"中国石油化工股份有限公司齐鲁分公司\"\n      }\n    ]\n  },\n  \"Status\": \"200\",\n  \"Message\": \"查询成功\",\n  \"OrderNumber\": \"ENVPUNISHMENTCHECK2020071618080340276086\"\n}"
+  },
+  "xmlDemo": {
+    "Description": "XML返回示例",
+    "content": "<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<YJServiceResult xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n <Status>200</Status>\r\n <Message>查询成功</Message>\r\n <OrderNumber>ENVPUNISHMENTCHECK2020071618081078662123</OrderNumber>\r\n <Result>\r\n  <Id>9373b50bf4f0aecb8b062fb7332b6dd6</Id>\r\n  <CaseNo>临环罚字[2019]第165号</CaseNo>\r\n  <IllegalType />\r\n  <PunishReason>齐鲁一净化站点2019年9月11日总氮浓度日均值为21.5毫克每立方米，超标0.075倍。</PunishReason>\r\n  <PunishBasis />\r\n  <PunishmentResult />\r\n  <PunishDate>2019-11-08</PunishDate>\r\n  <PunishGov>临淄区环保局</PunishGov>\r\n  <Implementation>已核销</Implementation>\r\n  <CompanyInfoList>\r\n   <EnvPunishmentCheckCompanyListEntity>\r\n    <KeyNo>340ad925a9e90c39c676a6e6ea61388f</KeyNo>\r\n    <Name>中国石油化工股份有限公司齐鲁分公司</Name>\r\n   </EnvPunishmentCheckCompanyListEntity>\r\n  </CompanyInfoList>\r\n </Result>\r\n</YJServiceResult>"
+  },
+  "Return": {
+    "name": "返回参数(Return)",
+    "type": "Object",
+    "description": "",
+    "length": "",
+    "content": "1",
+    "paramList": [
+      {
+        "name": "Id",
+        "type": "String",
+        "description": "环保处罚Id",
+        "length": "36",
+        "content": "0"
+      },
+      {
+        "name": "CaseNo",
+        "type": "String",
+        "description": "决定书文号",
+        "length": "32",
+        "content": "0"
+      },
+      {
+        "name": "IllegalType",
+        "type": "String",
+        "description": "违法类型",
+        "length": "1024",
+        "content": "0"
+      },
+      {
+        "name": "PunishReason",
+        "type": "String",
+        "description": "处罚事由",
+        "length": "1024",
+        "content": "0"
+      },
+      {
+        "name": "PunishBasis",
+        "type": "String",
+        "description": "处罚依据",
+        "length": "256",
+        "content": "0"
+      },
+      {
+        "name": "PunishmentResult",
+        "type": "String",
+        "description": "处罚结果",
+        "length": "1024",
+        "content": "0"
+      },
+      {
+        "name": "PunishDate",
+        "type": "String",
+        "description": "处罚日期",
+        "length": "20",
+        "content": "0"
+      },
+      {
+        "name": "PunishGov",
+        "type": "String",
+        "description": "处罚单位",
+        "length": "256",
+        "content": "0"
+      },
+      {
+        "name": "Implementation",
+        "type": "String",
+        "description": "执行情况",
+        "length": "256",
+        "content": "0"
+      },
+      {
+        "name": "CompanyInfoList",
+        "type": "List<Object>",
+        "description": "行政相对人信息",
+        "length": "",
+        "content": "1",
+        "paramList": [
+          {
+            "name": "KeyNo",
+            "type": "String",
+            "description": "KeyNo",
+            "length": "32",
+            "content": "0"
+          },
+          {
+            "name": "Name",
+            "type": "String",
+            "description": "名称",
+            "length": "128",
+            "content": "0"
+          }
+        ]
+      }
+    ]
+  }
+}

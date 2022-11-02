@@ -1,0 +1,99 @@
+package cn.utrust.fintech.cdcp2.core.provider.qichacha.impl;
+
+import cn.utrust.fintech.cdcp2.core.provider.qichacha.QiChaChaKeywordDataProvider;
+import cn.utrust.fintech.cdcp2.dto.qichacha.req.QiChaChaKeywordReq;
+import cn.utrust.fintech.cdcp2.dto.qichacha.resp.${className}Resp;
+import cn.utrust.fintech.cdcp2.framework.json.JSON;
+import cn.utrust.fintech.cdcp2.framework.json.JSONObject;
+import cn.utrust.fintech.cdcp2.framework.util.StringUtils;
+import cn.utrust.fintech.cdcp2.framework.util.http.RestTemplateUtils;
+import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.RequestEntity;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
+
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+/**
+* 企查查-${classNickName}
+*
+* ${author}
+* ${date}
+*/
+@ApiOperation(value = "企查查-${classNickName}", notes = "${classNotes}")
+@Component("/openapi/qichacha/${classPath}")
+@Slf4j
+public class ${className}DataProvider extends QiChaChaKeywordDataProvider<QiChaChaKeywordReq, ${className}Resp, JSONObject> {
+
+    @Override
+    public String providerCode() {
+        return "${className}";
+    }
+
+    public String apiPath() {
+        return "${apiPath}";
+    }
+
+    @Override
+    protected ${className}Resp doProvide(JSONObject externalData, Exception e) {
+        Object data = effectiveExternalData(externalData);
+        if (data != null) {
+            String result = JSON.toJSONString(data);
+            if (StringUtils.isNotBlank(result)) {
+                ${className}Resp resp = JSON.parseObject(result, ${className}Resp.class);
+                return resp;
+            }
+        }
+        return null;
+    }
+
+    @Override
+    protected JSONObject doExternalData(QiChaChaKeywordReq param) {
+        QiChaChaAccount account = getExternalAccountSetting(param, QiChaChaAccount.class);
+
+        //获取报文头参数
+        String[] autherHeader = this.randomAuthentHeader(account);
+        MultiValueMap<String, String> headersMap = new LinkedMultiValueMap<String, String>() {
+            {
+                put("accept", Collections.singletonList("application/json"));
+                put("content-type", Collections.singletonList("application/json; charset=UTF-8"));
+                put("Token", Collections.singletonList(autherHeader[0]));
+                put("Timespan", Collections.singletonList(autherHeader[1]));
+            }
+        };
+
+        //获取请求参数
+        Map<String, String> requestParam = new HashMap<String, String>();
+        requestParam.put("key", account.getAppKey());
+        requestParam.put("searchKey", param.getKeyword());
+
+        //获取请求URL
+        String url = account.getUrl() + apiPath();
+        log.info("{}，send:{} to {} ", providerGroup().getGroupCode(), requestParam, url);
+
+        try {
+            URI uri = new URI(url);
+            RequestEntity<Object> requestEntity = new RequestEntity<>(requestParam, headersMap, HttpMethod.GET, uri);
+            ResponseEntity<JSONObject> responseEntity = restTemplate.exchange(requestEntity, JSONObject.class);
+            log.info("{}，get:{} ", this.providerCode(), responseEntity != null ? responseEntity.getBody() : "");
+
+            if (responseEntity != null && responseOk(responseEntity.getBody())) {
+                return responseEntity.getBody();
+            }
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+            log.error("{} fail:{}", this.providerCode(), e.getMessage());
+        }
+        return null;
+    }
+
+}

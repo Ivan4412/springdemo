@@ -1,0 +1,13 @@
+{
+  "apiid": "046923c0-d0b8-4cf8-9562-ed1ec4b6665b",
+  "apicode": "748",
+  "seoTitle": "企业严重违法核查",
+  "description": "核查企业是否存在严重违法信息，助力风险管控。返回包括但不限于违法类型、列入时间、列入机关、移除原因、移除机关、移除时间等信息。",
+  "standardPrice": "0.30",
+  "upNotice": "0",
+  "upTips": "",
+  "isUse": "1",
+  "apiName": "严重违法核查",
+  "isSupportBalanceBill": 1,
+  "isSupportUserApply": 1
+}

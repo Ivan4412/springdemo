@@ -1,0 +1,13 @@
+{
+  "apiid": "8851330d-ae2b-4236-8ea8-0507e22c029d",
+  "apicode": "757",
+  "seoTitle": "企业欠税公告核查",
+  "description": "核查企业是否存在欠税公告情况，助力风险管控。返回包括但不限于欠税税种、欠税金额、发布日期、发布单位等信息。",
+  "standardPrice": "0.20",
+  "upNotice": "0",
+  "upTips": "",
+  "isUse": "1",
+  "apiName": "欠税公告核查",
+  "isSupportBalanceBill": 1,
+  "isSupportUserApply": 1
+}

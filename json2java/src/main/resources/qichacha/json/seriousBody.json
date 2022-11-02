@@ -1,0 +1,131 @@
+{
+  "Titles": {
+    "title": "接口介绍",
+    "paramList": {
+      "apiUrl": "http://api.qichacha.com/SeriousIllegalCheck/GetList",
+      "supportFormat": "JSON",
+      "requestMethod": "GET",
+      "requestSample": "http://api.qichacha.com/SeriousIllegalCheck/GetList?key=AppKey&searchKey=XXXXXX"
+    }
+  },
+  "Headers": {
+    "title": "请求参数(http请求头Headers)",
+    "paramList": [
+      {
+        "name": "Token",
+        "type": "String",
+        "ismandatory": true,
+        "description": "验证加密值 Md5(key+Timespan+SecretKey) 加密的32位大写字符串)"
+      },
+      {
+        "name": "Timespan",
+        "type": "String",
+        "ismandatory": true,
+        "description": "精确到秒的Unix时间戳"
+      }
+    ]
+  },
+  "Query": {
+    "title": "请求参数(Query)",
+    "paramList": [
+      {
+        "name": "key",
+        "type": "String",
+        "ismandatory": true,
+        "description": "应用APPKEY(应用详细页查询)"
+      },
+      {
+        "name": "searchKey",
+        "type": "String",
+        "ismandatory": true,
+        "description": "搜索关键字（公司名、注册号、统一社会信用代码或KeyNo）"
+      }
+    ]
+  },
+  "Body": {
+    "title": "请求参数(Body)",
+    "paramList": []
+  },
+  "jsonDemo": {
+    "Description": "JSON返回示例",
+    "content": "{\n  \"Result\": {\n    \"VerifyResult\": 1,\n    \"Data\": [\n      {\n        \"Type\": \"\",\n        \"AddReason\": \"被列入经营异常名录届满3年仍未履行相关义务的\",\n        \"AddDate\": \"2017-12-25\",\n        \"AddOffice\": \"山东省工商行政管理局\",\n        \"RemoveReason\": \"\",\n        \"RemoveDate\": \"\",\n        \"RemoveOffice\": \"\"\n      }\n    ]\n  },\n  \"Status\": \"200\",\n  \"Message\": \"查询成功\",\n  \"OrderNumber\": \"SERIOUSILLEGALCHECK2020071618100199123384\"\n}"
+  },
+  "xmlDemo": {
+    "Description": "XML返回示例",
+    "content": "<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<YJServiceResult xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n <Status>200</Status>\r\n <Message>查询成功</Message>\r\n <OrderNumber>SERIOUSILLEGALCHECK2020071618101513164909</OrderNumber>\r\n <Result>\r\n  <VerifyResult>1</VerifyResult>\r\n  <Data>\r\n   <SeriousViolationListEntity>\r\n    <Type>严重违法失信企业名单</Type>\r\n    <AddReason>被列入经营异常名录届满3年仍未履行相关义务的</AddReason>\r\n    <AddDate>2017-12-25</AddDate>\r\n    <AddOffice>山东省工商行政管理局</AddOffice>\r\n    <RemoveReason />\r\n    <RemoveDate />\r\n    <RemoveOffice />\r\n   </SeriousViolationListEntity>\r\n  </Data>\r\n </Result>\r\n</YJServiceResult>"
+  },
+  "Return": {
+    "name": "返回参数(Return)",
+    "type": "Object",
+    "description": "",
+    "length": "",
+    "content": "1",
+    "paramList": [
+      {
+        "name": "VerifyResult",
+        "type": "Int32",
+        "description": "数据是否存在(1-存在，0-不存在)",
+        "length": "1",
+        "content": "0"
+      },
+      {
+        "name": "Data",
+        "type": "List<Object>",
+        "description": "数据信息",
+        "length": "",
+        "content": "1",
+        "paramList": [
+          {
+            "name": "Type",
+            "type": "String",
+            "description": "类型（保留字段）",
+            "length": "10",
+            "content": "0"
+          },
+          {
+            "name": "AddReason",
+            "type": "String",
+            "description": "列入原因",
+            "length": "256",
+            "content": "0"
+          },
+          {
+            "name": "AddDate",
+            "type": "String",
+            "description": "列入时间",
+            "length": "20",
+            "content": "0"
+          },
+          {
+            "name": "AddOffice",
+            "type": "String",
+            "description": "列入决定机关",
+            "length": "128",
+            "content": "0"
+          },
+          {
+            "name": "RemoveReason",
+            "type": "String",
+            "description": "移除原因（保留字段）",
+            "length": "256",
+            "content": "0"
+          },
+          {
+            "name": "RemoveDate",
+            "type": "String",
+            "description": "移除时间（保留字段）",
+            "length": "20",
+            "content": "0"
+          },
+          {
+            "name": "RemoveOffice",
+            "type": "String",
+            "description": "移除决定机关（保留字段）",
+            "length": "128",
+            "content": "0"
+          }
+        ]
+      }
+    ]
+  }
+}

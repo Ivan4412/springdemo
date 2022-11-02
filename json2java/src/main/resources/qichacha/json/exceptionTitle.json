@@ -1,0 +1,13 @@
+{
+  "apiid": "5c28b452-cfe2-4e0f-bb05-b15a0f976371",
+  "apicode": "739",
+  "seoTitle": "企业经营异常核查",
+  "description": "核查企业经营异常情况，判断企业是否有列入经营异常的情况，返回包括列入经营异常原因、列入日期、作出决定机关等信息。",
+  "standardPrice": "0.30",
+  "upNotice": "0",
+  "upTips": "",
+  "isUse": "1",
+  "apiName": "经营异常核查",
+  "isSupportBalanceBill": 1,
+  "isSupportUserApply": 1
+}

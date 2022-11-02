@@ -21,6 +21,10 @@ public class StringUtil {
             javaType = "String";
         } else if ("Date|date|time|datetime|timestamp".contains(dbType)) {
             javaType = "Date";
+        } else if ("object|Object".contains(dbType)) {
+            javaType = "Object";
+        } else if ("list<object>|List<object>|list<Object>|List<Object>".contains(dbType)) {
+            javaType = "List<Object>";
         } else if (Arrays.asList("list<date>", "list<time>", "list<list<timestamp>").contains(dbType)) {
             javaType = "List<Date>";
         } else if (Arrays.asList("list<string>", "list<String>").contains(dbType)) {
@@ -64,6 +68,7 @@ public class StringUtil {
         return String.valueOf(cs);
 
     }
+
     /**
      * 首字母小写
      */
@@ -74,6 +79,7 @@ public class StringUtil {
         first = first.toUpperCase();
         return first + after;
     }
+
     /**
      * 首字母小写
      */

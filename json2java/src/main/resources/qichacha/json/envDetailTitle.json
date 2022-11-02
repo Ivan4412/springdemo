@@ -1,0 +1,13 @@
+{
+  "apiid": "adc2f873-dd6f-4f44-8b83-51f73b60375c",
+  "apicode": "746",
+  "seoTitle": "环保处罚详情",
+  "description": "核查企业是否存在环保处罚信息，助力风险管控。返回包括但不限于违法类型、违法行为、处罚依据、处罚结果、执行情况等信息",
+  "standardPrice": "0.20",
+  "upNotice": "0",
+  "upTips": "",
+  "isUse": "1",
+  "apiName": "环保处罚详情",
+  "isSupportBalanceBill": 1,
+  "isSupportUserApply": 1
+}

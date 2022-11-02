@@ -1,0 +1,166 @@
+{
+  "Titles": {
+    "title": "接口介绍",
+    "paramList": {
+      "apiUrl": "http://api.qichacha.com/CourtAnnoCheck/GetDetail",
+      "supportFormat": "JSON",
+      "requestMethod": "GET",
+      "requestSample": "http://api.qichacha.com/CourtAnnoCheck/GetDetail?key=AppKey&id={id}"
+    }
+  },
+  "Headers": {
+    "title": "请求参数(http请求头Headers)",
+    "paramList": [
+      {
+        "name": "Token",
+        "type": "String",
+        "ismandatory": true,
+        "description": "验证加密值 Md5(key+Timespan+SecretKey) 加密的32位大写字符串)"
+      },
+      {
+        "name": "Timespan",
+        "type": "String",
+        "ismandatory": true,
+        "description": "精确到秒的Unix时间戳"
+      }
+    ]
+  },
+  "Query": {
+    "title": "请求参数(Query)",
+    "paramList": [
+      {
+        "name": "key",
+        "type": "String",
+        "ismandatory": true,
+        "description": "应用APPKEY(应用详细页查询)"
+      },
+      {
+        "name": "id",
+        "type": "String",
+        "ismandatory": true,
+        "description": "详情Id"
+      }
+    ]
+  },
+  "Body": {
+    "title": "请求参数(Body)",
+    "paramList": []
+  },
+  "jsonDemo": {
+    "Description": "JSON返回示例",
+    "content": "{\n  \"Result\": {\n    \"CaseReason\": \"合同纠纷\",\n    \"CaseNo\": \"（2021）京0102民初13539号\",\n    \"CourtTime\": \"2021-08-04\",\n    \"Province\": \"北京\",\n    \"ScheduleTime\": \"\",\n    \"UndertakeDep\": \"\",\n    \"JusticeChief\": \"\",\n    \"PartyList\": [\n      {\n        \"Name\": \"王澜涛\",\n        \"RoleType\": \"2\",\n        \"Keyno\": \"\"\n      },\n      {\n        \"Name\": \"中国银行股份有限公司\",\n        \"RoleType\": \"1\",\n        \"Keyno\": \"837e8c3db3440424d29a579e27bd4b95\"\n      },\n      {\n        \"Name\": \"北京金融街资本运营中心\",\n        \"RoleType\": \"1\",\n        \"Keyno\": \"07ffd864484419644a08ec485a60c336\"\n      }\n    ],\n    \"Court\": \"北京市西城区人民法院\",\n    \"CourtRoom\": \"第十九法庭（南区）\",\n    \"Content\": \"\"\n  },\n  \"Status\": \"200\",\n  \"Message\": \"【有效请求】查询成功\",\n  \"OrderNumber\": \"COURTANNOCHECK2021070316474351177757\"\n}"
+  },
+  "xmlDemo": {
+    "Description": "XML返回示例",
+    "content": ""
+  },
+  "Return": {
+    "name": "返回参数(Return)",
+    "type": "Object",
+    "description": "",
+    "length": "",
+    "content": "1",
+    "paramList": [
+      {
+        "name": "CaseReason",
+        "type": "String",
+        "description": "案由",
+        "length": "256",
+        "content": "0"
+      },
+      {
+        "name": "CaseNo",
+        "type": "String",
+        "description": "案号",
+        "length": "32",
+        "content": "0"
+      },
+      {
+        "name": "CourtTime",
+        "type": "String",
+        "description": "开庭时间",
+        "length": "20",
+        "content": "0"
+      },
+      {
+        "name": "Province",
+        "type": "String",
+        "description": "地区",
+        "length": "10",
+        "content": "0"
+      },
+      {
+        "name": "ScheduleTime",
+        "type": "String",
+        "description": "排期日期",
+        "length": "20",
+        "content": "0"
+      },
+      {
+        "name": "UndertakeDep",
+        "type": "String",
+        "description": "承办部门",
+        "length": "256",
+        "content": "0"
+      },
+      {
+        "name": "JusticeChief",
+        "type": "String",
+        "description": "审判长/主审人",
+        "length": "100",
+        "content": "0"
+      },
+      {
+        "name": "PartyList",
+        "type": "List<Object>",
+        "description": "当事人信息",
+        "length": "",
+        "content": "1",
+        "paramList": [
+          {
+            "name": "Name",
+            "type": "String",
+            "description": "当事人名称",
+            "length": "64",
+            "content": "0"
+          },
+          {
+            "name": "RoleType",
+            "type": "String",
+            "description": "案件角色（1-被告，2-原告，3-第三方人）",
+            "length": "1",
+            "content": "0"
+          },
+          {
+            "name": "Keyno",
+            "type": "String",
+            "description": "当事人KeyNo",
+            "length": "32",
+            "content": "0"
+          }
+        ]
+      },
+      {
+        "name": "Court",
+        "type": "String",
+        "description": "法院",
+        "length": "128",
+        "content": "0"
+      },
+      {
+        "name": "CourtRoom",
+        "type": "String",
+        "description": "法庭",
+        "length": "256",
+        "content": "0"
+      },
+      {
+        "name": "Content",
+        "type": "String",
+        "description": "公告内容",
+        "length": "4096",
+        "content": "0"
+      }
+    ]
+  }
+}

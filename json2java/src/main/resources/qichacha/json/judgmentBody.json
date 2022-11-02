@@ -1,0 +1,226 @@
+{
+  "Titles": {
+    "title": "接口介绍",
+    "paramList": {
+      "apiUrl": "http://api.qichacha.com/JudgmentDocCheck/GetList",
+      "supportFormat": "JSON",
+      "requestMethod": "GET",
+      "requestSample": "http://api.qichacha.com/JudgmentDocCheck/GetList?key=AppKey&searchKey=XXXXXX"
+    }
+  },
+  "Headers": {
+    "title": "请求参数(http请求头Headers)",
+    "paramList": [
+      {
+        "name": "Token",
+        "type": "String",
+        "ismandatory": true,
+        "description": "验证加密值 Md5(key+Timespan+SecretKey) 加密的32位大写字符串)"
+      },
+      {
+        "name": "Timespan",
+        "type": "String",
+        "ismandatory": true,
+        "description": "精确到秒的Unix时间戳"
+      }
+    ]
+  },
+  "Query": {
+    "title": "请求参数(Query)",
+    "paramList": [
+      {
+        "name": "key",
+        "type": "String",
+        "ismandatory": true,
+        "description": "应用APPKEY(应用详细页查询)"
+      },
+      {
+        "name": "searchKey",
+        "type": "String",
+        "ismandatory": true,
+        "description": "搜索关键字（公司名、注册号、统一社会信用代码）"
+      },
+      {
+        "name": "pubYear",
+        "type": "String",
+        "ismandatory": false,
+        "description": "发布年份，格式为yyyy，如2010、2020"
+      },
+      {
+        "name": "caseIdentity",
+        "type": "String",
+        "ismandatory": false,
+        "description": "案件身份（1：被告；2：原告）"
+      },
+      {
+        "name": "caseStatus",
+        "type": "String",
+        "ismandatory": false,
+        "description": "案件状态（1：待结案，2：已结案）"
+      },
+      {
+        "name": "pageIndex",
+        "type": "String",
+        "ismandatory": false,
+        "description": "页码，默认第一页"
+      },
+      {
+        "name": "pageSize",
+        "type": "String",
+        "ismandatory": false,
+        "description": "每页条数，默认为10，最大不超过20"
+      }
+    ]
+  },
+  "Body": {
+    "title": "请求参数(Body)",
+    "paramList": []
+  },
+  "jsonDemo": {
+    "Description": "JSON返回示例",
+    "content": "{\r\n    \"Paging\": {\r\n        \"PageSize\": 1,\r\n        \"PageIndex\": 1,\r\n        \"TotalRecords\": 1763\r\n    },\r\n    \"Result\": {\r\n        \"VerifyResult\": 1,\r\n        \"Data\": [\r\n            {\r\n                \"Id\": \"xxxxxxxxxxxx\",\r\n                \"CaseName\": \"xxxxxxxxxx\",\r\n                \"CaseReason\": \"信用卡纠纷\",\r\n                \"CaseNo\": \"xxxxxxxxxxxx号\",\r\n                \"Amount\": \"19622.41\",\r\n                \"IsProsecutor\": \"true\",\r\n                \"IsDefendant\": \"false\",\r\n                \"JudgeResult\": \"xxxxxxxxxxxxxxxxxxxxxxxx\",\r\n                \"JudgeDate\": \"2021-08-24\",\r\n                \"PublishDate\": \"2021-10-13\",\r\n                \"PartyList\": [\r\n                    {\r\n                        \"Name\": \"xxxxxxxxx\",\r\n                        \"RoleType\": \"原告\",\r\n                        \"Keyno\": \"xxxxxxxxxxxxxx\",\r\n                        \"Statement\": \"对方撤诉\"\r\n                    },\r\n                    {\r\n                        \"Name\": \"xxxxxxxxxxxx\",\r\n                        \"RoleType\": \"代理律师\",\r\n                        \"Keyno\": \"xxxxxxxxxxx\",\r\n                        \"Statement\": \"\"\r\n                    },\r\n                    {\r\n                        \"Name\": \"xxxxxxxx\",\r\n                        \"RoleType\": \"被告\",\r\n                        \"Keyno\": \"\",\r\n                        \"Statement\": \"\"\r\n                    }\r\n                ],\r\n                \"CaseType\": \"ms\"\r\n            }\r\n        ]\r\n    },\r\n    \"Status\": \"200\",\r\n    \"Message\": \"【有效请求】查询成功\",\r\n    \"OrderNumber\": \"JUDGMENTDOCCHECK2021101810051052195642\"\r\n}"
+  },
+  "xmlDemo": {
+    "Description": "XML返回示例",
+    "content": ""
+  },
+  "Return": {
+    "name": "返回参数(Return)",
+    "type": "Object",
+    "description": "",
+    "length": "",
+    "content": "1",
+    "paramList": [
+      {
+        "name": "VerifyResult",
+        "type": "Int32",
+        "description": "数据是否存在(1-存在，0-不存在)",
+        "length": "1",
+        "content": "0"
+      },
+      {
+        "name": "Data",
+        "type": "List<Object>",
+        "description": "数据信息",
+        "length": "",
+        "content": "1",
+        "paramList": [
+          {
+            "name": "Id",
+            "type": "String",
+            "description": "裁判文书Id",
+            "length": "36",
+            "content": "0"
+          },
+          {
+            "name": "CaseName",
+            "type": "String",
+            "description": "文书标题",
+            "length": "128",
+            "content": "0"
+          },
+          {
+            "name": "CaseReason",
+            "type": "String",
+            "description": "案由",
+            "length": "256",
+            "content": "0"
+          },
+          {
+            "name": "CaseNo",
+            "type": "String",
+            "description": "案号",
+            "length": "32",
+            "content": "0"
+          },
+          {
+            "name": "Amount",
+            "type": "String",
+            "description": "案件金额（元）",
+            "length": "32",
+            "content": "0"
+          },
+          {
+            "name": "IsProsecutor",
+            "type": "String",
+            "description": "是否原告，true或false",
+            "length": "5",
+            "content": "0"
+          },
+          {
+            "name": "IsDefendant",
+            "type": "String",
+            "description": "是否被告，true或false",
+            "length": "5",
+            "content": "0"
+          },
+          {
+            "name": "JudgeResult",
+            "type": "String",
+            "description": "裁判结果",
+            "length": "256",
+            "content": "0"
+          },
+          {
+            "name": "JudgeDate",
+            "type": "String",
+            "description": "裁判日期",
+            "length": "20",
+            "content": "0"
+          },
+          {
+            "name": "PublishDate",
+            "type": "String",
+            "description": "发布日期",
+            "length": "20",
+            "content": "0"
+          },
+          {
+            "name": "PartyList",
+            "type": "List<Object>",
+            "description": "当事人信息",
+            "length": "",
+            "content": "1",
+            "paramList": [
+              {
+                "name": "Name",
+                "type": "String",
+                "description": "当事人名称",
+                "length": "64",
+                "content": "0"
+              },
+              {
+                "name": "RoleType",
+                "type": "String",
+                "description": "案件角色",
+                "length": "8",
+                "content": "0"
+              },
+              {
+                "name": "Statement",
+                "type": "String",
+                "description": "案件声明，具体可能如下：获得支持，对方不被支持，获得部分支持，诉讼中止，被解除查封，被执行完毕，被解除查冻扣，执行中止，不被支持，对方被支持，被驳回，被查封，被查冻扣，终结本次执行等情况",
+                "length": "256",
+                "content": "0"
+              },
+              {
+                "name": "Keyno",
+                "type": "String",
+                "description": "当事人KeyNo",
+                "length": "32",
+                "content": "0"
+              }
+            ]
+          },
+          {
+            "name": "CaseType",
+            "type": "String",
+            "description": "案件类型(ms:民事 xs:刑事 xz:行政  pc:赔偿 zx:执行 gx: 管辖案件 gsx：国际司法协助案件   qsx：区际司法协助案件  other：其他)",
+            "length": "10",
+            "content": "0"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,310 @@
+{
+  "Titles": {
+    "title": "接口介绍",
+    "paramList": {
+      "apiUrl": "http://api.qichacha.com/JudgmentDocCheck/GetDetail",
+      "supportFormat": "JSON",
+      "requestMethod": "GET",
+      "requestSample": "http://api.qichacha.com/JudgmentDocCheck/GetDetail?key=AppKey&id={id}"
+    }
+  },
+  "Headers": {
+    "title": "请求参数(http请求头Headers)",
+    "paramList": [
+      {
+        "name": "Token",
+        "type": "String",
+        "ismandatory": true,
+        "description": "验证加密值 Md5(key+Timespan+SecretKey) 加密的32位大写字符串)"
+      },
+      {
+        "name": "Timespan",
+        "type": "String",
+        "ismandatory": true,
+        "description": "精确到秒的Unix时间戳"
+      }
+    ]
+  },
+  "Query": {
+    "title": "请求参数(Query)",
+    "paramList": [
+      {
+        "name": "key",
+        "type": "String",
+        "ismandatory": true,
+        "description": "应用APPKEY(应用详细页查询)"
+      },
+      {
+        "name": "id",
+        "type": "String",
+        "ismandatory": true,
+        "description": "详情Id"
+      }
+    ]
+  },
+  "Body": {
+    "title": "请求参数(Body)",
+    "paramList": []
+  },
+  "jsonDemo": {
+    "Description": "JSON返回示例",
+    "content": "{\n  \"Result\": {\n    \"Id\": \"b8f66cf6cd2b246933d9e2c12f0d2e3f\",\n    \"CaseName\": \"(2021)湘1302民初2368号中国银行股份有限公司娄底市分行与谢群勇信用卡纠纷一审民事调解书\",\n    \"CaseNo\": \"（2021）湘1302民初2368号\",\n    \"Court\": \"娄底市娄星区人民法院\",\n    \"ContentClear\": \"\n不公开理由：以调解方式结案的\n\",\n    \"TrialRound\": \"民事一审\",\n    \"PublishDate\": \"2021-07-01\",\n    \"JudgeDate\": \"2021-04-29\",\n    \"JudgeResult\": \"\",\n    \"Defendantlist\": null,\n    \"Prosecutorlist\": null,\n    \"RelatedComList\": [],\n    \"RelatedLawList\": [],\n    \"JudgeDocInfo\": null\n  },\n  \"Status\": \"200\",\n  \"Message\": \"【有效请求】查询成功\",\n  \"OrderNumber\": \"JUDGMENTDOCCHECK2021070316434151254538\"\n}"
+  },
+  "xmlDemo": {
+    "Description": "XML返回示例",
+    "content": ""
+  },
+  "Return": {
+    "name": "返回参数(Return)",
+    "type": "Object",
+    "description": "",
+    "length": "",
+    "content": "1",
+    "paramList": [
+      {
+        "name": "Id",
+        "type": "String",
+        "description": "裁判文书Id",
+        "length": "36",
+        "content": "0"
+      },
+      {
+        "name": "CaseName",
+        "type": "String",
+        "description": "文书标题",
+        "length": "128",
+        "content": "0"
+      },
+      {
+        "name": "CaseNo",
+        "type": "String",
+        "description": "案号",
+        "length": "32",
+        "content": "0"
+      },
+      {
+        "name": "Court",
+        "type": "String",
+        "description": "法院",
+        "length": "128",
+        "content": "0"
+      },
+      {
+        "name": "ContentClear",
+        "type": "String",
+        "description": "裁判文书内容",
+        "length": "4096",
+        "content": "0"
+      },
+      {
+        "name": "TrialRound",
+        "type": "String",
+        "description": "审理程序",
+        "length": "10",
+        "content": "0"
+      },
+      {
+        "name": "PublishDate",
+        "type": "String",
+        "description": "发布日期",
+        "length": "20",
+        "content": "0"
+      },
+      {
+        "name": "JudgeDate",
+        "type": "String",
+        "description": "裁判日期",
+        "length": "20",
+        "content": "0"
+      },
+      {
+        "name": "JudgeResult",
+        "type": "String",
+        "description": "判决结果",
+        "length": "256",
+        "content": "0"
+      },
+      {
+        "name": "Defendantlist",
+        "type": "List<string>",
+        "description": "被告",
+        "length": "",
+        "content": "0"
+      },
+      {
+        "name": "Prosecutorlist",
+        "type": "List<string>",
+        "description": "原告",
+        "length": "",
+        "content": "0"
+      },
+      {
+        "name": "RelatedComList",
+        "type": "List<Object>",
+        "description": "关联企业信息",
+        "length": "",
+        "content": "1",
+        "paramList": [
+          {
+            "name": "KeyNo",
+            "type": "String",
+            "description": "KeyNo",
+            "length": "32",
+            "content": "0"
+          },
+          {
+            "name": "Name",
+            "type": "String",
+            "description": "名称",
+            "length": "128",
+            "content": "0"
+          }
+        ]
+      },
+      {
+        "name": "RelatedLawList",
+        "type": "List<Object>",
+        "description": "关联律所信息",
+        "length": "",
+        "content": "1",
+        "paramList": [
+          {
+            "name": "KeyNo",
+            "type": "String",
+            "description": "KeyNo",
+            "length": "32",
+            "content": "0"
+          },
+          {
+            "name": "Name",
+            "type": "String",
+            "description": "名称",
+            "length": "128",
+            "content": "0"
+          }
+        ]
+      },
+      {
+        "name": "JudgeDocInfo",
+        "type": "Object",
+        "description": "判决文书格式化内容",
+        "length": "",
+        "content": "1",
+        "paramList": [
+          {
+            "name": "PartyInfo",
+            "type": "String",
+            "description": "当事人(文书内容)",
+            "length": "4096",
+            "content": "0"
+          },
+          {
+            "name": "TrialProcedure",
+            "type": "String",
+            "description": "审理经过(文书内容)",
+            "length": "4096",
+            "content": "0"
+          },
+          {
+            "name": "CourtConsider",
+            "type": "String",
+            "description": "本院认为(文书内容)",
+            "length": "4096",
+            "content": "0"
+          },
+          {
+            "name": "PlaintiffRequest",
+            "type": "String",
+            "description": "原告诉求(文书内容)",
+            "length": "4096",
+            "content": "0"
+          },
+          {
+            "name": "DefendantReply",
+            "type": "String",
+            "description": "被告答辩(文书内容)",
+            "length": "4096",
+            "content": "0"
+          },
+          {
+            "name": "CourtInspect",
+            "type": "String",
+            "description": "本院查明(文书内容)",
+            "length": "4096",
+            "content": "0"
+          },
+          {
+            "name": "PlaintiffRequestOfFirst",
+            "type": "String",
+            "description": "一审原告诉求(文书内容)",
+            "length": "4096",
+            "content": "0"
+          },
+          {
+            "name": "DefendantReplyOfFirst",
+            "type": "String",
+            "description": "一审被告答辩(文书内容)",
+            "length": "4096",
+            "content": "0"
+          },
+          {
+            "name": "CourtInspectOfFirst",
+            "type": "String",
+            "description": "一审法院查明(文书内容)",
+            "length": "4096",
+            "content": "0"
+          },
+          {
+            "name": "CourtConsiderOfFirst",
+            "type": "String",
+            "description": "一审法院认为(文书内容)",
+            "length": "4096",
+            "content": "0"
+          },
+          {
+            "name": "AppellantRequest",
+            "type": "String",
+            "description": "上诉人诉求(文书内容)",
+            "length": "4096",
+            "content": "0"
+          },
+          {
+            "name": "AppelleeArguing",
+            "type": "String",
+            "description": "被上诉人答辩(文书内容)",
+            "length": "4096",
+            "content": "0"
+          },
+          {
+            "name": "ExecuteProcess",
+            "type": "String",
+            "description": "执行经过(文书内容)",
+            "length": "4096",
+            "content": "0"
+          },
+          {
+            "name": "CollegiateBench",
+            "type": "String",
+            "description": "合议庭(文书内容)",
+            "length": "4096",
+            "content": "0"
+          },
+          {
+            "name": "Judege_Date",
+            "type": "String",
+            "description": "裁判日期(文书内容)",
+            "length": "4096",
+            "content": "0"
+          },
+          {
+            "name": "Recorder",
+            "type": "String",
+            "description": "书记员(文书内容)",
+            "length": "4096",
+            "content": "0"
+          }
+        ]
+      }
+    ]
+  }
+}

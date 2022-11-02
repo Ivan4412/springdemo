@@ -1,0 +1,13 @@
+{
+  "apiid": "3c740d13-14bd-4bdd-8739-d336632244c8",
+  "apicode": "744",
+  "seoTitle": "企业司法拍卖核查",
+  "description": "核查企业是否存在司法拍卖情况，返回包括但不限于拍卖情况、委托法院、拍卖详情等信息。",
+  "standardPrice": "0.20",
+  "upNotice": "0",
+  "upTips": "",
+  "isUse": "1",
+  "apiName": "司法拍卖核查",
+  "isSupportBalanceBill": 1,
+  "isSupportUserApply": 1
+}

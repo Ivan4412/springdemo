@@ -1,0 +1,120 @@
+{
+  "Titles": {
+    "title": "接口介绍",
+    "paramList": {
+      "apiUrl": "http://api.qichacha.com/TelecomLicense/GetList",
+      "supportFormat": "JSON",
+      "requestMethod": "GET",
+      "requestSample": "http://api.qichacha.com/TelecomLicense/GetList?key=AppKey&searchKey=XXXXXX"
+    }
+  },
+  "Headers": {
+    "title": "请求参数(http请求头Headers)",
+    "paramList": [
+      {
+        "name": "Token",
+        "type": "String",
+        "ismandatory": true,
+        "description": "验证加密值 Md5(key+Timespan+SecretKey) 加密的32位大写字符串)"
+      },
+      {
+        "name": "Timespan",
+        "type": "String",
+        "ismandatory": true,
+        "description": "精确到秒的Unix时间戳"
+      }
+    ]
+  },
+  "Query": {
+    "title": "请求参数(Query)",
+    "paramList": [
+      {
+        "name": "key",
+        "type": "String",
+        "ismandatory": true,
+        "description": "应用APPKEY(应用详细页查询)"
+      },
+      {
+        "name": "searchKey",
+        "type": "String",
+        "ismandatory": true,
+        "description": "公司名、注册号、统一社会信用代码、KeyNo"
+      },
+      {
+        "name": "pageIndex",
+        "type": "String",
+        "ismandatory": false,
+        "description": "页码"
+      },
+      {
+        "name": "pageSize",
+        "type": "String",
+        "ismandatory": false,
+        "description": "分页数目，默认10条，最大不超过50条"
+      }
+    ]
+  },
+  "Body": {
+    "title": "请求参数(Body)",
+    "paramList": []
+  },
+  "jsonDemo": {
+    "Description": "JSON返回示例",
+    "content": "{\n  \"OrderNumber\": \"TELECOMLICENSE2019103015325895894970\",\n  \"Paging\": {\n    \"PageSize\": 2,\n    \"PageIndex\": 1,\n    \"TotalRecords\": 3\n  },\n  \"Result\": [\n    {\n      \"Id\": \"b3f4574a7362134060aa7bc2253ab448\",\n      \"KeyNo\": \"4659626b1e5e43f1bcad8c268753216e\",\n      \"CompanyName\": \"XXXXXX\",\n      \"Scope\": \"国内互联网虚拟专用网业务：广州市;北京市国内呼叫中心业务：全国信息服务业务（不含互联网信息服务）：全国互联网接入服务业务：广州市;北京市互联网数据中心业务：广州市;北京市国内多方通信服务业务：全国内容分发网络业务：北京市;广东省\",\n      \"LicenseNo\": \"B1.B2-20160181\",\n      \"IsValid\": \"是\"\n    },\n    {\n      \"Id\": \"1a43c0edab687410f19b657383e87ee2\",\n      \"KeyNo\": \"4659626b1e5e43f1bcad8c268753216e\",\n      \"CompanyName\": \"XXXXXXX\",\n      \"Scope\": \"信息服务业务（仅限互联网信息服务）\",\n      \"LicenseNo\": \"京ICP证150329号\",\n      \"IsValid\": \"是\"\n    }\n  ],\n  \"Status\": \"200\",\n  \"Message\": \"查询成功\"\n}"
+  },
+  "xmlDemo": {
+    "Description": "XML返回示例",
+    "content": "<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<YJServiceResult xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n <Status>200</Status>\r\n <Message>查询成功</Message>\r\n <Result>\r\n  <TelecomLicenseListEntity>\r\n   <Id>b3f4574a7362134060aa7bc2253ab448</Id>\r\n   <KeyNo>4659626b1e5e43f1bcad8c268753216e</KeyNo>\r\n   <CompanyName>北京小桔科技有限公司</CompanyName>\r\n   <Scope>国内互联网虚拟专用网业务：广州市;北京市国内呼叫中心业务：全国信息服务业务（不含互联网信息服务）：全国互联网接入服务业务：广州市;北京市互联网数据中心业务：广州市;北京市国内多方通信服务业务：全国内容分发网络业务：北京市;广东省</Scope>\r\n   <LicenseNo>B1.B2-20160181</LicenseNo>\r\n   <IsValid>是</IsValid>\r\n  </TelecomLicenseListEntity>\r\n  <TelecomLicenseListEntity>\r\n   <Id>1a43c0edab687410f19b657383e87ee2</Id>\r\n   <KeyNo>4659626b1e5e43f1bcad8c268753216e</KeyNo>\r\n   <CompanyName>北京小桔科技有限公司</CompanyName>\r\n   <Scope>信息服务业务（仅限互联网信息服务）</Scope>\r\n   <LicenseNo>京ICP证150329号</LicenseNo>\r\n   <IsValid>是</IsValid>\r\n  </TelecomLicenseListEntity>\r\n </Result>\r\n <OrderNumber>TELECOMLICENSE2019103015330560646911</OrderNumber>\r\n <Paging>\r\n  <PageSize>2</PageSize>\r\n  <PageIndex>1</PageIndex>\r\n  <TotalRecords>3</TotalRecords>\r\n </Paging>\r\n</YJServiceResult>"
+  },
+  "Return": {
+    "name": "返回参数(Return)",
+    "type": "Object",
+    "description": "",
+    "length": "",
+    "content": "1",
+    "paramList": [
+      {
+        "name": "Id",
+        "type": "String",
+        "description": "内部Id",
+        "length": "36",
+        "content": "0"
+      },
+      {
+        "name": "KeyNo",
+        "type": "String",
+        "description": "KeyNo",
+        "length": "32",
+        "content": "0"
+      },
+      {
+        "name": "CompanyName",
+        "type": "String",
+        "description": "企业名称",
+        "length": "128",
+        "content": "0"
+      },
+      {
+        "name": "Scope",
+        "type": "String",
+        "description": "业务范围",
+        "length": "1024",
+        "content": "0"
+      },
+      {
+        "name": "LicenseNo",
+        "type": "String",
+        "description": "许可证号",
+        "length": "32",
+        "content": "0"
+      },
+      {
+        "name": "IsValid",
+        "type": "String",
+        "description": "是否有效",
+        "length": "36",
+        "content": "0"
+      }
+    ]
+  }
+}
