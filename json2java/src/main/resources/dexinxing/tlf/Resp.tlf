@@ -1,0 +1,41 @@
+package cn.utrust.fintech.cdcp2.dto.dexinxing.resp;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.List;
+
+/**
+ * ${classNickName}
+ *
+ * ${author}
+ * ${date}
+ */
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class ${className} {
+
+    /**
+     * ${classNickName}
+     */
+    @ApiModelProperty("${classNickName}")
+    protected DataItem data;
+
+    @Data
+    public static class DataItem {
+
+        #for
+        /**
+        * ${data.columnComment}
+        */
+        @ApiModelProperty("${data.columnComment}")
+        @JsonProperty(value = "${data.columnJsonName}")
+        protected ${data.dataType} ${data.columnName};
+        #end
+
+    }
+}

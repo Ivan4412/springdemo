@@ -1,0 +1,87 @@
+package cn.utrust.fintech.cdcp2.core.provider.dexinxing.impl;
+
+import cn.hutool.core.bean.BeanUtil;
+import cn.utrust.fintech.cdcp2.core.dto.dexinxing.resp.${className}RespDto;
+import cn.utrust.fintech.cdcp2.core.provider.dexinxing.DeXinXingKeywordDataProvider;
+import cn.utrust.fintech.cdcp2.dto.dexinxing.req.DeXinXingKeywordReq;
+import cn.utrust.fintech.cdcp2.dto.dexinxing.resp.${className}Resp;
+import cn.utrust.fintech.cdcp2.framework.json.JSON;
+import cn.utrust.fintech.cdcp2.framework.json.JSONObject;
+import cn.utrust.fintech.cdcp2.framework.util.StringUtils;
+import cn.utrust.fintech.cdcp2.framework.util.http.RestTemplateUtils;
+import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
+
+import java.util.HashMap;
+import java.util.Map;
+
+/**
+ * ${classNickName}
+ *
+ * ${author}
+ * ${date}
+ */
+ @ApiOperation("${classNickName}", notes = "${classNote}")
+ @Component("/openapi/dexinxing/${classPath}")
+ @Slf4j
+ public class ${className}DataProvider extends DeXinXingKeywordDataProvider<DeXinXingKeywordReq, ${className}Resp, JSONObject> {
+
+    @Override
+    public String providerCode() {
+        return "${className}";
+    }
+
+    public String apiPath() {
+        return "${apiPath}";
+    }
+
+    @Override
+    protected ${className}Resp doProvide(JSONObject externalData, Exception e) {
+        Object data = effectiveExternalData(externalData);
+        if (data != null) {
+            String result = JSON.toJSONString(data);
+            if (StringUtils.isNotBlank(result)) {
+                ${className}RespDto respDto = JSON.parseObject(result, ${className}RespDto.class);
+                //深拷贝返回值
+               ${className}Resp resp = new ${className}Resp();
+                BeanUtil.copyProperties(respDto, resp);
+                return resp;
+            }
+        }
+        return null;
+    }
+
+     @Override
+     protected JSONObject doExternalData(DeXinXingKeywordReq param) {
+        FengBaoAccount account = getExternalAccountSetting(param, DeXinXingAccount.class);
+
+        //获取报文头参数
+        String token = getToken(account);
+        HttpHeaders headers = new HttpHeaders();
+        headers.setBearerAuth(token);
+
+        //获取请求参数
+        Map<String, String> requestParam = new HashMap<String, String>();
+        requestParam.put("keyword", param.getKeyword());
+
+        //获取请求URL
+        String url = RestTemplateUtils.getUrlByGet(account.getUrl() + apiPath(), requestParam);
+        log.info("{}，send:{} to {} ", providerGroup().getGroupCode(), requestParam, url);
+
+        HttpEntity<Object> httpEntity = new HttpEntity<>(headers);
+        ResponseEntity<JSONObject> responseEntity = restTemplate.exchange(url, HttpMethod.GET, httpEntity, JSONObject.class, requestParam);
+        log.info("{}，get:{} ", this.providerCode(), responseEntity != null ? responseEntity.getBody() : "");
+
+        if (responseEntity != null && responseOk(responseEntity.getBody())) {
+            return responseEntity.getBody();
+        }
+
+        return null;
+    }
+
+}
